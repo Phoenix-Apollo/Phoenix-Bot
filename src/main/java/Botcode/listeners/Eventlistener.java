@@ -73,11 +73,6 @@ public class Eventlistener extends ListenerAdapter {
 
         Category category = channel.getParentCategory(); // Retrieve the category
 
-        // Include the category information in the message
-        if (category != null) {
-            message += "You are in the " + category.getName() + " category.";
-        }
-
         channel.sendMessage(message).queue();
     }
 }

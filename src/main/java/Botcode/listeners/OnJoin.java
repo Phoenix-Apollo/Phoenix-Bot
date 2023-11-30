@@ -54,10 +54,7 @@ public class OnJoin extends ListenerAdapter {
     }
 
     private void announceEvent(Member member, VoiceChannel voiceChannel, String targetTextChannelName) {
-        String tempChannelName = tempChannelNames.get(voiceChannel.getIdLong()); // Get the name from the map
-        if (tempChannelName == null) {
-            tempChannelName = voiceChannel.getName();
-        }
+        String eventName = voiceChannel.getName(); // Use the current voice channel's name as the event name
 
         Category eventsCategory = voiceChannel.getGuild().getCategoriesByName("Events & Operations", true).stream().findFirst().orElse(null);
         if (eventsCategory != null) {
@@ -66,7 +63,7 @@ public class OnJoin extends ListenerAdapter {
                     .findFirst().orElse(null);
 
             if (targetTextChannel != null) {
-                targetTextChannel.sendMessage("An " + tempChannelName + " Event/Activity has started by " + member.getAsMention() + "!").queue();
+                targetTextChannel.sendMessage("An " + eventName + " Event/Activity has started by " + member.getAsMention() + "!").queue();
             }
         }
     }
