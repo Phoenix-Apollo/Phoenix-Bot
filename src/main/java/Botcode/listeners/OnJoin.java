@@ -63,7 +63,7 @@ public class OnJoin extends ListenerAdapter {
                     .findFirst().orElse(null);
 
             if (targetTextChannel != null) {
-                targetTextChannel.sendMessage("An " + eventName + " Event/Activity has started by " + member.getAsMention() + "!").queue();
+                targetTextChannel.sendMessage("A " + eventName + " Event/Activity has started by " + member.getAsMention() + "!").queue();
             }
         }
     }
