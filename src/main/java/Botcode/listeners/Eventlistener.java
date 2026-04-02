@@ -13,14 +13,24 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+/**
+ * Handles server onboarding and temporary voice-channel creation.
+ *
+ * Users joining the designated trigger channel get their own temporary room.
+ */
 public class Eventlistener extends ListenerAdapter {
 
     private final Set<Long> usersCreatingChannels = new HashSet<>();
 
+    /**
+     * Watches voice joins and creates a personal channel when users enter Join to Create.
+     */
     @Override
     public void onGuildVoiceUpdate(GuildVoiceUpdateEvent event) {
         System.out.println("Debug: GuildVoiceUpdateEvent received.");
 
+        // Ignore non-join transitions and prevent duplicate channel creation requests.
         if (event.getChannelJoined() == null || usersCreatingChannels.contains(event.getMember().getIdLong())) {
             System.out.println("Debug: Channel joined is null or user is already creating a channel.");
             return; // Don't proceed if there's no channel joined or user already creating channel
@@ -28,6 +38,7 @@ public class Eventlistener extends ListenerAdapter {
 
         VoiceChannel joinedChannel = (VoiceChannel) event.getChannelJoined();
 
+        // Only this trigger channel should spawn per-user temporary channels.
         if (joinedChannel.getName().equals("Join to Create")) {
             Member member = event.getMember();
             if (member != null && !usersCreatingChannels.contains(member.getIdLong())) {
@@ -37,6 +48,9 @@ public class Eventlistener extends ListenerAdapter {
         }
     }
 
+    /**
+     * Creates a temporary voice channel and moves the requesting member into it.
+     */
     private void createTempVoiceChannel(Member member, Category category) {
         String channelName = member.getEffectiveName() + "'s Channel";
 
@@ -53,6 +67,9 @@ public class Eventlistener extends ListenerAdapter {
         });
     }
 
+    /**
+     * Sends a basic welcome message in the configured public chat channel.
+     */
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
         User user = event.getUser();
@@ -60,11 +77,13 @@ public class Eventlistener extends ListenerAdapter {
         Guild guild = event.getGuild();
 
         TextChannel channel = null;
+        // Resolve the configured welcome channel by name.
         List<TextChannel> channelsByName = guild.getTextChannelsByName("public-chat", true); // Replace "public-chat" with the actual channel name
         if (!channelsByName.isEmpty()) {
             channel = channelsByName.get(0); // Assuming there's only one channel with that name
         }
 
+        // Abort silently when the configured channel does not exist.
         if (channel == null) {
             return;
         }

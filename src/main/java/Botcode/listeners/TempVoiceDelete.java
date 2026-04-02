@@ -10,15 +10,24 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * Deletes temporary voice channels shortly after they become empty.
+ */
 public class TempVoiceDelete extends ListenerAdapter {
 
+    // Tracks channels that were observed empty and the time they were marked.
     private final Map<Long, Long> emptyChannels = new HashMap<>();
+    // Maps channel IDs back to guild context needed for deletion lookup.
     private final Map<Long, Guild> channelGuildMap = new HashMap<>();
     private final Timer timer = new Timer();
 
+    /**
+     * Tracks voice channel exits and schedules deletion checks for empty channels.
+     */
     @Override
     public void onGuildVoiceUpdate(GuildVoiceUpdateEvent event) {
         VoiceChannel channelLeft = (VoiceChannel) event.getChannelLeft();
+        // Ignore permanent/control channels that should never be auto-deleted.
         if (channelLeft == null || channelLeft.getName().equals("Join to Create") || channelLeft.getName().contains("~")) {
             return; // Exclude Join to Create channels and channels with *
         }
@@ -37,6 +46,9 @@ public class TempVoiceDelete extends ListenerAdapter {
         }
     }
 
+    /**
+     * Runs a delayed delete pass to avoid removing channels during quick reconnects.
+     */
     private void scheduleDeletion(Long channelId) {
         timer.schedule(new TimerTask() {
             @Override
@@ -45,6 +57,7 @@ public class TempVoiceDelete extends ListenerAdapter {
                 if (guild == null) return;
 
                 VoiceChannel channel = guild.getVoiceChannelById(channelId);
+                // Delete only if the channel still exists and remained empty during delay.
                 if (channel != null && channel.getMembers().isEmpty()) {
                     channel.delete().queue(
                             success -> {

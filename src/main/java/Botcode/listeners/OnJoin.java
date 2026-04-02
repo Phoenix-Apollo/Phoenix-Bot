@@ -10,10 +10,17 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Prompts members to announce activities when they create a new voice room.
+ */
 public class OnJoin extends ListenerAdapter {
 
+    // Reserved for storing per-user temporary channel labels if naming customization is added.
     private final Map<Long, String> tempChannelNames = new HashMap<>();
 
+    /**
+     * Detects Join to Create entries and triggers a DM-based announcement prompt.
+     */
     @Override
     public void onGuildVoiceUpdate(GuildVoiceUpdateEvent event) {
         System.out.println("Debug: GuildVoiceUpdateEvent received.");
@@ -24,6 +31,7 @@ public class OnJoin extends ListenerAdapter {
         if (joinedChannel != null && member != null && joinedChannel.getName().equals("Join to Create")) {
             System.out.println("Debug: Voice channel joined: " + joinedChannel.getName());
             Category parentCategory = joinedChannel.getParentCategory();
+            // Route announcement target based on which voice category the user joined.
             if (parentCategory != null && parentCategory.getName().equals("Public Voice-Comms")) {
                 privateMessageUser(member, joinedChannel, "public-events");
             } else if (parentCategory != null && parentCategory.getName().equals("Org Voice Channels")) {
@@ -32,10 +40,14 @@ public class OnJoin extends ListenerAdapter {
         }
     }
 
+    /**
+     * Sends a DM prompt and listens for a yes/no reply from the channel creator.
+     */
     private void privateMessageUser(Member member, VoiceChannel createdChannel, String targetTextChannelName) {
         member.getUser().openPrivateChannel().queue(privateChannel -> {
             privateChannel.sendMessage("Would you like to announce an event/activity in your new voice channel? (yes/no)").queue(
                     response -> {
+                        // Add a one-time listener and remove it after the first valid reply.
                         privateChannel.getJDA().addEventListener(new ListenerAdapter() {
                             @Override
                             public void onMessageReceived(MessageReceivedEvent event) {
@@ -53,6 +65,9 @@ public class OnJoin extends ListenerAdapter {
         });
     }
 
+    /**
+     * Posts an event notification message in the selected events text channel.
+     */
     private void announceEvent(Member member, VoiceChannel voiceChannel, String targetTextChannelName) {
         String eventName = voiceChannel.getName(); // Use the current voice channel's name as the event name
 
