@@ -9,19 +9,20 @@
     <version>1.0</version>
 
     <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
+                <version>3.4.0</version>
                 <executions>
                     <execution>
+                        <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
@@ -43,7 +44,14 @@
         <dependency>
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
-            <version>5.0.0-beta.12</version>
+            <version>5.6.1</version>
+        </dependency>
+
+        <!-- Explicit pin to avoid older transitive jackson-core versions -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.18.6</version>
         </dependency>
 
         <dependency>
