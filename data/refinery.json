@@ -1,0 +1,85 @@
+{
+  "methods": {
+    "Cormack": {
+      "yield_bonus_pct": 5.0,
+      "time_per_scu_min": 8.0,
+      "cost_modifier": 1.0,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "Dinyx Solventation": {
+      "yield_bonus_pct": 15.0,
+      "time_per_scu_min": 12.0,
+      "cost_modifier": 0.85,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "Electrostarolysis": {
+      "yield_bonus_pct": 10.0,
+      "time_per_scu_min": 10.0,
+      "cost_modifier": 1.0,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "Gaskin Process": {
+      "yield_bonus_pct": 10.0,
+      "time_per_scu_min": 8.0,
+      "cost_modifier": 1.15,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "Pyrometric Chromalysis": {
+      "yield_bonus_pct": 15.0,
+      "time_per_scu_min": 12.0,
+      "cost_modifier": 1.15,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "Kazen Winnowing": {
+      "yield_bonus_pct": 5.0,
+      "time_per_scu_min": 10.0,
+      "cost_modifier": 1.0,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "Thermonatic Deposition": {
+      "yield_bonus_pct": 10.0,
+      "time_per_scu_min": 12.0,
+      "cost_modifier": 1.0,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "Ferron Exchange": {
+      "yield_bonus_pct": 15.0,
+      "time_per_scu_min": 12.0,
+      "cost_modifier": 1.0,
+      "description": "Imported from live source",
+      "good_for": []
+    },
+    "XCR Reaction": {
+      "yield_bonus_pct": 5.0,
+      "time_per_scu_min": 8.0,
+      "cost_modifier": 1.15,
+      "description": "Imported from live source",
+      "good_for": []
+    }
+  },
+  "stations": {},
+  "ore_base_values": {
+    "Quantainium": 1400,
+    "Bexalite": 1100,
+    "Hadanite": 950,
+    "Taranite": 850,
+    "Agricium": 700,
+    "Laranite": 650,
+    "Hephaestanite": 500,
+    "Gold": 350,
+    "Copper": 120,
+    "Titanium": 90,
+    "Iron": 55,
+    "Corundum": 40,
+    "Quartz": 20,
+    "Beryl": 15
+  },
+  "last_update": 1777587901
+}

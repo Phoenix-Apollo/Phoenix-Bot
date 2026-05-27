@@ -1,1 +1,372 @@
-{}
+{
+  "Behring M7A Laser Cannon": {
+    "info": {
+      "type": "Fixed Weapon",
+      "size": "S3",
+      "class": "Energy",
+      "manufacturer": "Behring",
+      "fire_mode": "Single / Burst"
+    },
+    "stats": {
+      "damage_per_bullet": 110,
+      "fire_rate_rpm": 180,
+      "dps": 330,
+      "range_m": 1560,
+      "ammo_per_mag": "N/A (energy)",
+      "heat_generation": "Medium"
+    },
+    "attributes": {
+      "buy_location": "Area18 (Dumper's Depot), Lorville",
+      "notes": "Reliable high-damage cannon. Popular on Hornet and Vanguard variants."
+    }
+  },
+  "Behring M6A Laser Cannon": {
+    "info": {
+      "type": "Fixed Weapon",
+      "size": "S2",
+      "class": "Energy",
+      "manufacturer": "Behring",
+      "fire_mode": "Single"
+    },
+    "stats": {
+      "damage_per_bullet": 60,
+      "fire_rate_rpm": 200,
+      "dps": 200,
+      "range_m": 1350,
+      "ammo_per_mag": "N/A (energy)",
+      "heat_generation": "Low-Medium"
+    },
+    "attributes": {
+      "buy_location": "Area18, New Babbage, Lorville",
+      "notes": "Workhorse S2 energy cannon. Very common in bounty hunting loadouts."
+    }
+  },
+  "Behring CF-117 Badger Repeater": {
+    "info": {
+      "type": "Fixed Weapon",
+      "size": "S1",
+      "class": "Energy (Repeater)",
+      "manufacturer": "Behring",
+      "fire_mode": "Continuous"
+    },
+    "stats": {
+      "damage_per_bullet": 14,
+      "fire_rate_rpm": 1100,
+      "dps": 257,
+      "range_m": 980,
+      "ammo_per_mag": "N/A (energy)",
+      "heat_generation": "Medium-High"
+    },
+    "attributes": {
+      "buy_location": "Area18, Lorville, New Babbage",
+      "notes": "Fast-firing energy repeater. Great for dogfighting. Overheats quickly at max fire rate."
+    }
+  },
+  "Klaus & Werner CF-227 Panther Repeater": {
+    "info": {
+      "type": "Fixed Weapon",
+      "size": "S2",
+      "class": "Energy (Repeater)",
+      "manufacturer": "Klaus & Werner",
+      "fire_mode": "Continuous"
+    },
+    "stats": {
+      "damage_per_bullet": 21,
+      "fire_rate_rpm": 1050,
+      "dps": 367,
+      "range_m": 1050,
+      "ammo_per_mag": "N/A (energy)",
+      "heat_generation": "High"
+    },
+    "attributes": {
+      "buy_location": "Area18 (Dumper's Depot), Levski",
+      "notes": "High-output repeater for sustained dogfighting. Best used on ships with good cooler ratings."
+    }
+  },
+  "Klaus & Werner CF-337 Panther Repeater": {
+    "info": {
+      "type": "Fixed Weapon",
+      "size": "S3",
+      "class": "Energy (Repeater)",
+      "manufacturer": "Klaus & Werner",
+      "fire_mode": "Continuous"
+    },
+    "stats": {
+      "damage_per_bullet": 35,
+      "fire_rate_rpm": 1000,
+      "dps": 583,
+      "range_m": 1100,
+      "ammo_per_mag": "N/A (energy)",
+      "heat_generation": "High"
+    },
+    "attributes": {
+      "buy_location": "Area18, Levski",
+      "notes": "High DPS S3 repeater. Serious heat output — pair with cooler overclocking."
+    }
+  },
+  "Gallant Heritage Ballistic Repeater": {
+    "info": {
+      "type": "Fixed Weapon",
+      "size": "S2",
+      "class": "Ballistic (Repeater)",
+      "manufacturer": "Gallant",
+      "fire_mode": "Continuous"
+    },
+    "stats": {
+      "damage_per_bullet": 20,
+      "fire_rate_rpm": 1000,
+      "dps": 333,
+      "range_m": 900,
+      "ammo_per_mag": 5000,
+      "heat_generation": "Low"
+    },
+    "attributes": {
+      "buy_location": "Area18, Lorville",
+      "notes": "Ballistic repeater — bypasses energy shields partially. Good against armoured targets."
+    }
+  },
+  "Kroneg FL-33 Laser Cannon": {
+    "info": {
+      "type": "Fixed Weapon",
+      "size": "S1",
+      "class": "Energy",
+      "manufacturer": "Kroneg",
+      "fire_mode": "Single"
+    },
+    "stats": {
+      "damage_per_bullet": 40,
+      "fire_rate_rpm": 280,
+      "dps": 187,
+      "range_m": 1200,
+      "ammo_per_mag": "N/A (energy)",
+      "heat_generation": "Low"
+    },
+    "attributes": {
+      "buy_location": "New Babbage, Area18",
+      "notes": "Entry-level energy cannon. Good for starter ships like the Aurora."
+    }
+  },
+  "APAR Polar S2 Shield Generator": {
+    "info": {
+      "type": "Shield Generator",
+      "size": "S2",
+      "class": "Shield",
+      "manufacturer": "APAR",
+      "shield_type": "Bubble"
+    },
+    "stats": {
+      "max_shield_hp": 660,
+      "shield_regen_rate": 55,
+      "regen_delay_s": 5,
+      "power_usage": "Medium",
+      "weight_kg": 28
+    },
+    "attributes": {
+      "buy_location": "Area18 (SelfLand), Lorville",
+      "notes": "Solid general-purpose shield. Fast regen but lower peak HP than Allmax alternatives."
+    }
+  },
+  "Allmax FR-86 Shield Generator": {
+    "info": {
+      "type": "Shield Generator",
+      "size": "S2",
+      "class": "Shield",
+      "manufacturer": "Allmax",
+      "shield_type": "Bubble"
+    },
+    "stats": {
+      "max_shield_hp": 840,
+      "shield_regen_rate": 40,
+      "regen_delay_s": 7,
+      "power_usage": "Medium-High",
+      "weight_kg": 32
+    },
+    "attributes": {
+      "buy_location": "New Babbage, Port Tressler",
+      "notes": "Higher peak HP than Polar. Slower regeneration. Preferred for sustained engagement."
+    }
+  },
+  "Juno Starwerk Surge Powerplant": {
+    "info": {
+      "type": "Power Plant",
+      "size": "S2",
+      "class": "Power Plant",
+      "manufacturer": "Juno Starwerk",
+      "efficiency_class": "High Output"
+    },
+    "stats": {
+      "max_power_output": 2780,
+      "heat_rate": "High",
+      "signature_ir": "Very High",
+      "power_to_weapon_ratio": 1.22
+    },
+    "attributes": {
+      "buy_location": "Area18, Orison",
+      "notes": "Max power output for combat. Very high IR signature — easily detected. Military builds."
+    }
+  },
+  "Juno Starwerk Proton Powerplant": {
+    "info": {
+      "type": "Power Plant",
+      "size": "S2",
+      "class": "Power Plant",
+      "manufacturer": "Juno Starwerk",
+      "efficiency_class": "Balanced"
+    },
+    "stats": {
+      "max_power_output": 2350,
+      "heat_rate": "Medium",
+      "signature_ir": "Medium",
+      "power_to_weapon_ratio": 1.05
+    },
+    "attributes": {
+      "buy_location": "New Babbage, Area18",
+      "notes": "Balanced output and signature. Popular for daily-use combat ships."
+    }
+  },
+  "Jorvik Cold Flow Cooler": {
+    "info": {
+      "type": "Cooler",
+      "size": "S2",
+      "class": "Cooler",
+      "manufacturer": "Jorvik",
+      "efficiency_class": "High Throughput"
+    },
+    "stats": {
+      "max_cooling_rate": 1850,
+      "em_signature": "Low",
+      "heat_dissipation": "Excellent"
+    },
+    "attributes": {
+      "buy_location": "New Babbage, Lorville",
+      "notes": "Best cooling rate in class. Allows sustained weapon fire without thermal shutdowns."
+    }
+  },
+  "Thermyte Conquest Cooler": {
+    "info": {
+      "type": "Cooler",
+      "size": "S1",
+      "class": "Cooler",
+      "manufacturer": "Thermyte Concern",
+      "efficiency_class": "Balanced"
+    },
+    "stats": {
+      "max_cooling_rate": 950,
+      "em_signature": "Medium",
+      "heat_dissipation": "Good"
+    },
+    "attributes": {
+      "buy_location": "Area18, Orison",
+      "notes": "Good all-rounder cooler. Moderate EM signature. Works well on light fighters."
+    }
+  },
+  "WillsOps ArmaStar Q6 Quantum Drive": {
+    "info": {
+      "type": "Quantum Drive",
+      "size": "S2",
+      "class": "Quantum Drive",
+      "manufacturer": "WillsOps",
+      "drive_class": "FTL"
+    },
+    "stats": {
+      "max_speed_ms": 55000000,
+      "spool_time_s": 16,
+      "quantum_fuel_rate": 0.48,
+      "interdiction_resistance": "Low"
+    },
+    "attributes": {
+      "buy_location": "New Babbage, Port Tressler",
+      "notes": "Fast quantum drive. Lower fuel efficiency but excellent spool time for busy trading routes."
+    }
+  },
+  "MISC Odyssey Standard Quantum Drive": {
+    "info": {
+      "type": "Quantum Drive",
+      "size": "S1",
+      "class": "Quantum Drive",
+      "manufacturer": "MISC",
+      "drive_class": "FTL"
+    },
+    "stats": {
+      "max_speed_ms": 20000000,
+      "spool_time_s": 20,
+      "quantum_fuel_rate": 0.36,
+      "interdiction_resistance": "None"
+    },
+    "attributes": {
+      "buy_location": "Area18, New Babbage, Lorville",
+      "notes": "Starter quantum drive. Low fuel consumption. Adequate for system travel."
+    }
+  },
+  "Hydrail Odyssey Fuel Intake": {
+    "info": {
+      "type": "Fuel Intake",
+      "size": "S2",
+      "class": "Fuel Intake",
+      "manufacturer": "Hydrail"
+    },
+    "stats": {
+      "intake_rate_fuel_per_s": 0.62,
+      "hydrogen_collection": "High",
+      "power_usage": "Low"
+    },
+    "attributes": {
+      "buy_location": "Orison, New Babbage",
+      "notes": "Good fuel intake rate. Ideal for players doing long-distance hauling near gas giants."
+    }
+  },
+  "Origin S4 Main Thruster": {
+    "info": {
+      "type": "Main Thruster",
+      "size": "S4",
+      "class": "Thruster",
+      "manufacturer": "Origin"
+    },
+    "stats": {
+      "max_thrust_n": 215000,
+      "heat_rate": "Medium",
+      "fuel_consumption": "High",
+      "signature_ir": "High"
+    },
+    "attributes": {
+      "buy_location": "New Babbage (Origin showroom), Area18",
+      "notes": "High-thrust main drive. Best suited for Origin 300-series and 600i. High fuel cost."
+    }
+  },
+  "Behring EM-9 EMP Generator": {
+    "info": {
+      "type": "EMP Generator",
+      "size": "S2",
+      "class": "Utility",
+      "manufacturer": "Behring"
+    },
+    "stats": {
+      "emp_radius_m": 800,
+      "disable_duration_s": 10,
+      "power_usage": "Very High",
+      "cooldown_s": 60
+    },
+    "attributes": {
+      "buy_location": "Grim HEX, Levski",
+      "notes": "Disables systems within radius including shields. Expensive to recharge. High-risk engagement tool."
+    }
+  },
+  "Pyro Burn Scanner": {
+    "info": {
+      "type": "Scanner",
+      "size": "S1",
+      "class": "Utility / Scanning",
+      "manufacturer": "Pyro Tech (unofficial)"
+    },
+    "stats": {
+      "scan_range_m": 2500,
+      "signature_detection": "High",
+      "ping_interval_s": 2,
+      "power_usage": "Low"
+    },
+    "attributes": {
+      "buy_location": "Ruin Station (Pyro), Bloom",
+      "notes": "Pyro-specific scanning device. High sensitivity for detecting ship signatures in hostile environments."
+    }
+  }
+}

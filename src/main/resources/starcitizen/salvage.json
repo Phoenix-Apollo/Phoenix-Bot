@@ -1,1 +1,132 @@
-{}
+{
+  "ships": {
+    "Reclaimer": {
+      "role": "Heavy Salvage",
+      "crew": 5,
+      "cargo_scu": 228,
+      "scrape_rate_scu_min": 3.2,
+      "tractor_beams": 2,
+      "notes": "Best for large wrecks and bulk RMC collection. Requires a crew."
+    },
+    "Vulture": {
+      "role": "Solo Salvage",
+      "crew": 1,
+      "cargo_scu": 12,
+      "scrape_rate_scu_min": 1.1,
+      "tractor_beams": 1,
+      "notes": "Ideal for solo operators. Efficient for small wrecks and component salvage."
+    }
+  },
+  "materials": {
+    "RMC": {
+      "full_name": "Recycled Material Composite",
+      "base_value_per_scu": 105,
+      "source": "Hull scraping from ship wrecks",
+      "sells_at": [
+        "Omega Pro",
+        "Platinum Bay",
+        "CRU-L5",
+        "HUR-L5",
+        "MIC-L5"
+      ]
+    },
+    "Construction Materials": {
+      "full_name": "Construction Materials",
+      "base_value_per_scu": 75,
+      "source": "Derelict structures and stations",
+      "sells_at": [
+        "Omega Pro",
+        "Platinum Bay"
+      ]
+    },
+    "Composite Materials": {
+      "full_name": "Composite Materials",
+      "base_value_per_scu": 90,
+      "source": "Component salvage from larger ships",
+      "sells_at": [
+        "Omega Pro",
+        "CRU-L5",
+        "HUR-L5"
+      ]
+    }
+  },
+  "hotspots": {
+    "Yela Asteroid Belt": {
+      "body": "Yela",
+      "system": "Stanton",
+      "risk": "Medium",
+      "wreck_density": "High",
+      "notes": "High wreck density from player combat. Good RMC yields."
+    },
+    "Delamar": {
+      "body": "Delamar",
+      "system": "Stanton",
+      "risk": "Low",
+      "wreck_density": "Medium",
+      "notes": "Derelict outposts near Levski. Good for solo Vulture runs."
+    },
+    "CRU-L4 Ship Graveyard": {
+      "body": "CRU-L4",
+      "system": "Stanton",
+      "risk": "Low",
+      "wreck_density": "High",
+      "notes": "Designated wreck site. Predictable and safe for new salvagers."
+    },
+    "HUR-L4 Ship Graveyard": {
+      "body": "HUR-L4",
+      "system": "Stanton",
+      "risk": "Low",
+      "wreck_density": "High",
+      "notes": "Large capital ship debris. Reclaimer recommended for maximum yield."
+    },
+    "MIC-L4 Ship Graveyard": {
+      "body": "MIC-L4",
+      "system": "Stanton",
+      "risk": "Low",
+      "wreck_density": "Medium",
+      "notes": "Quieter than L4 graveyards. Good for solo operators."
+    },
+    "GrimHEX Surroundings": {
+      "body": "Yela",
+      "system": "Stanton",
+      "risk": "High",
+      "wreck_density": "Very High",
+      "notes": "High risk due to pirate activity. Highest wreck density in Stanton."
+    },
+    "Pyro 4 Debris Fields": {
+      "body": "Pyro 4",
+      "system": "Pyro",
+      "risk": "High",
+      "wreck_density": "High",
+      "notes": "Frequent derelicts and hostile traffic. Bring escort or keep runs short."
+    },
+    "Pyro Gateway Fringe": {
+      "body": "Pyro Gateway",
+      "system": "Pyro",
+      "risk": "Medium",
+      "wreck_density": "Medium",
+      "notes": "Transit corridor wrecks with moderate competition and manageable extraction windows."
+    },
+    "Levski Drift Zone": {
+      "body": "Delamar",
+      "system": "Nyx",
+      "risk": "Medium",
+      "wreck_density": "Medium",
+      "notes": "Consistent wreck pockets near Levski approaches, good for coordinated Vulture teams."
+    },
+    "Nyx Outer Transit Wreckline": {
+      "body": "Nyx Transit",
+      "system": "Nyx",
+      "risk": "Medium",
+      "wreck_density": "Low",
+      "notes": "Lower traffic route with periodic larger hull finds; best for patience-focused salvage loops."
+    }
+  },
+  "tips": [
+    "Always carry Arga or Lifeguard multi-tools for efficient hull scraping.",
+    "Sell RMC at Omega Pro (ARC-L5) for consistently high prices.",
+    "Use the Vulture's front arms to reach tight wreck sections the Reclaimer can't.",
+    "Component salvage from larger wrecks often yields more aUEC per run than hull scraping.",
+    "Check your cargo capacity before heading to a graveyard — leaving early wastes travel time."
+  ]
+}

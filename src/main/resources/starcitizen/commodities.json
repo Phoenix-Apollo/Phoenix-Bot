@@ -1,1 +1,1115 @@
-{}
+{
+  "Quantanium": {
+    "best_buy": "R&R HUR-L4",
+    "best_sell": "Levski",
+    "profit_per_scu": 720,
+    "buy": [
+      {
+        "location": "R&R HUR-L4",
+        "price": 1180
+      },
+      {
+        "location": "Benson Mining Outpost",
+        "price": 1200
+      },
+      {
+        "location": "Kudre Ore",
+        "price": 1210
+      }
+    ],
+    "sell": [
+      {
+        "location": "Levski",
+        "price": 1900
+      },
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 1880
+      },
+      {
+        "location": "New Babbage",
+        "price": 1860
+      }
+    ]
+  },
+  "Laranite": {
+    "best_buy": "R&R HUR-L4",
+    "best_sell": "Levski",
+    "profit_per_scu": 170,
+    "buy": [
+      {
+        "location": "R&R HUR-L4",
+        "price": 174
+      },
+      {
+        "location": "Benson Mining Outpost",
+        "price": 180
+      },
+      {
+        "location": "Shubin Mining Facility SMCa-8",
+        "price": 177
+      }
+    ],
+    "sell": [
+      {
+        "location": "Levski",
+        "price": 344
+      },
+      {
+        "location": "Port Tressler",
+        "price": 340
+      },
+      {
+        "location": "Area18",
+        "price": 333
+      }
+    ]
+  },
+  "Agricium": {
+    "best_buy": "R&R CRU-L5",
+    "best_sell": "Lorville (Teasa Spaceport)",
+    "profit_per_scu": 290,
+    "buy": [
+      {
+        "location": "R&R CRU-L5",
+        "price": 291
+      },
+      {
+        "location": "Shubin Mining Facility SCD-1",
+        "price": 295
+      },
+      {
+        "location": "R&R CRU-L4",
+        "price": 290
+      }
+    ],
+    "sell": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 581
+      },
+      {
+        "location": "Area18",
+        "price": 575
+      },
+      {
+        "location": "New Babbage",
+        "price": 570
+      }
+    ]
+  },
+  "Bexalite": {
+    "best_buy": "R&R ARC-L1",
+    "best_sell": "New Babbage",
+    "profit_per_scu": 370,
+    "buy": [
+      {
+        "location": "R&R ARC-L1",
+        "price": 591
+      },
+      {
+        "location": "Humboldt Mines",
+        "price": 599
+      },
+      {
+        "location": "R&R ARC-L4",
+        "price": 595
+      }
+    ],
+    "sell": [
+      {
+        "location": "New Babbage",
+        "price": 961
+      },
+      {
+        "location": "Levski",
+        "price": 950
+      },
+      {
+        "location": "Port Tressler",
+        "price": 940
+      }
+    ]
+  },
+  "Taranite": {
+    "best_buy": "R&R HUR-L3",
+    "best_sell": "Area18",
+    "profit_per_scu": 330,
+    "buy": [
+      {
+        "location": "R&R HUR-L3",
+        "price": 355
+      },
+      {
+        "location": "Shubin Mining Facility SMCa-6",
+        "price": 360
+      },
+      {
+        "location": "Kudre Ore",
+        "price": 358
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 685
+      },
+      {
+        "location": "New Babbage",
+        "price": 680
+      },
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 676
+      }
+    ]
+  },
+  "Gold": {
+    "best_buy": "Lorville (Teasa Spaceport)",
+    "best_sell": "Area18",
+    "profit_per_scu": 112,
+    "buy": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 168
+      },
+      {
+        "location": "R&R HUR-L4",
+        "price": 170
+      },
+      {
+        "location": "Shubin Mining Facility SMCa-6",
+        "price": 172
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 280
+      },
+      {
+        "location": "Port Tressler",
+        "price": 276
+      },
+      {
+        "location": "New Babbage",
+        "price": 274
+      }
+    ]
+  },
+  "Titanium": {
+    "best_buy": "Lorville (Teasa Spaceport)",
+    "best_sell": "Area18",
+    "profit_per_scu": 29,
+    "buy": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 24
+      },
+      {
+        "location": "Orison",
+        "price": 25
+      },
+      {
+        "location": "R&R CRU-L3",
+        "price": 24
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 53
+      },
+      {
+        "location": "Port Tressler",
+        "price": 51
+      },
+      {
+        "location": "New Babbage",
+        "price": 52
+      }
+    ]
+  },
+  "Aluminum": {
+    "best_buy": "Lorville (Teasa Spaceport)",
+    "best_sell": "Area18",
+    "profit_per_scu": 5,
+    "buy": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 5
+      },
+      {
+        "location": "Orison",
+        "price": 5
+      },
+      {
+        "location": "R&R CRU-L1",
+        "price": 5
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 10
+      },
+      {
+        "location": "Port Tressler",
+        "price": 10
+      },
+      {
+        "location": "New Babbage",
+        "price": 9
+      }
+    ]
+  },
+  "Copper": {
+    "best_buy": "Lorville (Teasa Spaceport)",
+    "best_sell": "Area18",
+    "profit_per_scu": 29,
+    "buy": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 43
+      },
+      {
+        "location": "R&R HUR-L2",
+        "price": 44
+      },
+      {
+        "location": "R&R CRU-L4",
+        "price": 43
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 72
+      },
+      {
+        "location": "Port Tressler",
+        "price": 70
+      },
+      {
+        "location": "Levski",
+        "price": 71
+      }
+    ]
+  },
+  "Diamond": {
+    "best_buy": "R&R ARC-L2",
+    "best_sell": "New Babbage",
+    "profit_per_scu": 440,
+    "buy": [
+      {
+        "location": "R&R ARC-L2",
+        "price": 980
+      },
+      {
+        "location": "Humboldt Mines",
+        "price": 990
+      },
+      {
+        "location": "Shubin Mining Facility SCD-1",
+        "price": 995
+      }
+    ],
+    "sell": [
+      {
+        "location": "New Babbage",
+        "price": 1420
+      },
+      {
+        "location": "Port Tressler",
+        "price": 1410
+      },
+      {
+        "location": "Area18",
+        "price": 1400
+      }
+    ]
+  },
+  "Corundum": {
+    "best_buy": "R&R CRU-L5",
+    "best_sell": "Lorville (Teasa Spaceport)",
+    "profit_per_scu": 22,
+    "buy": [
+      {
+        "location": "R&R CRU-L5",
+        "price": 65
+      },
+      {
+        "location": "R&R CRU-L3",
+        "price": 66
+      },
+      {
+        "location": "Orison",
+        "price": 67
+      }
+    ],
+    "sell": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 87
+      },
+      {
+        "location": "Area18",
+        "price": 86
+      },
+      {
+        "location": "New Babbage",
+        "price": 85
+      }
+    ]
+  },
+  "Tungsten": {
+    "best_buy": "R&R HUR-L2",
+    "best_sell": "Port Tressler",
+    "profit_per_scu": 33,
+    "buy": [
+      {
+        "location": "R&R HUR-L2",
+        "price": 96
+      },
+      {
+        "location": "Harmon Watley",
+        "price": 98
+      },
+      {
+        "location": "Shubin Mining Facility SMCa-8",
+        "price": 97
+      }
+    ],
+    "sell": [
+      {
+        "location": "Port Tressler",
+        "price": 129
+      },
+      {
+        "location": "New Babbage",
+        "price": 127
+      },
+      {
+        "location": "Area18",
+        "price": 128
+      }
+    ]
+  },
+  "Medical Supplies": {
+    "best_buy": "New Babbage",
+    "best_sell": "Levski",
+    "profit_per_scu": 3,
+    "buy": [
+      {
+        "location": "New Babbage",
+        "price": 12.5
+      },
+      {
+        "location": "Port Tressler",
+        "price": 13
+      },
+      {
+        "location": "Orison",
+        "price": 13
+      }
+    ],
+    "sell": [
+      {
+        "location": "Levski",
+        "price": 15.5
+      },
+      {
+        "location": "Grim HEX",
+        "price": 15
+      },
+      {
+        "location": "R&R CRU-L5",
+        "price": 14.8
+      }
+    ]
+  },
+  "Agricultural Supplies": {
+    "best_buy": "Lorville (Teasa Spaceport)",
+    "best_sell": "R&R ARC-L1",
+    "profit_per_scu": 1.1,
+    "buy": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 1.23
+      },
+      {
+        "location": "Orison",
+        "price": 1.25
+      },
+      {
+        "location": "Area18",
+        "price": 1.24
+      }
+    ],
+    "sell": [
+      {
+        "location": "R&R ARC-L1",
+        "price": 2.33
+      },
+      {
+        "location": "New Babbage",
+        "price": 2.30
+      },
+      {
+        "location": "Port Tressler",
+        "price": 2.28
+      }
+    ]
+  },
+  "Processed Food": {
+    "best_buy": "Lorville (Teasa Spaceport)",
+    "best_sell": "Levski",
+    "profit_per_scu": 0.75,
+    "buy": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 0.96
+      },
+      {
+        "location": "Area18",
+        "price": 0.97
+      },
+      {
+        "location": "Orison",
+        "price": 0.98
+      }
+    ],
+    "sell": [
+      {
+        "location": "Levski",
+        "price": 1.71
+      },
+      {
+        "location": "Grim HEX",
+        "price": 1.68
+      },
+      {
+        "location": "R&R CRU-L5",
+        "price": 1.65
+      }
+    ]
+  },
+  "Scrap": {
+    "best_buy": "Port Tressler",
+    "best_sell": "Lorville (Teasa Spaceport)",
+    "profit_per_scu": 0.92,
+    "buy": [
+      {
+        "location": "Port Tressler",
+        "price": 0.22
+      },
+      {
+        "location": "R&R HUR-L3",
+        "price": 0.22
+      },
+      {
+        "location": "Grim HEX",
+        "price": 0.23
+      }
+    ],
+    "sell": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 1.14
+      },
+      {
+        "location": "Area18",
+        "price": 1.12
+      },
+      {
+        "location": "R&R ARC-L1",
+        "price": 1.10
+      }
+    ]
+  },
+  "Hydrogen": {
+    "best_buy": "New Babbage",
+    "best_sell": "Lorville (Teasa Spaceport)",
+    "profit_per_scu": 0.12,
+    "buy": [
+      {
+        "location": "New Babbage",
+        "price": 0.33
+      },
+      {
+        "location": "Port Tressler",
+        "price": 0.34
+      },
+      {
+        "location": "Orison",
+        "price": 0.34
+      }
+    ],
+    "sell": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 0.45
+      },
+      {
+        "location": "R&R HUR-L1",
+        "price": 0.44
+      },
+      {
+        "location": "Area18",
+        "price": 0.43
+      }
+    ]
+  },
+  "Diluthermex": {
+    "best_buy": "Orison",
+    "best_sell": "Levski",
+    "profit_per_scu": 0.9,
+    "buy": [
+      {
+        "location": "Orison",
+        "price": 2.4
+      },
+      {
+        "location": "R&R CRU-L1",
+        "price": 2.45
+      },
+      {
+        "location": "R&R CRU-L5",
+        "price": 2.42
+      }
+    ],
+    "sell": [
+      {
+        "location": "Levski",
+        "price": 3.3
+      },
+      {
+        "location": "Grim HEX",
+        "price": 3.25
+      },
+      {
+        "location": "R&R HUR-L4",
+        "price": 3.20
+      }
+    ]
+  },
+  "Stims": {
+    "best_buy": "R&R HUR-L5",
+    "best_sell": "Grim HEX",
+    "profit_per_scu": 4.5,
+    "buy": [
+      {
+        "location": "R&R HUR-L5",
+        "price": 8.5
+      },
+      {
+        "location": "R&R HUR-L3",
+        "price": 8.6
+      },
+      {
+        "location": "R&R ARC-L4",
+        "price": 8.55
+      }
+    ],
+    "sell": [
+      {
+        "location": "Grim HEX",
+        "price": 13
+      },
+      {
+        "location": "Levski",
+        "price": 12.8
+      },
+      {
+        "location": "R&R CRU-L5",
+        "price": 12.5
+      }
+    ]
+  },
+  "Beryl": {
+    "best_buy": "R&R CRU-L3",
+    "best_sell": "Area18",
+    "profit_per_scu": 28,
+    "buy": [
+      {
+        "location": "R&R CRU-L3",
+        "price": 38
+      },
+      {
+        "location": "Orison",
+        "price": 39
+      },
+      {
+        "location": "R&R CRU-L5",
+        "price": 38
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 66
+      },
+      {
+        "location": "New Babbage",
+        "price": 65
+      },
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 64
+      }
+    ]
+  },
+  "Diamond": {
+    "best_buy": "R&R ARC-L2",
+    "best_sell": "New Babbage",
+    "profit_per_scu": 440,
+    "buy": [
+      {
+        "location": "R&R ARC-L2",
+        "price": 980
+      },
+      {
+        "location": "Humboldt Mines",
+        "price": 990
+      },
+      {
+        "location": "Shubin Mining Facility SCD-1",
+        "price": 995
+      }
+    ],
+    "sell": [
+      {
+        "location": "New Babbage",
+        "price": 1420
+      },
+      {
+        "location": "Port Tressler",
+        "price": 1410
+      },
+      {
+        "location": "Area18",
+        "price": 1400
+      }
+    ]
+  },
+  "Hadanite": {
+    "best_buy": "Caves (hand mined)",
+    "best_sell": "New Babbage",
+    "profit_per_scu": 1200,
+    "buy": [
+      {
+        "location": "Caves — Daymar, Calliope, Euterpe",
+        "price": 0
+      }
+    ],
+    "sell": [
+      {
+        "location": "New Babbage",
+        "price": 1750
+      },
+      {
+        "location": "Area18",
+        "price": 1700
+      },
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 1680
+      }
+    ]
+  },
+  "Aphorite": {
+    "best_buy": "Caves (hand mined)",
+    "best_sell": "Area18",
+    "profit_per_scu": 650,
+    "buy": [
+      {
+        "location": "Caves — various moons",
+        "price": 0
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 750
+      },
+      {
+        "location": "New Babbage",
+        "price": 720
+      },
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 700
+      }
+    ]
+  },
+  "Dolivine": {
+    "best_buy": "Caves (hand mined)",
+    "best_sell": "Lorville",
+    "profit_per_scu": 400,
+    "buy": [
+      {
+        "location": "Caves — various moons",
+        "price": 0
+      }
+    ],
+    "sell": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 500
+      },
+      {
+        "location": "Area18",
+        "price": 480
+      },
+      {
+        "location": "New Babbage",
+        "price": 460
+      }
+    ]
+  },
+  "RMC (Recycled Material Composite)": {
+    "best_buy": "Salvage / derelict ships",
+    "best_sell": "Lorville (Teasa Spaceport)",
+    "profit_per_scu": 0,
+    "buy": [
+      {
+        "location": "Hull scraping / salvage operations",
+        "price": 0
+      }
+    ],
+    "sell": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 28
+      },
+      {
+        "location": "Area18",
+        "price": 27
+      },
+      {
+        "location": "Port Tressler",
+        "price": 26
+      }
+    ]
+  },
+  "Consolidated Compound (CF)": {
+    "best_buy": "Salvage / derelict ships",
+    "best_sell": "New Babbage",
+    "profit_per_scu": 0,
+    "buy": [
+      {
+        "location": "Salvage operations",
+        "price": 0
+      }
+    ],
+    "sell": [
+      {
+        "location": "New Babbage",
+        "price": 22
+      },
+      {
+        "location": "Area18",
+        "price": 20
+      },
+      {
+        "location": "Orison",
+        "price": 21
+      }
+    ]
+  },
+  "WiDoW": {
+    "best_buy": "Grim HEX (black market)",
+    "best_sell": "Levski",
+    "profit_per_scu": 18,
+    "buy": [
+      {
+        "location": "Grim HEX (black market)",
+        "price": 142
+      },
+      {
+        "location": "Outlaw outposts",
+        "price": 148
+      }
+    ],
+    "sell": [
+      {
+        "location": "Levski",
+        "price": 160
+      },
+      {
+        "location": "Outlaw outposts (buyers)",
+        "price": 155
+      }
+    ]
+  },
+  "Slam": {
+    "best_buy": "Outlaw stations",
+    "best_sell": "Grim HEX",
+    "profit_per_scu": 30,
+    "buy": [
+      {
+        "location": "Grim HEX black market",
+        "price": 80
+      },
+      {
+        "location": "Nine Tails outposts",
+        "price": 85
+      }
+    ],
+    "sell": [
+      {
+        "location": "Outlaw buyers",
+        "price": 110
+      },
+      {
+        "location": "Grim HEX dealers",
+        "price": 105
+      }
+    ]
+  },
+  "Neon": {
+    "best_buy": "Port Olisar remnants / outlaw sources",
+    "best_sell": "Grim HEX",
+    "profit_per_scu": 22,
+    "buy": [
+      {
+        "location": "Outlaw outposts",
+        "price": 60
+      },
+      {
+        "location": "Grim HEX black market",
+        "price": 63
+      }
+    ],
+    "sell": [
+      {
+        "location": "Grim HEX",
+        "price": 82
+      },
+      {
+        "location": "Levski",
+        "price": 80
+      }
+    ]
+  },
+  "Quantum Fuel": {
+    "best_buy": "New Babbage fuel depot",
+    "best_sell": "N/A (used for quantum travel)",
+    "profit_per_scu": 0,
+    "buy": [
+      {
+        "location": "All major stations and cities",
+        "price": 0.36
+      }
+    ],
+    "sell": [
+      {
+        "location": "Not a commodity — ship fuel only",
+        "price": 0
+      }
+    ]
+  },
+  "Hydrogen Fuel": {
+    "best_buy": "Orison (atmospheric collection)",
+    "best_sell": "N/A (ship fuel)",
+    "profit_per_scu": 0,
+    "buy": [
+      {
+        "location": "All refuelling stations",
+        "price": 0.12
+      }
+    ],
+    "sell": [
+      {
+        "location": "Not a listed commodity",
+        "price": 0
+      }
+    ]
+  },
+  "Waste": {
+    "best_buy": "N/A (collected from dumping zones)",
+    "best_sell": "Waste processing outposts",
+    "profit_per_scu": 0.15,
+    "buy": [
+      {
+        "location": "Various dumping zones",
+        "price": 0.05
+      }
+    ],
+    "sell": [
+      {
+        "location": "Waste processing outposts",
+        "price": 0.20
+      },
+      {
+        "location": "R&R stations (limited)",
+        "price": 0.18
+      }
+    ]
+  },
+  "Medical Equipment": {
+    "best_buy": "New Babbage",
+    "best_sell": "Levski",
+    "profit_per_scu": 8,
+    "buy": [
+      {
+        "location": "New Babbage",
+        "price": 22
+      },
+      {
+        "location": "Orison",
+        "price": 23
+      },
+      {
+        "location": "Area18",
+        "price": 24
+      }
+    ],
+    "sell": [
+      {
+        "location": "Levski",
+        "price": 30
+      },
+      {
+        "location": "Grim HEX",
+        "price": 29
+      },
+      {
+        "location": "R&R CRU-L5",
+        "price": 28
+      }
+    ]
+  },
+  "Comp-MMats": {
+    "best_buy": "Area18",
+    "best_sell": "New Babbage",
+    "profit_per_scu": 15,
+    "buy": [
+      {
+        "location": "Area18",
+        "price": 55
+      },
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 57
+      },
+      {
+        "location": "R&R ARC-L1",
+        "price": 56
+      }
+    ],
+    "sell": [
+      {
+        "location": "New Babbage",
+        "price": 70
+      },
+      {
+        "location": "Port Tressler",
+        "price": 68
+      },
+      {
+        "location": "Baijini Point",
+        "price": 67
+      }
+    ]
+  },
+  "SuperSteel": {
+    "best_buy": "Lorville (Teasa Spaceport)",
+    "best_sell": "Area18",
+    "profit_per_scu": 95,
+    "buy": [
+      {
+        "location": "Lorville (Teasa Spaceport)",
+        "price": 220
+      },
+      {
+        "location": "Everus Harbor",
+        "price": 225
+      },
+      {
+        "location": "R&R HUR-L1",
+        "price": 222
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 315
+      },
+      {
+        "location": "New Babbage",
+        "price": 310
+      },
+      {
+        "location": "Port Tressler",
+        "price": 308
+      }
+    ]
+  },
+  "Fluorine": {
+    "best_buy": "Orison",
+    "best_sell": "Area18",
+    "profit_per_scu": 12,
+    "buy": [
+      {
+        "location": "Orison",
+        "price": 35
+      },
+      {
+        "location": "R&R CRU-L1",
+        "price": 36
+      },
+      {
+        "location": "R&R CRU-L3",
+        "price": 36
+      }
+    ],
+    "sell": [
+      {
+        "location": "Area18",
+        "price": 47
+      },
+      {
+        "location": "New Babbage",
+        "price": 46
+      },
+      {
+        "location": "Port Tressler",
+        "price": 45
+      }
+    ]
+  },
+  "Stims (Refined)": {
+    "best_buy": "R&R HUR-L5",
+    "best_sell": "Grim HEX",
+    "profit_per_scu": 4.5,
+    "buy": [
+      {
+        "location": "R&R HUR-L5",
+        "price": 8.5
+      },
+      {
+        "location": "R&R HUR-L3",
+        "price": 8.6
+      },
+      {
+        "location": "R&R ARC-L4",
+        "price": 8.55
+      }
+    ],
+    "sell": [
+      {
+        "location": "Grim HEX",
+        "price": 13
+      },
+      {
+        "location": "Levski",
+        "price": 12.8
+      },
+      {
+        "location": "R&R CRU-L5",
+        "price": 12.5
+      }
+    ]
+  }
+}

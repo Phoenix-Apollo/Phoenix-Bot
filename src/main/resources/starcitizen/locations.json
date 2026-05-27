@@ -1,1 +1,399 @@
-{}
+{
+  "Lorville": {
+    "system": "Stanton",
+    "body": "Hurston (planet)",
+    "type": "City / Spaceport",
+    "description": "Company city owned and operated by Hurston Dynamics. Teasa Spaceport is the main landing zone. Dark, industrial atmosphere.",
+    "services": "Trade, medical, ship repair, outfitting, armistice zone",
+    "key_shops": "Tammany and Sons (armour), Garrity Defense (weapons), J&J Electronics (components), TDD terminal",
+    "trade_speciality": "Buying: refined metals, electronics. Selling: agricultural goods, processed food",
+    "coordinates": "Hurston, approximately 326 km from planet core"
+  },
+  "Area18": {
+    "system": "Stanton",
+    "body": "ArcCorp (planet)",
+    "type": "City / Spaceport",
+    "description": "ArcCorp's corporate city planet. Area18 is the primary landing zone — an industrial megacity covering the entire planet surface.",
+    "services": "Trade, medical, ship repair, full outfitting",
+    "key_shops": "Casaba Outlet (armour/clothing), Voyager Direct (general), Cubby Blast (weapons), TDD terminal",
+    "trade_speciality": "Industrial goods, electronics, titanium",
+    "coordinates": "ArcCorp surface, eastern continent"
+  },
+  "New Babbage": {
+    "system": "Stanton",
+    "body": "microTech (planet)",
+    "type": "City / Spaceport",
+    "description": "Corporate city on the frozen planet microTech. The Aspire Grand and Commons house most shopping and services.",
+    "services": "Trade, medical, ship repair, full outfitting, weapon modification",
+    "key_shops": "Centermass (weapons), Omega Pro (components), TDD terminal, armour shops",
+    "trade_speciality": "Electronics, medical supplies, processed food. Sells: refined ores",
+    "coordinates": "microTech surface, Novikov crater"
+  },
+  "Orison": {
+    "system": "Stanton",
+    "body": "Crusader (gas giant)",
+    "type": "Floating City / Spaceport",
+    "description": "Crusader Industries' floating city above the gas giant Crusader. Unique cloud-top environment with multiple platforms.",
+    "services": "Trade, medical, ship repair, full outfitting",
+    "key_shops": "Voyager Direct, TDD terminal, Crusader Industries store",
+    "trade_speciality": "Agricultural goods, diluthermex. Hydrogen nearby in atmosphere",
+    "coordinates": "Crusader gas giant, upper atmosphere"
+  },
+  "Grim HEX": {
+    "system": "Stanton",
+    "body": "Yela (moon of Crusader)",
+    "type": "Outlaw Station",
+    "description": "Former mining station turned outlaw hub orbiting Yela. No UEE security presence. Black market and criminal services available.",
+    "services": "Basic trade, medical, ship repair, black market, criminal missions",
+    "key_shops": "Conscientious Objects (armour/gear), Skutters (ship parts), black market dealer",
+    "trade_speciality": "Stims sell well. Illegal goods available. No crime stat enforcement.",
+    "coordinates": "Yela orbit, Stanton system"
+  },
+  "Port Tressler": {
+    "system": "Stanton",
+    "body": "microTech orbit (Lagrange L1)",
+    "type": "Space Station (Rest Stop)",
+    "description": "Orbital rest stop at microTech's L1 Lagrange point. Full trade and repair services.",
+    "services": "Trade, medical, ship repair, refuelling",
+    "key_shops": "TDD terminal, ship components vendor, armistice zone",
+    "trade_speciality": "Buy: processed food, medical supplies. Sell: refined ores and metals",
+    "coordinates": "microTech L1 Lagrange, Stanton"
+  },
+  "Baijini Point": {
+    "system": "Stanton",
+    "body": "ArcCorp orbit (Lagrange L1)",
+    "type": "Space Station (Rest Stop)",
+    "description": "ArcCorp L1 orbital rest stop. Heavy trade traffic due to ArcCorp's industrial output.",
+    "services": "Trade, medical, ship repair, refuelling",
+    "key_shops": "TDD terminal, components, armistice zone",
+    "trade_speciality": "Industrial supplies and electronics readily available here",
+    "coordinates": "ArcCorp L1 Lagrange, Stanton"
+  },
+  "Everus Harbor": {
+    "system": "Stanton",
+    "body": "Hurston orbit (Lagrange L1)",
+    "type": "Space Station (Rest Stop)",
+    "description": "Hurston L1 orbital platform. Major hub for mining and industrial goods distribution.",
+    "services": "Trade, medical, ship repair, refuelling",
+    "key_shops": "TDD terminal, ship components, armistice zone",
+    "trade_speciality": "Buy: medical supplies, agricultural goods. Sell: Hurston-produced metals",
+    "coordinates": "Hurston L1 Lagrange, Stanton"
+  },
+  "Levski": {
+    "system": "Nyx",
+    "body": "Delamar (asteroid)",
+    "type": "Outpost / Station",
+    "description": "Anti-UEE political settlement carved into the asteroid Delamar. Premium sell prices for most commodities.",
+    "services": "Trade, medical, ship repair, outfitting",
+    "key_shops": "Conscientious Objects (armour), various vendors",
+    "trade_speciality": "High-demand sell point for refined ore and salvage materials in Nyx routes",
+    "coordinates": "Delamar, Nyx system"
+  },
+  "R&R HUR-L1": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange L1",
+    "type": "Rest Stop",
+    "description": "Hurston L1 rest stop. Basic services, trade, and refuelling.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Good buy/sell location for metals and industrial goods",
+    "coordinates": "Hurston L1, Stanton"
+  },
+  "R&R HUR-L2": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange L2",
+    "type": "Rest Stop",
+    "description": "Hurston L2 rest stop. Trade and refuelling services.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Copper and Tungsten available nearby",
+    "coordinates": "Hurston L2, Stanton"
+  },
+  "R&R HUR-L3": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange L3",
+    "type": "Rest Stop",
+    "description": "Hurston L3 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Taranite mining proximity",
+    "coordinates": "Hurston L3, Stanton"
+  },
+  "R&R HUR-L4": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange L4",
+    "type": "Rest Stop",
+    "description": "Hurston L4 rest stop. One of the best buy locations for Quantanium.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Best buy for Quantanium. Also: Laranite buy point",
+    "coordinates": "Hurston L4, Stanton"
+  },
+  "R&R HUR-L5": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange L5",
+    "type": "Rest Stop",
+    "description": "Hurston L5 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Stims buy location",
+    "coordinates": "Hurston L5, Stanton"
+  },
+  "R&R CRU-L1": {
+    "system": "Stanton",
+    "body": "Crusader Lagrange L1",
+    "type": "Rest Stop",
+    "description": "Crusader L1 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Diluthermex and agricultural goods nearby",
+    "coordinates": "Crusader L1, Stanton"
+  },
+  "R&R CRU-L3": {
+    "system": "Stanton",
+    "body": "Crusader Lagrange L3",
+    "type": "Rest Stop",
+    "description": "Crusader L3 rest stop. Beryl mining proximity.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Beryl buy location",
+    "coordinates": "Crusader L3, Stanton"
+  },
+  "R&R CRU-L4": {
+    "system": "Stanton",
+    "body": "Crusader Lagrange L4",
+    "type": "Rest Stop",
+    "description": "Crusader L4 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Agricium buy location",
+    "coordinates": "Crusader L4, Stanton"
+  },
+  "R&R CRU-L5": {
+    "system": "Stanton",
+    "body": "Crusader Lagrange L5",
+    "type": "Rest Stop",
+    "description": "Crusader L5 rest stop. Good all-rounder for buying mining ores.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Agricium and Corundum buy. Medical supplies sell well",
+    "coordinates": "Crusader L5, Stanton"
+  },
+  "R&R ARC-L1": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange L1",
+    "type": "Rest Stop",
+    "description": "ArcCorp L1 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Best sell for Agricultural Supplies. Bexalite buy location",
+    "coordinates": "ArcCorp L1, Stanton"
+  },
+  "R&R ARC-L2": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange L2",
+    "type": "Rest Stop",
+    "description": "ArcCorp L2 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Diamond buy location",
+    "coordinates": "ArcCorp L2, Stanton"
+  },
+  "R&R ARC-L4": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange L4",
+    "type": "Rest Stop",
+    "description": "ArcCorp L4 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Bexalite and Stims available",
+    "coordinates": "ArcCorp L4, Stanton"
+  },
+  "R&R MIC-L1": {
+    "system": "Stanton",
+    "body": "microTech Lagrange L1",
+    "type": "Rest Stop",
+    "description": "microTech L1 rest stop.",
+    "services": "Trade, refuelling, basic repair",
+    "trade_speciality": "Electronics and components sell well nearby",
+    "coordinates": "microTech L1, Stanton"
+  },
+  "Daymar": {
+    "system": "Stanton",
+    "body": "Moon of Crusader",
+    "type": "Moon / Surface Outposts",
+    "description": "Barren moon orbiting Crusader. Sandy surface, cave systems rich in hand-mining minerals. Notable outposts: Kudre Ore, Shubin Mining SMCa-6/8.",
+    "services": "Mining outpost trade, basic repair at some outposts",
+    "trade_speciality": "Quantanium and Taranite mining. Caves: Hadanite, Aphorite (hand mining)",
+    "coordinates": "Crusader system, Stanton"
+  },
+  "Cellin": {
+    "system": "Stanton",
+    "body": "Moon of Crusader",
+    "type": "Moon / Surface Outposts",
+    "description": "Rocky volcanic moon of Crusader. Small outposts. Mining and patrol contracts common.",
+    "services": "Mining outpost trade",
+    "trade_speciality": "Rock surface mining. Instability research outposts",
+    "coordinates": "Crusader system, Stanton"
+  },
+  "Yela": {
+    "system": "Stanton",
+    "body": "Moon of Crusader",
+    "type": "Moon / Asteroid Ring",
+    "description": "Icy moon with an asteroid ring — the Yela Belt. Rich in Quantanium and Bexalite. Home to Grim HEX.",
+    "services": "Mining, Grim HEX (outlaw services)",
+    "trade_speciality": "Yela Belt: best ship mining zone for Quantanium, Taranite, and Bexalite",
+    "coordinates": "Crusader system, Stanton"
+  },
+  "Aberdeen": {
+    "system": "Stanton",
+    "body": "Moon of Hurston",
+    "type": "Moon / Surface Outposts",
+    "description": "Dry, desolate moon of Hurston. Shubin mining facilities operate here. Criminal activity.",
+    "services": "Mining outpost trade",
+    "trade_speciality": "Gold and Titanium. Shubin Mining Facility SMCa-8",
+    "coordinates": "Hurston system, Stanton"
+  },
+  "Arial": {
+    "system": "Stanton",
+    "body": "Moon of Hurston",
+    "type": "Moon / Surface Outposts",
+    "description": "Temperate moon of Hurston with green-blue skies. Some mining facilities.",
+    "services": "Limited surface outpost services",
+    "trade_speciality": "Mixed ore deposits",
+    "coordinates": "Hurston system, Stanton"
+  },
+  "Lyria": {
+    "system": "Stanton",
+    "body": "Moon of ArcCorp",
+    "type": "Moon / Surface Outposts",
+    "description": "Rocky moon of ArcCorp. Humboldt Mines and other facilities operate here. Bexalite and Diamond deposits.",
+    "services": "Mining outpost trade",
+    "trade_speciality": "Bexalite and Diamond. Humboldt Mines buy location",
+    "coordinates": "ArcCorp system, Stanton"
+  },
+  "Wala": {
+    "system": "Stanton",
+    "body": "Moon of ArcCorp",
+    "type": "Moon / Surface Outposts",
+    "description": "Small moon of ArcCorp. Limited outposts. Mostly rock and dust.",
+    "services": "Limited outpost services",
+    "trade_speciality": "Low-value ores",
+    "coordinates": "ArcCorp system, Stanton"
+  },
+  "Calliope": {
+    "system": "Stanton",
+    "body": "Moon of microTech",
+    "type": "Moon / Surface Outposts",
+    "description": "Icy blue moon of microTech. Deep cave systems with hand-mining opportunities.",
+    "services": "Limited outpost services, cave hand mining",
+    "trade_speciality": "Hadanite, Aphorite in caves",
+    "coordinates": "microTech system, Stanton"
+  },
+  "Euterpe": {
+    "system": "Stanton",
+    "body": "Moon of microTech",
+    "type": "Moon / Surface Outposts",
+    "description": "Smallest microTech moon. Cave systems with Aphorite and Hadanite deposits.",
+    "services": "Limited outpost services",
+    "trade_speciality": "Hand mining — Aphorite, cave minerals",
+    "coordinates": "microTech system, Stanton"
+  },
+  "Benson Mining Outpost": {
+    "system": "Stanton",
+    "body": "Daymar",
+    "type": "Surface Outpost",
+    "description": "Small mining outpost on Daymar. Limited trade but a buy point for Quantanium.",
+    "services": "Trade (limited), refuelling",
+    "trade_speciality": "Quantanium buy location",
+    "coordinates": "Daymar surface, Stanton"
+  },
+  "Shubin Mining Facility SCD-1": {
+    "system": "Stanton",
+    "body": "Daymar / Cellin",
+    "type": "Surface Outpost (Mining)",
+    "description": "Shubin Mining industrial facility. Trades in locally mined ores.",
+    "services": "Trade (ores)",
+    "trade_speciality": "Agricium and Diamond buy location",
+    "coordinates": "Daymar / Cellin, Stanton"
+  },
+  "Humboldt Mines": {
+    "system": "Stanton",
+    "body": "Lyria (ArcCorp moon)",
+    "type": "Surface Outpost (Mining)",
+    "description": "Major Bexalite and Diamond mining operation on Lyria.",
+    "services": "Trade (ores)",
+    "trade_speciality": "Bexalite and Diamond buy locations",
+    "coordinates": "Lyria, Stanton"
+  },
+  "Ruin Station": {
+    "system": "Pyro",
+    "body": "Pyro V orbital",
+    "type": "Outlaw Station",
+    "description": "Primary Pyro system hub station. Outlaw haven with full services but no UEE presence. The meeting point of Pyro factions.",
+    "services": "Trade, repair, refuelling, medical, outfitting, black market",
+    "key_shops": "Various Pyro vendors, faction mission terminals",
+    "trade_speciality": "Pyro system ores, faction gear, illegal goods",
+    "coordinates": "Pyro V orbit, Pyro system"
+  },
+  "Bloom": {
+    "system": "Pyro",
+    "body": "Pyro V surface",
+    "type": "Trading Post / Outpost",
+    "description": "Surface trading settlement on Pyro V. Unique market with Pyro-exclusive goods.",
+    "services": "Trade, limited repair, faction contacts",
+    "trade_speciality": "Pyro RGD armour, Pyro-specific weapons and components",
+    "coordinates": "Pyro V surface, Pyro system"
+  },
+  "Checkmate Station": {
+    "system": "Pyro",
+    "body": "Pyro II orbital",
+    "type": "Contested Station",
+    "description": "Contested orbital platform near Pyro II. Faction control fluctuates. High combat risk.",
+    "services": "Basic trade and repair (when controlled)",
+    "trade_speciality": "Faction-dependent. Combat contracts available",
+    "coordinates": "Pyro II orbit, Pyro system"
+  },
+  "Orinth": {
+    "system": "Pyro",
+    "body": "Pyro VI",
+    "type": "Rest Stop / Habitat",
+    "description": "A small habitat and rest stop near the edges of the Pyro system. Minimal services.",
+    "services": "Basic refuelling, limited medical",
+    "trade_speciality": "Emergency resupply for Pyro deep-space operations",
+    "coordinates": "Pyro VI, Pyro system"
+  },
+  "Pyro 4": {
+    "system": "Pyro",
+    "body": "Pyro IV",
+    "type": "Planet / Surface Mining",
+    "description": "Volatile Pyro world with dangerous weather and strong ore yields. Often treated as a top Pyro mining hotspot.",
+    "services": "Limited outposts, contested refuel points",
+    "trade_speciality": "High-risk mining routes with strong upside for organized crews",
+    "coordinates": "Pyro IV, Pyro system"
+  },
+  "Nyx Transit Hub": {
+    "system": "Nyx",
+    "body": "Nyx jump corridor",
+    "type": "Space Station / Transit",
+    "description": "Key transit and staging node for Nyx-side operations and route chaining.",
+    "services": "Trade, refuel, basic repair",
+    "trade_speciality": "Staging point for Delamar and Nyx outer-route logistics",
+    "coordinates": "Nyx corridor, Nyx system"
+  },
+  "Nyx Outer Belt": {
+    "system": "Nyx",
+    "body": "Nyx asteroid region",
+    "type": "Asteroid Field",
+    "description": "Sparse but valuable asteroid lanes used for mining and salvage expedition runs.",
+    "services": "None (open space)",
+    "trade_speciality": "Expedition mining and salvage opportunities with lower traffic",
+    "coordinates": "Outer Nyx belt"
+  },
+  "Aaron Halo (Stanton)": {
+    "system": "Stanton",
+    "body": "Interplanetary asteroid field",
+    "type": "Asteroid Field",
+    "description": "A dense asteroid ring between Hurston and ArcCorp. Rich in valuable ores. High pirate activity.",
+    "services": "None (open space)",
+    "trade_speciality": "Excellent ship mining: Quantanium, Taranite, Bexalite, Diamond. Extreme piracy risk.",
+    "coordinates": "Stanton inner belt between HUR and ARC"
+  },
+  "Kudre Ore": {
+    "system": "Stanton",
+    "body": "Daymar",
+    "type": "Surface Outpost (Mining)",
+    "description": "Mining outpost on Daymar operated by Shubin. Quantanium buy location.",
+    "services": "Trade (ores)",
+    "trade_speciality": "Quantanium buy",
+    "coordinates": "Daymar surface, Stanton"
+  }
+}

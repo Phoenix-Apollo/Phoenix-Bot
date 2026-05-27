@@ -39,3 +39,15 @@ build/
 
 # env file
 .env
+
+# Runtime / user data — never commit these
+data/starcitizen.db
+data/user_memory.json
+data/user_phrase_profiles.json
+data/conversation_sessions.json
+data/learned_phrases.json
+data/missing_reports.json
+data/panel_state.json
+data/manual_update_queue.json
+data/manual_update_queue.md
+data/source_overrides.json

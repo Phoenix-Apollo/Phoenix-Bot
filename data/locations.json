@@ -1,0 +1,362 @@
+{
+  "ARC-L1 Wide Forest Station": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange Point 1",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "ARC-L2 Lively Pathway Station": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange Point 2",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "ARC-L3 Modern Express Station": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "ARC-L4 Faint Glen Station": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "ARC-L5 Yellow Core Station": {
+    "system": "Stanton",
+    "body": "ArcCorp Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Baijini Point": {
+    "system": "Stanton",
+    "body": "ArcCorp",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "CRU-L1 Ambitious Dream Station": {
+    "system": "Stanton",
+    "body": "Crusader Lagrange Point 1",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "CRU-L4 Shallow Fields Station": {
+    "system": "Stanton",
+    "body": "Crusader Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "CRU-L5 Beautiful Glen Station": {
+    "system": "Stanton",
+    "body": "Crusader Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Everus Harbor": {
+    "system": "Stanton",
+    "body": "Hurston",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Green Imperial Housing Exchange": {
+    "system": "Stanton",
+    "body": "Crusader",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "HUR-L1 Green Glade Station": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange Point 1",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "HUR-L2 Faithful Dream Station": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange Point 2",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "HUR-L3 Thundering Express Station": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "HUR-L4 Melodic Fields Station": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "HUR-L5 High Course Station": {
+    "system": "Stanton",
+    "body": "Hurston Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "MIC-L1 Shallow Frontier Station": {
+    "system": "Stanton",
+    "body": "microTech Lagrange Point 1",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "MIC-L2 Long Forest Station": {
+    "system": "Stanton",
+    "body": "microTech Lagrange Point 2",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "MIC-L3 Endless Odyssey Station": {
+    "system": "Stanton",
+    "body": "microTech Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "MIC-L4 Red Crossroads Station": {
+    "system": "Stanton",
+    "body": "microTech Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "MIC-L5 Modern Icarus Station": {
+    "system": "Stanton",
+    "body": "microTech Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Port Olisar": {
+    "system": "Stanton",
+    "body": "Crusader",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Port Tressler": {
+    "system": "Stanton",
+    "body": "MicroTech",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Pyro Gateway (Stanton)": {
+    "system": "Stanton",
+    "body": "Pyro Gateway (Stanton system)",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Nyx Gateway (Stanton)": {
+    "system": "Stanton",
+    "body": "Nyx Gateway (Stanton system)",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Terra Gateway (Stanton)": {
+    "system": "Stanton",
+    "body": "Terra Gateway (Stanton system)",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Seraphim Station": {
+    "system": "Stanton",
+    "body": "Crusader",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-1-2": {
+    "system": "Pyro",
+    "body": "Pyro I Lagrange Point 2",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-1-3": {
+    "system": "Pyro",
+    "body": "Pyro I Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-1-5": {
+    "system": "Pyro",
+    "body": "Pyro I Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Checkmate Station": {
+    "system": "Pyro",
+    "body": "Monox Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Orbituary": {
+    "system": "Pyro",
+    "body": "Bloom",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Starlight Service Station": {
+    "system": "Pyro",
+    "body": "Bloom Lagrange Point 1",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Patch City": {
+    "system": "Pyro",
+    "body": "Bloom Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-3-5": {
+    "system": "Pyro",
+    "body": "Bloom Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-5-1": {
+    "system": "Pyro",
+    "body": "Pyro V Lagrange Point 1",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-5-3": {
+    "system": "Pyro",
+    "body": "Pyro V Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Rod's Fuel 'N Supplies": {
+    "system": "Pyro",
+    "body": "Pyro V Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Rat's Nest": {
+    "system": "Pyro",
+    "body": "Pyro V Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-6-2": {
+    "system": "Pyro",
+    "body": "Pyro VI Lagrange Point 2",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Endgame": {
+    "system": "Pyro",
+    "body": "Pyro VI Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Dudley & Daughters": {
+    "system": "Pyro",
+    "body": "Pyro VI Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Megumi Refueling": {
+    "system": "Pyro",
+    "body": "Pyro VI Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "INS Jericho": {
+    "system": "Stanton",
+    "body": "microTech Lagrange Point 1",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Ruin Station": {
+    "system": "Pyro",
+    "body": "Terminus",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Gaslight": {
+    "system": "Pyro",
+    "body": "Pyro V Lagrange Point 2",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-FARSTAT-2-3": {
+    "system": "Pyro",
+    "body": "Monox Lagrange Point 3",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-SUPVISR-3-4": {
+    "system": "Pyro",
+    "body": "Bloom Lagrange Point 4",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "PYAM-SUPVISR-3-5": {
+    "system": "Pyro",
+    "body": "Bloom Lagrange Point 5",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Stanton Gateway (Pyro)": {
+    "system": "Pyro",
+    "body": "Stanton Gateway (Pyro system)",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Wikelo Emporium Kinga Station": {
+    "system": "Stanton",
+    "body": "Unknown",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Wikelo Emporium Dasi Station": {
+    "system": "Stanton",
+    "body": "Unknown",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Wikelo Emporium Selo Station": {
+    "system": "Stanton",
+    "body": "Unknown",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Nyx Gateway (Pyro)": {
+    "system": "Pyro",
+    "body": "Nyx Gateway (Pyro system)",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Stanton Gateway (Nyx)": {
+    "system": "Nyx",
+    "body": "Stanton Gateway (Nyx system)",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "Pyro Gateway (Nyx)": {
+    "system": "Nyx",
+    "body": "Pyro Gateway (Nyx system)",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "People's Service Station Delta": {
+    "system": "Nyx",
+    "body": "People's Service Station Delta",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "People's Service Station Alpha": {
+    "system": "Nyx",
+    "body": "People's Service Station Alpha",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "People's Service Station Theta": {
+    "system": "Nyx",
+    "body": "People's Service Station Theta",
+    "type": "station",
+    "last_update": 1777587902
+  },
+  "People's Service Station Lambda": {
+    "system": "Nyx",
+    "body": "People's Service Station Lambda",
+    "type": "station",
+    "last_update": 1777587902
+  }
+}

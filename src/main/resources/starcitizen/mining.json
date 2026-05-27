@@ -1,1 +1,247 @@
-{}
+{
+  "lasers": {
+    "Hofstede S1": {
+      "size": 1,
+      "base_power": 1500,
+      "charge_rate": 1.0,
+      "fluctuation": 0.05
+    },
+    "Hofstede S2": {
+      "size": 2,
+      "base_power": 4500,
+      "charge_rate": 1.0,
+      "fluctuation": 0.05
+    },
+    "Helix I": {
+      "size": 1,
+      "base_power": 1800,
+      "charge_rate": 0.9,
+      "fluctuation": 0.08
+    },
+    "Helix II": {
+      "size": 2,
+      "base_power": 5400,
+      "charge_rate": 0.9,
+      "fluctuation": 0.08
+    },
+    "Lancet MH1": {
+      "size": 1,
+      "base_power": 1200,
+      "charge_rate": 1.2,
+      "fluctuation": 0.03
+    },
+    "Lancet MH2": {
+      "size": 2,
+      "base_power": 3600,
+      "charge_rate": 1.2,
+      "fluctuation": 0.03
+    },
+    "Arbor MH1": {
+      "size": 1,
+      "base_power": 1600,
+      "charge_rate": 1.0,
+      "fluctuation": 0.06
+    },
+    "Arbor MH2": {
+      "size": 2,
+      "base_power": 4800,
+      "charge_rate": 1.0,
+      "fluctuation": 0.06
+    },
+    "Rigler XL": {
+      "size": 2,
+      "base_power": 6500,
+      "charge_rate": 0.85,
+      "fluctuation": 0.10
+    },
+    "Klein S": {
+      "size": 1,
+      "base_power": 900,
+      "charge_rate": 1.3,
+      "fluctuation": 0.02
+    }
+  },
+  "consumables": {
+    "Surge": {
+      "type": "active",
+      "effect": "+50% power burst"
+    },
+    "Stampede": {
+      "type": "active",
+      "effect": "+30% charge rate"
+    },
+    "Brandt": {
+      "type": "active",
+      "effect": "-20% instability"
+    },
+    "Focus I": {
+      "type": "active",
+      "effect": "+20% focus power"
+    },
+    "Focus II": {
+      "type": "active",
+      "effect": "+35% focus power"
+    },
+    "Focus III": {
+      "type": "active",
+      "effect": "+50% focus power"
+    },
+    "Torrent I": {
+      "type": "active",
+      "effect": "+10% power, +8% charge rate"
+    },
+    "Torrent II": {
+      "type": "active",
+      "effect": "+15% power, +12% charge rate"
+    },
+    "Torrent III": {
+      "type": "active",
+      "effect": "+20% power, +15% charge rate"
+    },
+    "XMT XL": {
+      "type": "active",
+      "effect": "+25% power burst, -10% instability"
+    },
+    "Lifeline": {
+      "type": "passive",
+      "effect": "extends optimal window"
+    },
+    "Optimum": {
+      "type": "passive",
+      "effect": "reduces power fluctuation"
+    },
+    "Torrent": {
+      "type": "passive",
+      "effect": "steady power output"
+    },
+    "Rime": {
+      "type": "passive",
+      "effect": "stability boost"
+    },
+    "Rime I": {
+      "type": "passive",
+      "effect": "stability boost tier 1"
+    },
+    "Rime II": {
+      "type": "passive",
+      "effect": "stability boost tier 2"
+    },
+    "Rime III": {
+      "type": "passive",
+      "effect": "stability boost tier 3"
+    },
+    "Forel": {
+      "type": "passive",
+      "effect": "-15% raw instability"
+    },
+    "Grelin": {
+      "type": "passive",
+      "effect": "+20% charge rate"
+    },
+    "Herc": {
+      "type": "passive",
+      "effect": "+12% effective power"
+    },
+    "Impulse": {
+      "type": "passive",
+      "effect": "+8% power transfer efficiency"
+    },
+    "Jütes": {
+      "type": "passive",
+      "effect": "-10% resistance multiplier"
+    },
+    "None": {
+      "type": "none",
+      "effect": "no consumable"
+    }
+  },
+  "rocks": {
+    "Quantanium": {
+      "instability": 0.85,
+      "resistance": 1.20,
+      "value": "very high"
+    },
+    "Laranite": {
+      "instability": 0.60,
+      "resistance": 1.10,
+      "value": "high"
+    },
+    "Agricium": {
+      "instability": 0.45,
+      "resistance": 1.00,
+      "value": "high"
+    },
+    "Bexalite": {
+      "instability": 0.55,
+      "resistance": 1.15,
+      "value": "high"
+    },
+    "Taranite": {
+      "instability": 0.50,
+      "resistance": 1.05,
+      "value": "medium-high"
+    },
+    "Beryl": {
+      "instability": 0.20,
+      "resistance": 0.80,
+      "value": "medium"
+    },
+    "Gold": {
+      "instability": 0.30,
+      "resistance": 0.85,
+      "value": "medium"
+    },
+    "Diamond": {
+      "instability": 0.40,
+      "resistance": 1.10,
+      "value": "high"
+    },
+    "Corundum": {
+      "instability": 0.25,
+      "resistance": 0.75,
+      "value": "low-medium"
+    },
+    "Titanium": {
+      "instability": 0.15,
+      "resistance": 0.70,
+      "value": "low"
+    },
+    "Tungsten": {
+      "instability": 0.20,
+      "resistance": 0.75,
+      "value": "low"
+    },
+    "Aluminum": {
+      "instability": 0.10,
+      "resistance": 0.60,
+      "value": "very low"
+    },
+    "Hephaestanite": {
+      "instability": 0.70,
+      "resistance": 1.15,
+      "value": "high"
+    },
+    "Inertite": {
+      "instability": 0.35,
+      "resistance": 0.90,
+      "value": "medium"
+    }
+  },
+  "ships": {
+    "Prospector": {
+      "size": "S1 laser",
+      "cargo_scu": 32,
+      "lasers": 1
+    },
+    "Mole": {
+      "size": "S2 laser",
+      "cargo_scu": 96,
+      "lasers": 3
+    },
+    "Orion": {
+      "size": "S2 laser",
+      "cargo_scu": 480,
+      "lasers": 3
+    }
+  }
+}

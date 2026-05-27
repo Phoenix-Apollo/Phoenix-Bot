@@ -1,1 +1,119 @@
-{}
+{
+  "methods": {
+    "Dinyx Solvation": {
+      "yield_bonus_pct": 18,
+      "time_per_scu_min": 11.55,
+      "cost_modifier": 1.0,
+      "description": "Standard chemical solvation. Balanced cost and yield.",
+      "good_for": [
+        "Quantainium",
+        "Bexalite",
+        "Agricium"
+      ]
+    },
+    "Electrostatic Separation": {
+      "yield_bonus_pct": 12,
+      "time_per_scu_min": 6.15,
+      "cost_modifier": 0.85,
+      "description": "Fast and cheap. Lower yield, best for quick turnaround on low-value ore.",
+      "good_for": [
+        "Copper",
+        "Titanium",
+        "Iron"
+      ]
+    },
+    "Fractal Skim": {
+      "yield_bonus_pct": 16,
+      "time_per_scu_min": 8.40,
+      "cost_modifier": 0.95,
+      "description": "Mid-tier process. Good speed/yield balance for most minerals.",
+      "good_for": [
+        "Agricium",
+        "Laranite",
+        "Gold"
+      ]
+    },
+    "Gaskin Process": {
+      "yield_bonus_pct": 20,
+      "time_per_scu_min": 14.50,
+      "cost_modifier": 1.15,
+      "description": "Higher yield at moderate cost. Well suited to mid-value ores.",
+      "good_for": [
+        "Laranite",
+        "Hephaestanite",
+        "Taranite"
+      ]
+    },
+    "Pyrometric Chromalysis": {
+      "yield_bonus_pct": 25,
+      "time_per_scu_min": 22.0,
+      "cost_modifier": 1.40,
+      "description": "High-heat smelting process. Excellent yield for rare minerals.",
+      "good_for": [
+        "Quantainium",
+        "Bexalite",
+        "Taranite"
+      ]
+    },
+    "Quantum Dissolution": {
+      "yield_bonus_pct": 30,
+      "time_per_scu_min": 32.0,
+      "cost_modifier": 1.75,
+      "description": "Top-tier yield. Expensive and slow — only worth it for high-value ore.",
+      "good_for": [
+        "Quantainium",
+        "Bexalite",
+        "Hadanite"
+      ]
+    },
+    "Thermonuclear Distillation": {
+      "yield_bonus_pct": 22,
+      "time_per_scu_min": 18.0,
+      "cost_modifier": 1.25,
+      "description": "Solid yield increase at moderate speed. Good for Laranite and Gold.",
+      "good_for": [
+        "Laranite",
+        "Gold",
+        "Agricium"
+      ]
+    }
+  },
+  "stations": {
+    "ARC-L1 Wide Forest Station": {
+      "system": "Stanton",
+      "body": "ARC-L1"
+    },
+    "CRU-L1 Ambitious Dream Station": {
+      "system": "Stanton",
+      "body": "CRU-L1"
+    },
+    "HUR-L1 Sweet Dreams Station": {
+      "system": "Stanton",
+      "body": "HUR-L1"
+    },
+    "HUR-L2 Faithful Dream Station": {
+      "system": "Stanton",
+      "body": "HUR-L2"
+    },
+    "MIC-L1 Shallow Frontier Station": {
+      "system": "Stanton",
+      "body": "MIC-L1"
+    }
+  },
+  "ore_base_values": {
+    "Quantainium": 1400,
+    "Bexalite": 1100,
+    "Hadanite": 950,
+    "Taranite": 850,
+    "Agricium": 700,
+    "Laranite": 650,
+    "Hephaestanite": 500,
+    "Gold": 350,
+    "Copper": 120,
+    "Titanium": 90,
+    "Iron": 55,
+    "Corundum": 40,
+    "Quartz": 20,
+    "Beryl": 15
+  }
+}
