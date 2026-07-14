@@ -3,6 +3,7 @@ package Botcode;
 import Botcode.Commands.CommandManager;
 import Botcode.Panel.PanelModule;
 import Botcode.StarCitizen.StarCitizenUpdateManager;
+import Botcode.Utils.DatasetCache;
 import Botcode.listeners.Eventlistener;
 import Botcode.listeners.OnJoin;
 import Botcode.listeners.TempVoiceDelete;
@@ -95,6 +96,10 @@ public class CommsBot {
     System.out.println(
         "[Startup] Shard manager created. Current shard objects: " + shardManager.getShards()
             .size());
+
+    // Initialize SQLite cache and load initial data from JSON files.
+    System.out.println("[Startup] Initializing dataset cache...");
+    DatasetCache.initializeAtStartup();
 
     // Pull fresh web snapshots on startup for supported datasets (UEX/Erkul).
     refreshStarCitizenSnapshots();
