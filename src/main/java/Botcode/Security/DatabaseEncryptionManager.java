@@ -10,6 +10,8 @@ import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Base64;
 
 /**
@@ -111,25 +113,38 @@ public class DatabaseEncryptionManager {
   }
 
   /**
-   * Gets the JDBC connection string for an encrypted SQLite database.
-   *
-   * @param dbPath Path to the SQLite database file
-   * @return JDBC URL for encrypted connection
-   */
-  public static String getEncryptedJdbcUrl(String dbPath) {
-    String encryptionKey = getOrGenerateEncryptionKey();
-    return "jdbc:sqlite:" + dbPath + "?cipher=sqlcipher&key=" + encryptionKey;
-  }
-
-  /**
    * Creates an encrypted database connection.
    *
    * @param dbPath Path to the SQLite database file
    * @return Encrypted database connection
    */
   public static Connection getEncryptedConnection(String dbPath) throws Exception {
-    String jdbcUrl = getEncryptedJdbcUrl(dbPath);
-    return DriverManager.getConnection(jdbcUrl);
+    String normalizedPath = normalizeDbPath(dbPath);
+    Connection connection = DriverManager.getConnection("jdbc:sqlite:" + normalizedPath);
+    String encryptionKey = getOrGenerateEncryptionKey();
+
+    try (Statement statement = connection.createStatement()) {
+      statement.execute("PRAGMA key = '" + escapeSqlLiteral(encryptionKey) + "'");
+    }
+
+    // Verify that SQLCipher is actually active. When not available, this pragma
+    // is empty and encryption has not been applied.
+    boolean sqlCipherActive = false;
+    try (Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery("PRAGMA cipher_version")) {
+      if (rs.next()) {
+        String cipherVersion = rs.getString(1);
+        sqlCipherActive = cipherVersion != null && !cipherVersion.isBlank();
+      }
+    }
+
+    if (!sqlCipherActive) {
+      connection.close();
+      throw new IllegalStateException(
+          "SQLCipher is not available in the current SQLite driver/runtime");
+    }
+
+    return connection;
   }
 
   /**
@@ -170,5 +185,18 @@ public class DatabaseEncryptionManager {
    */
   public static boolean isEncryptionEnabled() {
     return Boolean.parseBoolean(Env.getOrDefault("DB_ENCRYPTION_ENABLED", "true"));
+  }
+
+  private static String escapeSqlLiteral(String value) {
+    return value.replace("'", "''");
+  }
+
+  private static String normalizeDbPath(String dbPath) {
+    if (dbPath == null) {
+      return "";
+    }
+    int queryStart = dbPath.indexOf('?');
+    String clean = queryStart >= 0 ? dbPath.substring(0, queryStart) : dbPath;
+    return clean.trim();
   }
 }

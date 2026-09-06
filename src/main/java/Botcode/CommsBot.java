@@ -305,7 +305,7 @@ public class CommsBot {
         && DatabaseEncryptionManager.isEncryptionEnabled()) {
       try {
         return DatabaseEncryptionManager.getEncryptedConnection(dbPath);
-      } catch (SQLException e) {
+      } catch (Exception e) {
         System.out.println(
             "[Security] Encrypted DB connection unavailable; falling back to standard SQLite: "
                 + e.getMessage());
