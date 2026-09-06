@@ -271,6 +271,7 @@ public class PanelEmbeds {
     // Profile column
     StringBuilder profile = new StringBuilder();
     appendField(profile, "Class", armor.path("class").asText(""));
+    appendField(profile, "Category", armor.path("category").asText(""));
     appendField(profile, "Manufacturer", armor.path("manufacturer").asText(""));
     appendField(profile, "Weight Class", armor.path("weight_class").asText(""));
     appendField(profile, "Pieces", armor.path("pieces").asText(""));
@@ -298,7 +299,7 @@ public class PanelEmbeds {
     eb.addField("Resistance", resistance, true);
 
     // Buy locations & notes
-    String buyLocations = armor.path("buy_locations").asText("").trim();
+    String buyLocations = stringifyLocations(armor.path("buy_locations"));
     if (!buyLocations.isEmpty()) {
       eb.addField("Buy Locations", buyLocations, false);
     }
@@ -315,6 +316,23 @@ public class PanelEmbeds {
     if (value != null && !value.isBlank()) {
       sb.append("**").append(label).append(":** ").append(value).append("\n");
     }
+  }
+
+  private static String stringifyLocations(JsonNode locations) {
+    if (locations == null || locations.isMissingNode() || locations.isNull()) {
+      return "";
+    }
+    if (locations.isArray()) {
+      java.util.List<String> rows = new java.util.ArrayList<>();
+      for (JsonNode node : locations) {
+        String text = node.asText("").trim();
+        if (!text.isBlank() && !rows.contains(text)) {
+          rows.add(text);
+        }
+      }
+      return String.join(", ", rows);
+    }
+    return locations.asText("").trim();
   }
 
   public static MessageEmbed locationResult(String name, String details) {

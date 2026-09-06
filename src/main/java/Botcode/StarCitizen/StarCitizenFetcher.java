@@ -150,6 +150,30 @@ public class StarCitizenFetcher {
     return mergeByName(base, enrich, "name");
   }
 
+  /**
+   * Fetches FPS armor items and filters to armor slots (undersuits, arms, legs, chests, helmets,
+   * backpacks).
+   */
+  public static JsonNode fetchArmor() {
+    JsonNode base = fetchLocalDataset("SC_ARMOR_FILE", "armor", "armor");
+    if (base == null) {
+      int[] categoryIds = {6, 7, 8, 9, 10, 11};
+      base = fetchItemsByCategoryIds("SC_ARMOR_CATEGORY_IDS", categoryIds, "armor");
+      base =
+          enrichItemsWithPricesByCategories(
+              base, parseCategoryIdsFromEnv("SC_ARMOR_CATEGORY_IDS", categoryIds), "armor");
+    }
+
+    if (base == null || (unwrapDataArray(base) != null && unwrapDataArray(base).isEmpty())) {
+      JsonNode fallback = fetchFromOptionalEnv("SC_ARMOR_URL", "armor");
+      if (fallback != null) {
+        base = fallback;
+      }
+    }
+
+    return filterArmorRows(base);
+  }
+
   // Industry fetchers (env-overridable)
 
   /**
@@ -714,6 +738,67 @@ public class StarCitizenFetcher {
             + pricesByItem.size()
             + " item keys");
     return enriched;
+  }
+
+  private static JsonNode filterArmorRows(JsonNode raw) {
+    JsonNode rows = unwrapDataArray(raw);
+    if (rows == null || !rows.isArray()) {
+      return raw;
+    }
+    ArrayNode filtered = mapper.createArrayNode();
+    for (JsonNode row : rows) {
+      if (looksLikeArmorRow(row)) {
+        filtered.add(row);
+      }
+    }
+    System.out.println("[Fetcher] armor filtered rows: " + filtered.size() + "/" + rows.size());
+    return filtered;
+  }
+
+  private static boolean looksLikeArmorRow(JsonNode row) {
+    if (row == null || !row.isObject()) {
+      return false;
+    }
+    String hay =
+        (
+                row.path("name").asText("")
+                    + " "
+                    + row.path("item_name").asText("")
+                    + " "
+                    + row.path("type").asText("")
+                    + " "
+                    + row.path("category").asText("")
+                    + " "
+                    + row.path("section").asText("")
+                    + " "
+                    + row.path("item_type").asText("")
+                    + " "
+                    + row.path("sub_type").asText("")
+                    + " "
+                    + row.path("subtype").asText(""))
+            .toLowerCase(Locale.ROOT);
+
+    if (hay.contains("weapon")
+        || hay.contains("gun")
+        || hay.contains("missile")
+        || hay.contains("torpedo")
+        || hay.contains("cooler")
+        || hay.contains("power plant")
+        || hay.contains("quantum")
+        || hay.contains("engine")) {
+      return false;
+    }
+
+    return hay.contains("armor")
+        || hay.contains("armour")
+        || hay.contains("undersuit")
+        || hay.contains("helmet")
+        || hay.contains("backpack")
+        || hay.contains("chest")
+        || hay.contains("torso")
+        || hay.contains("core")
+        || hay.contains("arm")
+        || hay.contains("leg");
   }
 
   private static void applyPriceEnrichment(ObjectNode out, List<JsonNode> prices) {

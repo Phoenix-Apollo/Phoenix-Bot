@@ -1092,6 +1092,120 @@ public class StarCitizenNormalizer {
     return root;
   }
 
+  /**
+   * Normalizes armor payloads into name-keyed entries and assigns armor categories (undersuits,
+   * arms, legs, chests, helmets, backpacks).
+   */
+  public static JsonNode normalizeArmor(JsonNode raw) {
+    ObjectNode root = mapper.createObjectNode();
+    JsonNode rows = unwrapDataArray(raw);
+    if (rows == null || !rows.isArray()) {
+      return root;
+    }
+
+    for (JsonNode item : rows) {
+      String name = firstNonBlank(item, "name", "item_name", "name_full", "title");
+      if (name.isBlank()) {
+        continue;
+      }
+
+      String typeHaystack =
+          (firstNonBlank(item, "type", "category", "section", "item_type", "sub_type", "subtype")
+                  + " "
+                  + name)
+              .toLowerCase();
+      String pieces =
+          firstNonBlank(item, "pieces", "slot", "slots", "body_part", "body_parts", "part");
+
+      ObjectNode entry = mapper.createObjectNode();
+      entry.put("class", firstNonBlank(item, "class", "item_class", "tier", "grade"));
+      entry.put("manufacturer", firstNonBlank(item, "manufacturer", "company_name"));
+      entry.put("description", firstNonBlank(item, "description", "short_description"));
+      entry.put("pieces", pieces);
+      entry.put("weight_class", firstNonBlank(item, "weight_class", "weight", "mass_class"));
+      entry.put(
+          "ballistic_resist_pct",
+          (int)
+              Math.round(
+                  firstPositiveDouble(
+                      item, "ballistic_resist_pct", "ballistic_resistance", "resistance_ballistic")));
+      entry.put(
+          "energy_resist_pct",
+          (int)
+              Math.round(
+                  firstPositiveDouble(
+                      item, "energy_resist_pct", "energy_resistance", "resistance_energy")));
+      entry.put(
+          "distortion_resist_pct",
+          (int)
+              Math.round(
+                  firstPositiveDouble(
+                      item,
+                      "distortion_resist_pct",
+                      "distortion_resistance",
+                      "resistance_distortion")));
+      entry.put("temp_resist", firstNonBlank(item, "temp_resist", "temperature_resistance"));
+      entry.set(
+          "buy_locations",
+          collectTextArray(item, "buy_locations", "locations", "available_at", "sold_at"));
+      entry.set("sell_locations", collectTextArray(item, "sell_locations", "sell_at", "sold_at"));
+      entry.put("notes", firstNonBlank(item, "notes"));
+
+      String category = deriveArmorPrimaryCategory(typeHaystack, pieces);
+      entry.put("category", category);
+      entry.set("categories", deriveArmorCategories(typeHaystack, pieces));
+      entry.put("last_update", System.currentTimeMillis() / 1000);
+
+      root.set(name, entry);
+    }
+
+    return root;
+  }
+
+  private static String deriveArmorPrimaryCategory(String haystack, String pieces) {
+    ArrayNode categories = deriveArmorCategories(haystack, pieces);
+    if (categories.isArray() && categories.size() > 0) {
+      return categories.get(0).asText("armor");
+    }
+    return "armor";
+  }
+
+  private static ArrayNode deriveArmorCategories(String haystack, String pieces) {
+    String text = ((haystack == null ? "" : haystack) + " " + (pieces == null ? "" : pieces)).toLowerCase();
+    ArrayNode out = mapper.createArrayNode();
+    addArmorCategoryIfMatch(out, text, "undersuits", "undersuit", "under suit");
+    addArmorCategoryIfMatch(out, text, "helmets", "helmet", "head");
+    addArmorCategoryIfMatch(out, text, "chests", "chest", "torso", "core");
+    addArmorCategoryIfMatch(out, text, "arms", "arm", "glove", "shoulder");
+    addArmorCategoryIfMatch(out, text, "legs", "leg", "thigh", "shin", "boot");
+    addArmorCategoryIfMatch(out, text, "backpacks", "backpack", "pack");
+    if (out.isEmpty()) {
+      out.add("armor");
+    }
+    return out;
+  }
+
+  private static void addArmorCategoryIfMatch(
+      ArrayNode out, String text, String category, String... keywords) {
+    for (String keyword : keywords) {
+      if (text.contains(keyword)) {
+        if (!containsText(out, category)) {
+          out.add(category);
+        }
+        return;
+      }
+    }
+  }
+
+  private static boolean containsText(ArrayNode array, String value) {
+    for (JsonNode n : array) {
+      if (value.equalsIgnoreCase(n.asText(""))) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   private static int parseSize(JsonNode sizeNode) {
     if (sizeNode == null || sizeNode.isMissingNode() || sizeNode.isNull()) {
       return 0;

@@ -672,12 +672,29 @@ public class StarCitizenChatService {
         lower.contains("light")
             ? "light"
             : lower.contains("medium") ? "medium" : lower.contains("heavy") ? "heavy" : null;
+    String categoryFilter =
+        lower.contains("undersuit") || lower.contains("under suit")
+            ? "undersuits"
+            : lower.contains("helmet")
+                ? "helmets"
+                : lower.contains("chest") || lower.contains("torso") || lower.contains("core")
+                    ? "chests"
+                    : lower.contains("arm")
+                        ? "arms"
+                        : lower.contains("leg") || lower.contains("boot")
+                            ? "legs"
+                            : lower.contains("backpack") || lower.contains("pack")
+                                ? "backpacks"
+                                : null;
 
     List<String> names = new ArrayList<>();
     armor
         .fields()
         .forEachRemaining(
             entry -> {
+              if (categoryFilter != null && !armorMatchesCategory(entry.getValue(), categoryFilter)) {
+                return;
+              }
               if (classFilter == null) {
                 names.add(entry.getKey());
                 return;
@@ -694,9 +711,11 @@ public class StarCitizenChatService {
     }
     names.sort(String.CASE_INSENSITIVE_ORDER);
     String title =
-        classFilter == null
-            ? "**Armor Types**\n"
-            : "**" + capitalize(classFilter) + " Armor Types**\n";
+        categoryFilter != null
+            ? "**" + capitalize(categoryFilter) + "**\n"
+            : classFilter == null
+                ? "**Armor Types**\n"
+                : "**" + capitalize(classFilter) + " Armor Types**\n";
     return withSnark("armor", null, title + bulletList(names, 20));
   }
 
@@ -1511,6 +1530,7 @@ public class StarCitizenChatService {
         .append(" / ")
         .append(textOrDash(armor, "weight_class"))
         .append("\n");
+    sb.append("Category: ").append(textOrDash(armor, "category")).append("\n");
     sb.append("Manufacturer: ").append(textOrDash(armor, "manufacturer")).append("\n");
     sb.append("Pieces: ").append(textOrDash(armor, "pieces")).append("\n");
     sb.append("Ballistic / Energy / Distortion: ")
@@ -1521,9 +1541,38 @@ public class StarCitizenChatService {
         .append(percentOrDash(armor.path("distortion_resist_pct")))
         .append("\n");
     sb.append("Temp resist: ").append(textOrDash(armor, "temp_resist")).append("\n");
-    sb.append("Buy locations: ").append(textOrDash(armor, "buy_locations")).append("\n\n");
+    sb.append("Buy locations: ").append(formatLocationList(armor.path("buy_locations"), 5)).append("\n\n");
     sb.append(textOrDash(armor, "description"));
     return withSnark("armor", key, sb.toString().trim());
+  }
+
+  private static boolean armorMatchesCategory(JsonNode armor, String category) {
+    if (armor == null || category == null || category.isBlank()) {
+      return false;
+    }
+    if (category.equalsIgnoreCase(armor.path("category").asText(""))) {
+      return true;
+    }
+    JsonNode categories = armor.path("categories");
+    if (categories.isArray()) {
+      for (JsonNode c : categories) {
+        if (category.equalsIgnoreCase(c.asText(""))) {
+          return true;
+        }
+      }
+    }
+    String hay =
+        (armor.path("pieces").asText("") + " " + armor.path("description").asText(""))
+            .toLowerCase(Locale.ROOT);
+    return switch (category) {
+      case "undersuits" -> hay.contains("undersuit") || hay.contains("under suit");
+      case "helmets" -> hay.contains("helmet") || hay.contains("head");
+      case "chests" -> hay.contains("chest") || hay.contains("torso") || hay.contains("core");
+      case "arms" -> hay.contains("arm") || hay.contains("glove") || hay.contains("shoulder");
+      case "legs" -> hay.contains("leg") || hay.contains("thigh") || hay.contains("shin") || hay.contains("boot");
+      case "backpacks" -> hay.contains("backpack") || hay.contains("pack");
+      default -> false;
+    };
   }
 
   private static String tryLocation(String text, String lower) {

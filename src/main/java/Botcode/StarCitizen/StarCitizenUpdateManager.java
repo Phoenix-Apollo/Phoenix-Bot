@@ -256,12 +256,14 @@ public class StarCitizenUpdateManager {
       case "components":
         return StarCitizenFetcher.fetchComponents();
 
+      case "armor":
+        return StarCitizenFetcher.fetchArmor();
+
       // -------------------------
       // FUTURE DATASETS (SC.Tools, static, etc.)
       // -------------------------
       case "missions":
       case "items":
-      case "armor":
         System.out.println("[UpdateManager] Fetcher not implemented for: " + dataset);
         return null;
 
@@ -313,12 +315,14 @@ public class StarCitizenUpdateManager {
       case "locations":
         return StarCitizenNormalizer.normalizeLocations(raw);
 
+      case "armor":
+        return StarCitizenNormalizer.normalizeArmor(raw);
+
       // -------------------------
       // FUTURE NORMALIZERS
       // -------------------------
       case "missions":
       case "items":
-      case "armor":
         System.out.println("[UpdateManager] Normalizer not implemented for: " + dataset);
         return null;
 

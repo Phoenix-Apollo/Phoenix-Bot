@@ -99,6 +99,7 @@ public class PanelButtons {
   public static final String SELECT_REFINERY_VIEW = "panel_select:refinery_view";
   public static final String SELECT_COMPONENT_CATEGORY = "panel_select:component_category";
   public static final String SELECT_COMPONENT_PICK = "panel_select:component_pick";
+  public static final String SELECT_ARMOR_CATEGORY = "panel_select:armor_category";
   public static final String SELECT_ARMOR_PICK = "panel_select:armor_pick";
   public static final String SELECT_LOCATION_PICK = "panel_select:location_pick";
   public static final String SELECT_MISSION_PICK = "panel_select:mission_pick";
@@ -575,6 +576,25 @@ public class PanelButtons {
                 SelectOption.of("Weapons", "weapons"),
                 SelectOption.of("Missiles", "missiles"),
                 SelectOption.of("Utility / Other", "utility"))
+            .setRequiredRange(1, 1)
+            .build());
+  }
+
+  /**
+   * Armor category breakdown shown before armor name selection.
+   */
+  public static ActionRow armorCategoryMenu() {
+    return ActionRow.of(
+        StringSelectMenu.create(SELECT_ARMOR_CATEGORY)
+            .setPlaceholder("Armor: choose a category")
+            .addOptions(
+                SelectOption.of("All Armor", "all"),
+                SelectOption.of("Undersuits", "undersuits"),
+                SelectOption.of("Helmets", "helmets"),
+                SelectOption.of("Chests", "chests"),
+                SelectOption.of("Arms", "arms"),
+                SelectOption.of("Legs", "legs"),
+                SelectOption.of("Backpacks", "backpacks"))
             .setRequiredRange(1, 1)
             .build());
   }

@@ -147,8 +147,11 @@ public class PanelInteractionHandler extends ListenerAdapter {
           .setEphemeral(true)
           .queue();
 
-      case PanelButtons.BTN_ARMOR ->
-          replyWithDatasetSelect(event, "armor", PanelButtons.SELECT_ARMOR_PICK, "Choose armor");
+      case PanelButtons.BTN_ARMOR -> event
+          .reply("Armor: step 1/2 — choose category")
+          .addComponents(PanelButtons.armorCategoryMenu())
+          .setEphemeral(true)
+          .queue();
 
       case PanelButtons.BTN_LOCATIONS -> replyWithDatasetSelect(
           event, "locations", PanelButtons.SELECT_LOCATION_PICK, "Choose a location");
@@ -305,6 +308,7 @@ public class PanelInteractionHandler extends ListenerAdapter {
       case PanelButtons.SELECT_WEAPON_PICK -> handleWeaponSelect(event, value);
       case PanelButtons.SELECT_COMPONENT_CATEGORY -> handleComponentCategorySelect(event, value);
       case PanelButtons.SELECT_COMPONENT_PICK -> handleComponentSelect(event, value);
+      case PanelButtons.SELECT_ARMOR_CATEGORY -> handleArmorCategorySelect(event, value);
       case PanelButtons.SELECT_ARMOR_PICK -> handleArmorSelect(event, value);
       case PanelButtons.SELECT_LOCATION_PICK -> handleLocationSelect(event, value);
       case PanelButtons.SELECT_MISSION_PICK -> handleMissionSelect(event, value);
@@ -922,6 +926,25 @@ public class PanelInteractionHandler extends ListenerAdapter {
         .setContent("")
         .setComponents(java.util.Collections.emptyList())
         .queue();
+  }
+
+  private void handleArmorCategorySelect(StringSelectInteractionEvent event, String category) {
+    java.util.List<String> names = buildArmorNamesForCategory(category);
+    if (names.isEmpty()) {
+      event
+          .editMessage("No armor entries found for that category.")
+          .setComponents(java.util.Collections.emptyList())
+          .queue();
+      return;
+    }
+
+    String label = "all".equalsIgnoreCase(category) ? "armor" : (category + " armor");
+    replyWithListSelect(
+        event,
+        label,
+        names,
+        PanelButtons.SELECT_ARMOR_PICK,
+        "Armor: step 2/2 — choose item");
   }
 
   private void handleLocationSelect(StringSelectInteractionEvent event, String name) {
@@ -1665,6 +1688,68 @@ public class PanelInteractionHandler extends ListenerAdapter {
           || haystack.contains("cannon")
           || haystack.contains("laser"));
       default -> true;
+    };
+  }
+
+  private java.util.List<String> buildArmorNamesForCategory(String category) {
+    JsonNode armor = StarCitizenDataService.get("armor");
+    if (armor == null || !armor.isObject() || armor.isEmpty()) {
+      return java.util.Collections.emptyList();
+    }
+
+    String target = (category == null ? "all" : category.trim().toLowerCase());
+    java.util.List<String> names = new java.util.ArrayList<>();
+    armor
+        .fields()
+        .forEachRemaining(
+            entry -> {
+              if ("all".equals(target)) {
+                names.add(entry.getKey());
+                return;
+              }
+              if (armorMatchesCategory(entry.getValue(), target)) {
+                names.add(entry.getKey());
+              }
+            });
+
+    names.sort(String.CASE_INSENSITIVE_ORDER);
+    return names;
+  }
+
+  private boolean armorMatchesCategory(JsonNode armor, String target) {
+    if (armor == null || target == null || target.isBlank()) {
+      return false;
+    }
+    if (target.equalsIgnoreCase(armor.path("category").asText(""))) {
+      return true;
+    }
+    JsonNode categories = armor.path("categories");
+    if (categories.isArray()) {
+      for (JsonNode category : categories) {
+        if (target.equalsIgnoreCase(category.asText(""))) {
+          return true;
+        }
+      }
+    }
+
+    String hay =
+        (
+                armor.path("class").asText("")
+                    + " "
+                    + armor.path("weight_class").asText("")
+                    + " "
+                    + armor.path("pieces").asText("")
+                    + " "
+                    + armor.path("description").asText(""))
+            .toLowerCase(java.util.Locale.ROOT);
+    return switch (target) {
+      case "undersuits" -> hay.contains("undersuit") || hay.contains("under suit");
+      case "helmets" -> hay.contains("helmet") || hay.contains("head");
+      case "chests" -> hay.contains("chest") || hay.contains("torso") || hay.contains("core");
+      case "arms" -> hay.contains("arm") || hay.contains("glove") || hay.contains("shoulder");
+      case "legs" -> hay.contains("leg") || hay.contains("thigh") || hay.contains("shin") || hay.contains("boot");
+      case "backpacks" -> hay.contains("backpack") || hay.contains("pack");
+      default -> false;
     };
   }
 

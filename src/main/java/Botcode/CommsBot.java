@@ -277,7 +277,8 @@ public class CommsBot {
         "refinery",
         "refinery_stations",
         "locations",
-        "salvage"
+        "salvage",
+        "armor"
     };
 
     int updatedOrUnchanged = 0;
