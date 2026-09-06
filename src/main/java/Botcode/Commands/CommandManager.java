@@ -290,11 +290,19 @@ public class CommandManager extends ListenerAdapter {
 
       String claimTime = info.path("claim_time").asText("");
       String expediteTime = info.path("expedite_time").asText("");
+      String shieldFaceType = info.path("shield_face_type").asText("");
+      double expeditionFee = info.path("expedition_fee").asDouble(0);
       if (!claimTime.isBlank()) {
         sb.append("**Claim Time:** ").append(claimTime).append("\n");
       }
       if (!expediteTime.isBlank()) {
         sb.append("**Expedite Time:** ").append(expediteTime).append("\n");
+      }
+      if (!shieldFaceType.isBlank()) {
+        sb.append("**Shield Face Type:** ").append(shieldFaceType).append("\n");
+      }
+      if (expeditionFee > 0) {
+        sb.append("**Expedition Fee:** ").append(String.format("%,.0f", expeditionFee)).append("\n");
       }
 
       String storeUrl = info.path("store_url").asText("");
@@ -311,6 +319,10 @@ public class CommandManager extends ListenerAdapter {
       double qtSpeed = stats.path("qt_speed").asDouble(0);
       double h2Fuel = stats.path("hydrogen_fuel").asDouble(0);
       double qtFuel = stats.path("quantum_fuel").asDouble(0);
+      double scmBoostForward = stats.path("scm_boost_forward").asDouble(0);
+      double scmBoostBackward = stats.path("scm_boost_backward").asDouble(0);
+      double cmDecoy = stats.path("cm_decoy").asDouble(0);
+      double cmNoise = stats.path("cm_noise").asDouble(0);
       double pilotDps = Math.max(stats.path("pilot_dps").asDouble(0), derivedFirepower[0]);
       double turretDps = Math.max(stats.path("turret_dps").asDouble(0), derivedFirepower[1]);
       double missileDps = Math.max(stats.path("missile_dps").asDouble(0), derivedFirepower[2]);
@@ -349,6 +361,16 @@ public class CommandManager extends ListenerAdapter {
         }
         if (qtFuel > 0) {
           sb.append("**QT Fuel:** ").append(String.format("%,.0f", qtFuel)).append(" units\n");
+        }
+        if (scmBoostForward > 0) {
+          sb.append("**SCM Boost (Forward):** ")
+              .append(String.format("%.0f", scmBoostForward))
+              .append(" m/s\n");
+        }
+        if (scmBoostBackward > 0) {
+          sb.append("**SCM Boost (Backward):** ")
+              .append(String.format("%.0f", scmBoostBackward))
+              .append(" m/s\n");
         }
       }
 
@@ -389,6 +411,13 @@ public class CommandManager extends ListenerAdapter {
             .append(" / ")
             .append(String.format("%.0f", stats.path("deflection_energy").asDouble(0)))
             .append("\n");
+        if (cmDecoy > 0 || cmNoise > 0) {
+          sb.append("**Countermeasures (Decoy / Noise):** ")
+              .append(String.format("%.0f", cmDecoy))
+              .append(" / ")
+              .append(String.format("%.0f", cmNoise))
+              .append("\n");
+        }
         sb.append("**Default Loadout Effective DPS (Phys / Energy):** ")
             .append(String.format("%.1f", effectiveTotals[0]))
             .append(" / ")

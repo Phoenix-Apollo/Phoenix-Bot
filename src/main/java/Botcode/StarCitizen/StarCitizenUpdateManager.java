@@ -553,17 +553,23 @@ public class StarCitizenUpdateManager {
       patchMissingNumber(info, "crew", row.crew);
       patchMissingNumber(info, "cargo", row.cargo);
       patchMissingNumber(info, "price_auec", row.priceAuec);
+      patchMissingNumber(info, "expedition_fee", row.expeditionFee);
       patchMissingNumber(info, "scm_speed", row.scmSpeed);
       patchMissingNumber(info, "max_speed", row.navMaxSpeed);
       patchMissingNumber(info, "hull_hp", row.hp);
       patchMissingNumber(info, "shield_hp", row.armorHp);
+      patchMissingText(info, "shield_face_type", row.shieldFaceType);
 
       patchMissingNumber(stats, "mass", row.mass);
       patchMissingNumber(stats, "pitch", row.pitch);
       patchMissingNumber(stats, "yaw", row.yaw);
       patchMissingNumber(stats, "roll", row.roll);
+      patchMissingNumber(stats, "scm_boost_forward", row.scmBoostForward);
+      patchMissingNumber(stats, "scm_boost_backward", row.scmBoostBackward);
       patchMissingNumber(stats, "hydrogen_fuel", row.hydrogenCapacity);
       patchMissingNumber(stats, "quantum_fuel", row.qtFuelCapacity);
+      patchMissingNumber(stats, "cm_decoy", row.cmDecoy);
+      patchMissingNumber(stats, "cm_noise", row.cmNoise);
       patchMissingNumber(stats, "pitch_boost", row.pitchBoost);
       patchMissingNumber(stats, "yaw_boost", row.yawBoost);
       patchMissingNumber(stats, "roll_boost", row.rollBoost);
@@ -1097,6 +1103,8 @@ public class StarCitizenUpdateManager {
         row.deflectionPhysical = parseNumberAllowZero(getCol(cols, 14));
         row.deflectionEnergy = parseNumberAllowZero(getCol(cols, 15));
         row.scmSpeed = parseNumberAllowZero(getCol(cols, 16));
+        row.scmBoostForward = parseNumberAllowZero(getCol(cols, 17));
+        row.scmBoostBackward = parseNumberAllowZero(getCol(cols, 18));
         row.navMaxSpeed = parseNumberAllowZero(getCol(cols, 19));
         row.pitch = parseNumberAllowZero(getCol(cols, 20));
         row.yaw = parseNumberAllowZero(getCol(cols, 21));
@@ -1106,11 +1114,15 @@ public class StarCitizenUpdateManager {
         row.rollBoost = parseNumberAllowZero(getCol(cols, 25));
         row.hydrogenCapacity = parseNumberAllowZero(getCol(cols, 26));
         row.qtFuelCapacity = parseNumberAllowZero(getCol(cols, 27));
+        row.shieldFaceType = clean(getCol(cols, 28));
+        row.cmDecoy = parseNumberAllowZero(getCol(cols, 29));
+        row.cmNoise = parseNumberAllowZero(getCol(cols, 30));
         row.armorPhysicalDmgModifier = parsePercentAllowZero(getCol(cols, 31));
         row.armorEnergyDmgModifier = parsePercentAllowZero(getCol(cols, 32));
         row.armorEmSignalModifier = parsePercentAllowZero(getCol(cols, 33));
         row.armorIrSignalModifier = parsePercentAllowZero(getCol(cols, 34));
         row.armorCsSignalModifier = parsePercentAllowZero(getCol(cols, 35));
+        row.expeditionFee = parseNumberAllowZero(getCol(cols, 36));
         row.claimTime = clean(getCol(cols, 37));
         row.expediteTime = clean(getCol(cols, 38));
 
@@ -1184,6 +1196,8 @@ public class StarCitizenUpdateManager {
     Double deflectionPhysical;
     Double deflectionEnergy;
     Double scmSpeed;
+    Double scmBoostForward;
+    Double scmBoostBackward;
     Double navMaxSpeed;
     Double pitch;
     Double yaw;
@@ -1193,11 +1207,15 @@ public class StarCitizenUpdateManager {
     Double rollBoost;
     Double hydrogenCapacity;
     Double qtFuelCapacity;
+    String shieldFaceType = "";
+    Double cmDecoy;
+    Double cmNoise;
     Double armorPhysicalDmgModifier;
     Double armorEnergyDmgModifier;
     Double armorEmSignalModifier;
     Double armorIrSignalModifier;
     Double armorCsSignalModifier;
+    Double expeditionFee;
     Double priceAuec;
   }
 
