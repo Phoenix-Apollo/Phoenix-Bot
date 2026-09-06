@@ -10,7 +10,7 @@ RUN mvn clean package
 FROM eclipse-temurin:21-jre
 WORKDIR /home/app
 
-RUN useradd -m -u 1000 appuser
+RUN if ! id -u appuser >/dev/null 2>&1; then useradd -m appuser; fi
 
 COPY --from=build /home/app/target/*-shaded.jar /home/app/bot.jar
 COPY --from=build /home/app/data /home/app/data
