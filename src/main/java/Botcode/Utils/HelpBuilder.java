@@ -17,6 +17,7 @@ public class HelpBuilder {
    * Phoenix orange — matches the server brand.
    */
   private static final Color EMBED_COLOR = new Color(0xFF6B00);
+  private static final int EMBED_FIELD_MAX = 1024;
 
   /**
    * Builds and returns the full help embed.
@@ -34,7 +35,8 @@ public class HelpBuilder {
     // ----------------------------------------------------------------
     // Slash Commands — Star Citizen Tools
     // ----------------------------------------------------------------
-    embed.addField(
+    addFieldChunked(
+        embed,
         "📊  Star Citizen Tools  *(slash commands)*",
         "`/help`\n"
             + "› Show this command reference.\n\n"
@@ -60,13 +62,13 @@ public class HelpBuilder {
             + "› Log missing data and run a live refresh check immediately.\n"
             + "  • Supported dataset aliases: `commodity` `trade` `mining` `ship` `weapon`\n"
             + "    `missile_rack` `component` `refinery` `salvage` `location`\n"
-            + "  • Unresolved items are written to `data/manual_update_queue.md` for manual updates.",
-        false);
+            + "  • Unresolved items are written to `data/manual_update_queue.md` for manual updates.");
 
     // ----------------------------------------------------------------
     // @mention Commands — General
     // ----------------------------------------------------------------
-    embed.addField(
+    addFieldChunked(
+        embed,
         "💬  Chat Commands  *(@ mention the bot)*",
         "`@bot help`\n"
             + "› Show this command reference.\n\n"
@@ -86,8 +88,7 @@ public class HelpBuilder {
             + "`@bot missing <dataset>: <item> [| notes]`\n"
             + "› Report missing data; bot logs it and checks live sources right away.\n\n"
             + "`@bot reportmissing <dataset>: <item> [| notes]`\n"
-            + "› Alias for `@bot missing`.",
-        false);
+            + "› Alias for `@bot missing`.");
 
     // ----------------------------------------------------------------
     // Reaction Voting — everyone
@@ -102,7 +103,8 @@ public class HelpBuilder {
     // Admin-only section — only shown to admins
     // ----------------------------------------------------------------
     if (isAdmin) {
-      embed.addField(
+      addFieldChunked(
+          embed,
           "🔧  Admin Commands  *(@ mention the bot · requires Manage Server)*",
           "`@bot allowchannel`\n"
               + "› Allow the bot to respond freely in the current channel (no @mention needed).\n"
@@ -130,12 +132,51 @@ public class HelpBuilder {
               + "`@bot approvesource <dataset>`\n"
               + "› Approve the latest pending source for a dataset.\n\n"
               + "`@bot sources`\n"
-              + "› List approved and pending source overrides.",
-          false);
+              + "› List approved and pending source overrides.");
     } else {
       embed.addField("🔧  Admin Commands", "*Hidden — available to server admins only.*", false);
     }
 
     return embed.build();
+  }
+
+  private static void addFieldChunked(EmbedBuilder embed, String title, String value) {
+    if (value == null) {
+      embed.addField(title, "—", false);
+      return;
+    }
+    if (value.length() <= EMBED_FIELD_MAX) {
+      embed.addField(title, value, false);
+      return;
+    }
+
+    String[] blocks = value.split("\\n\\n");
+    StringBuilder current = new StringBuilder();
+    int part = 1;
+    boolean first = true;
+    for (String block : blocks) {
+      String candidate = current.length() == 0 ? block : current + "\n\n" + block;
+      if (candidate.length() > EMBED_FIELD_MAX) {
+        if (current.length() > 0) {
+          embed.addField(first ? title : title + " (cont. " + part + ")", current.toString(), false);
+          first = false;
+          part++;
+          current = new StringBuilder(block);
+        } else {
+          embed.addField(
+              first ? title : title + " (cont. " + part + ")",
+              block.substring(0, EMBED_FIELD_MAX),
+              false);
+          first = false;
+          part++;
+          current = new StringBuilder(block.substring(EMBED_FIELD_MAX));
+        }
+      } else {
+        current = new StringBuilder(candidate);
+      }
+    }
+    if (current.length() > 0) {
+      embed.addField(first ? title : title + " (cont. " + part + ")", current.toString(), false);
+    }
   }
 }

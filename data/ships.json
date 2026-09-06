@@ -59,7 +59,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "125a" : {
     "info" : {
@@ -121,7 +121,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "135c" : {
     "info" : {
@@ -183,7 +183,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "300i" : {
     "info" : {
@@ -245,7 +245,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "315p" : {
     "info" : {
@@ -307,7 +307,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "325a" : {
     "info" : {
@@ -369,7 +369,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "350r" : {
     "info" : {
@@ -431,7 +431,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "400i" : {
     "info" : {
@@ -440,7 +440,7 @@
       "size" : "Medium",
       "crew" : 3,
       "cargo" : 42,
-      "price_auec" : 1.08927E7,
+      "price_auec" : 8398060.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "Astro Armada", "New Deal Lorville" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/8/images/7415e4cf6ed8b3f756cb78ea72af4e6718464c15.jpg",
@@ -493,7 +493,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "600i Executive Edition" : {
     "info" : {
@@ -555,7 +555,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "600i Explorer" : {
     "info" : {
@@ -578,7 +578,7 @@
       "sell_locations" : [ ]
     },
     "stats" : {
-      "mass" : 0.0,
+      "mass" : 1544670.0,
       "pitch" : 0.0,
       "yaw" : 0.0,
       "roll" : 0.0,
@@ -601,14 +601,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "600i Touring" : {
     "info" : {
       "manufacturer" : "Origin Jumpworks",
       "role" : "Multi-role",
       "size" : "Large",
-      "crew" : 5,
+      "crew" : 1,
       "cargo" : 20,
       "price_auec" : 2.49386E7,
       "buy_location" : "Astro Armada",
@@ -629,7 +629,7 @@
       "expedite_time" : "00:11:42"
     },
     "stats" : {
-      "mass" : 1544667.0,
+      "mass" : 1544670.0,
       "pitch" : 19.0,
       "yaw" : 19.0,
       "roll" : 30.0,
@@ -663,14 +663,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "85X" : {
     "info" : {
       "manufacturer" : "Origin Jumpworks",
       "role" : "Multi-role",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 544635.0,
       "buy_location" : "New Deal Lorville",
@@ -724,14 +724,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "890 Jump" : {
     "info" : {
       "manufacturer" : "Origin Jumpworks",
       "role" : "Multi-role",
       "size" : "Capital",
-      "crew" : 8,
+      "crew" : 1,
       "cargo" : 388,
       "price_auec" : 6.20884E7,
       "buy_location" : "New Deal Lorville",
@@ -752,7 +752,7 @@
       "expedite_time" : "00:22:30"
     },
     "stats" : {
-      "mass" : 4.3896159E7,
+      "mass" : 4.38962E7,
       "pitch" : 10.0,
       "yaw" : 10.0,
       "roll" : 15.0,
@@ -786,7 +786,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "A2 Hercules Starlifter" : {
     "info" : {
@@ -795,7 +795,7 @@
       "size" : "Unknown",
       "crew" : 8.0,
       "cargo" : 234,
-      "price_auec" : 4.42969E7,
+      "price_auec" : 3.78002E7,
       "buy_location" : "New Deal Crusader",
       "buy_locations" : [ "New Deal Crusader", "Teach's Levski" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/14/images/50bd9b4ba6b6df25dc9319bc2710c710d5a0766c.jpg",
@@ -848,7 +848,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Apollo Medivac" : {
     "info" : {
@@ -910,7 +910,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Apollo Triage" : {
     "info" : {
@@ -972,7 +972,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ares Inferno Starfighter" : {
     "info" : {
@@ -1018,7 +1018,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ares Ion Starfighter" : {
     "info" : {
@@ -1064,7 +1064,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Arrastra" : {
     "info" : {
@@ -1110,7 +1110,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Arrow" : {
     "info" : {
@@ -1172,7 +1172,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Aurora Mk I CL" : {
     "info" : {
@@ -1234,7 +1234,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Aurora Mk I ES" : {
     "info" : {
@@ -1296,7 +1296,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Aurora Mk I LN" : {
     "info" : {
@@ -1358,7 +1358,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Aurora Mk I LX" : {
     "info" : {
@@ -1420,7 +1420,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Aurora Mk I MR" : {
     "info" : {
@@ -1482,7 +1482,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Avenger Stalker" : {
     "info" : {
@@ -1544,7 +1544,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Avenger Titan" : {
     "info" : {
@@ -1606,7 +1606,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Avenger Titan Renegade" : {
     "info" : {
@@ -1668,7 +1668,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Avenger Warlock" : {
     "info" : {
@@ -1730,7 +1730,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ballista" : {
     "info" : {
@@ -1789,7 +1789,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ballista Dunestalker" : {
     "info" : {
@@ -1848,7 +1848,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ballista Snowblind" : {
     "info" : {
@@ -1907,7 +1907,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Blade" : {
     "info" : {
@@ -1969,7 +1969,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Buccaneer" : {
     "info" : {
@@ -2031,7 +2031,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "C2 Hercules Starlifter" : {
     "info" : {
@@ -2093,14 +2093,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "C8 Pisces" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Multi-role",
       "size" : "Small",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 4,
       "price_auec" : 745290.0,
       "buy_location" : "Astro Armada",
@@ -2155,7 +2155,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "C8R Pisces Rescue" : {
     "info" : {
@@ -2217,14 +2217,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "C8X Pisces Expedition" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Multi-role",
       "size" : "Small",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 4,
       "price_auec" : 515970.0,
       "buy_location" : "Astro Armada",
@@ -2279,7 +2279,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Carrack" : {
     "info" : {
@@ -2307,7 +2307,7 @@
       "expedite_time" : "00:16:06"
     },
     "stats" : {
-      "mass" : 4397860.0,
+      "mass" : 3275860.0,
       "pitch" : 16.0,
       "yaw" : 16.0,
       "roll" : 30.0,
@@ -2341,7 +2341,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Carrack Expedition" : {
     "info" : {
@@ -2369,7 +2369,7 @@
       "expedite_time" : "00:16:06"
     },
     "stats" : {
-      "mass" : 4397860.0,
+      "mass" : 3275860.0,
       "pitch" : 16.0,
       "yaw" : 16.0,
       "roll" : 30.0,
@@ -2403,14 +2403,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Caterpillar" : {
     "info" : {
       "manufacturer" : "Drake Interplanetary",
       "role" : "Cargo",
-      "size" : "Snub",
-      "crew" : 4,
+      "size" : "Large",
+      "crew" : 1,
       "cargo" : 576,
       "price_auec" : 1.18503E7,
       "buy_location" : "New Deal Lorville",
@@ -2431,7 +2431,7 @@
       "expedite_time" : "00:06:12"
     },
     "stats" : {
-      "mass" : 1508063.0,
+      "mass" : 1508060.0,
       "pitch" : 16.0,
       "yaw" : 16.0,
       "roll" : 25.0,
@@ -2465,7 +2465,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Caterpillar Best In Show Edition" : {
     "info" : {
@@ -2511,13 +2511,13 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Caterpillar Pirate Edition" : {
     "info" : {
       "manufacturer" : "Drake Interplanetary",
       "role" : "Cargo",
-      "size" : "Snub",
+      "size" : "Large",
       "crew" : 4,
       "cargo" : 576,
       "price_auec" : 0.0,
@@ -2539,7 +2539,7 @@
       "expedite_time" : "00:06:12"
     },
     "stats" : {
-      "mass" : 1508063.0,
+      "mass" : 1508060.0,
       "pitch" : 16.0,
       "yaw" : 16.0,
       "roll" : 25.0,
@@ -2573,7 +2573,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Centurion" : {
     "info" : {
@@ -2632,14 +2632,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Constellation Andromeda" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Military",
       "size" : "Medium",
-      "crew" : 4,
+      "crew" : 1,
       "cargo" : 96,
       "price_auec" : 9652610.0,
       "buy_location" : "New Deal Lorville",
@@ -2694,14 +2694,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Constellation Aquila" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Exploration",
       "size" : "Medium",
-      "crew" : 4,
+      "crew" : 1,
       "cargo" : 96,
       "price_auec" : 1.15774E7,
       "buy_location" : "New Deal Lorville",
@@ -2756,14 +2756,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Constellation Phoenix" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Multi-role",
       "size" : "Medium",
-      "crew" : 4,
+      "crew" : 1,
       "cargo" : 80,
       "price_auec" : 1.40767E7,
       "buy_location" : "New Deal Lorville",
@@ -2818,14 +2818,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Constellation Phoenix Emerald" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Multi-role",
       "size" : "Medium",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 80,
       "price_auec" : 0.0,
       "buy_location" : "",
@@ -2880,14 +2880,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Constellation Taurus" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Cargo",
       "size" : "Large",
-      "crew" : 4,
+      "crew" : 1,
       "cargo" : 174,
       "price_auec" : 7641650.0,
       "buy_location" : "New Deal Lorville",
@@ -2942,7 +2942,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Corsair" : {
     "info" : {
@@ -3004,7 +3004,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Crucible" : {
     "info" : {
@@ -3050,14 +3050,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutlass Black" : {
     "info" : {
       "manufacturer" : "Drake Interplanetary",
       "role" : "Military",
       "size" : "Medium",
-      "crew" : 2,
+      "crew" : 3,
       "cargo" : 46,
       "price_auec" : 2010960.0,
       "buy_location" : "New Deal Lorville",
@@ -3112,7 +3112,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutlass Black Best In Show Edition" : {
     "info" : {
@@ -3158,7 +3158,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutlass Blue" : {
     "info" : {
@@ -3220,7 +3220,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutlass Red" : {
     "info" : {
@@ -3282,7 +3282,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutlass Steel" : {
     "info" : {
@@ -3344,7 +3344,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutter" : {
     "info" : {
@@ -3406,7 +3406,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutter Scout" : {
     "info" : {
@@ -3468,7 +3468,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cutter Rambler" : {
     "info" : {
@@ -3529,14 +3529,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cyclone" : {
     "info" : {
       "manufacturer" : "Tumbril Land Systems",
       "role" : "Multi-role",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 1,
       "price_auec" : 98753.0,
       "buy_location" : "New Deal Lorville",
@@ -3588,14 +3588,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cyclone AA" : {
     "info" : {
       "manufacturer" : "Tumbril Land Systems",
       "role" : "Military",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 143640.0,
       "buy_location" : "New Deal Lorville",
@@ -3647,14 +3647,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cyclone MT" : {
     "info" : {
       "manufacturer" : "Tumbril Land Systems",
       "role" : "Military",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 134663.0,
       "buy_location" : "New Deal Lorville",
@@ -3706,14 +3706,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cyclone RC" : {
     "info" : {
       "manufacturer" : "Tumbril Land Systems",
       "role" : "Racing",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 116708.0,
       "buy_location" : "New Deal Lorville",
@@ -3765,14 +3765,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cyclone RN" : {
     "info" : {
       "manufacturer" : "Tumbril Land Systems",
       "role" : "Military",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 116708.0,
       "buy_location" : "New Deal Lorville",
@@ -3824,14 +3824,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Cyclone TR" : {
     "info" : {
       "manufacturer" : "Tumbril Land Systems",
       "role" : "Military",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 116708.0,
       "buy_location" : "New Deal Lorville",
@@ -3883,14 +3883,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Defender" : {
     "info" : {
       "manufacturer" : "Banu Souli",
       "role" : "Military",
       "size" : "Small",
-      "crew" : 2,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 6237000.0,
       "buy_location" : "Astro Armada",
@@ -3945,7 +3945,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Dragonfly Black" : {
     "info" : {
@@ -3991,14 +3991,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Dragonfly Yellowjacket" : {
     "info" : {
       "manufacturer" : "Drake Interplanetary",
       "role" : "Racing",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 0.0,
       "buy_location" : "",
@@ -4052,7 +4052,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Eclipse" : {
     "info" : {
@@ -4114,7 +4114,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Endeavor" : {
     "info" : {
@@ -4160,7 +4160,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Expanse" : {
     "info" : {
@@ -4206,7 +4206,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7A Hornet Mk I" : {
     "info" : {
@@ -4268,7 +4268,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C Hornet Mk II" : {
     "info" : {
@@ -4276,7 +4276,7 @@
       "role" : "Military",
       "size" : "Small",
       "crew" : 1,
-      "cargo" : 0,
+      "cargo" : 2,
       "price_auec" : 4650340.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville" ],
@@ -4330,7 +4330,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C Hornet Wildfire Mk I" : {
     "info" : {
@@ -4392,14 +4392,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C-M Super Hornet Mk I" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Military",
       "size" : "Small",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 4762800.0,
       "buy_location" : "Astro Armada",
@@ -4454,7 +4454,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C-M Super Hornet Heartseeker Mk I" : {
     "info" : {
@@ -4500,7 +4500,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C-R Hornet Tracker Mk I" : {
     "info" : {
@@ -4562,7 +4562,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C-S Hornet Ghost Mk I" : {
     "info" : {
@@ -4624,7 +4624,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F8C Lightning" : {
     "info" : {
@@ -4686,14 +4686,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Freelancer" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Cargo",
       "size" : "Medium",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 66,
       "price_auec" : 2962580.0,
       "buy_location" : "New Deal Lorville",
@@ -4748,14 +4748,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Freelancer DUR" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Exploration",
       "size" : "Medium",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 36,
       "price_auec" : 3151100.0,
       "buy_location" : "New Deal Lorville",
@@ -4810,14 +4810,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Freelancer MAX" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Cargo",
       "size" : "Medium",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 120,
       "price_auec" : 4039880.0,
       "buy_location" : "New Deal Lorville",
@@ -4872,14 +4872,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Freelancer MIS" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Military",
       "size" : "Medium",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 36,
       "price_auec" : 4713190.0,
       "buy_location" : "New Deal Lorville",
@@ -4934,7 +4934,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Fury" : {
     "info" : {
@@ -4996,7 +4996,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Fury LX" : {
     "info" : {
@@ -5058,7 +5058,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Fury MX" : {
     "info" : {
@@ -5120,7 +5120,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "G12" : {
     "info" : {
@@ -5166,7 +5166,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "G12-A" : {
     "info" : {
@@ -5212,7 +5212,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "G12-R" : {
     "info" : {
@@ -5258,7 +5258,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Galaxy" : {
     "info" : {
@@ -5304,7 +5304,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Genesis Starliner" : {
     "info" : {
@@ -5350,14 +5350,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Gladiator" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Bomber",
       "size" : "Small",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 4365900.0,
       "buy_location" : "Astro Armada",
@@ -5412,7 +5412,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Gladius" : {
     "info" : {
@@ -5474,7 +5474,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Gladius Pirate" : {
     "info" : {
@@ -5536,7 +5536,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Gladius Valiant" : {
     "info" : {
@@ -5564,7 +5564,7 @@
       "expedite_time" : "00:01:56"
     },
     "stats" : {
-      "mass" : 50152.0,
+      "mass" : 502.0,
       "pitch" : 68.0,
       "yaw" : 52.0,
       "roll" : 200.0,
@@ -5598,7 +5598,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Glaive" : {
     "info" : {
@@ -5660,16 +5660,16 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hammerhead" : {
     "info" : {
       "manufacturer" : "Aegis Dynamics",
       "role" : "Military",
       "size" : "Large",
-      "crew" : 9,
+      "crew" : 2,
       "cargo" : 40,
-      "price_auec" : 4.55601E7,
+      "price_auec" : 3.44666E7,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/97/images/35ab1ab33ee510c29d42a5a0a5d5523533e4807f.jpg",
@@ -5688,7 +5688,7 @@
       "expedite_time" : "00:16:12"
     },
     "stats" : {
-      "mass" : 4542311.0,
+      "mass" : 4542310.0,
       "pitch" : 20.0,
       "yaw" : 20.0,
       "roll" : 30.0,
@@ -5722,7 +5722,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hammerhead Best In Show Edition" : {
     "info" : {
@@ -5768,7 +5768,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hawk" : {
     "info" : {
@@ -5829,7 +5829,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Herald" : {
     "info" : {
@@ -5891,7 +5891,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "HoverQuad" : {
     "info" : {
@@ -5953,7 +5953,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hull A" : {
     "info" : {
@@ -6015,7 +6015,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hull B" : {
     "info" : {
@@ -6077,14 +6077,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hull C" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Cargo",
       "size" : "Large",
-      "crew" : 4,
+      "crew" : 1,
       "cargo" : 4608,
       "price_auec" : 1.57106E7,
       "buy_location" : "New Deal Lorville",
@@ -6139,7 +6139,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hull D" : {
     "info" : {
@@ -6185,7 +6185,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hull E" : {
     "info" : {
@@ -6231,14 +6231,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hurricane" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Military",
       "size" : "Unknown",
-      "crew" : 2,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 5556600.0,
       "buy_location" : "Astro Armada",
@@ -6292,7 +6292,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Idris-M" : {
     "info" : {
@@ -6300,7 +6300,7 @@
       "role" : "Military",
       "size" : "Capital",
       "crew" : 1.0,
-      "cargo" : 1168,
+      "cargo" : 1326,
       "price_auec" : 0.0,
       "buy_location" : "",
       "buy_locations" : [ ],
@@ -6354,7 +6354,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Idris-P" : {
     "info" : {
@@ -6416,14 +6416,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Javelin" : {
     "info" : {
       "manufacturer" : "Aegis Dynamics",
       "role" : "Military",
       "size" : "Unknown",
-      "crew" : 65,
+      "crew" : 1,
       "cargo" : 5400,
       "price_auec" : 0.0,
       "buy_location" : "",
@@ -6439,7 +6439,7 @@
       "sell_locations" : [ ]
     },
     "stats" : {
-      "mass" : 0.0,
+      "mass" : 1.0E8,
       "pitch" : 0.0,
       "yaw" : 0.0,
       "roll" : 0.0,
@@ -6462,7 +6462,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Khartu-al" : {
     "info" : {
@@ -6524,7 +6524,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Kraken" : {
     "info" : {
@@ -6570,7 +6570,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Kraken Privateer" : {
     "info" : {
@@ -6616,7 +6616,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Legionnaire" : {
     "info" : {
@@ -6662,7 +6662,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Liberator" : {
     "info" : {
@@ -6708,14 +6708,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Lynx" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Multi-role",
       "size" : "Snub",
-      "crew" : 2.0,
+      "crew" : 2,
       "cargo" : 0,
       "price_auec" : 129276.0,
       "buy_location" : "New Deal Lorville",
@@ -6767,7 +6767,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "M2 Hercules Starlifter" : {
     "info" : {
@@ -6829,7 +6829,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "M50" : {
     "info" : {
@@ -6875,7 +6875,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mantis" : {
     "info" : {
@@ -6937,7 +6937,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Merchantman" : {
     "info" : {
@@ -6983,7 +6983,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mercury Star Runner" : {
     "info" : {
@@ -7045,15 +7045,15 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MOLE" : {
     "info" : {
       "manufacturer" : "Argo Astronautics",
       "role" : "Mining",
       "size" : "Medium",
-      "crew" : 4,
-      "cargo" : 96,
+      "crew" : 5,
+      "cargo" : 32,
       "price_auec" : 8483740.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville", "Teach's Levski" ],
@@ -7107,7 +7107,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MOLE Carbon Edition" : {
     "info" : {
@@ -7153,7 +7153,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MOLE Talus Edition" : {
     "info" : {
@@ -7199,7 +7199,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MPUV Cargo" : {
     "info" : {
@@ -7260,7 +7260,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MPUV Personnel" : {
     "info" : {
@@ -7322,7 +7322,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MULE" : {
     "info" : {
@@ -7379,7 +7379,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mustang Alpha" : {
     "info" : {
@@ -7440,7 +7440,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mustang Alpha Vindicator" : {
     "info" : {
@@ -7486,7 +7486,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mustang Beta" : {
     "info" : {
@@ -7548,7 +7548,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mustang Delta" : {
     "info" : {
@@ -7610,7 +7610,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mustang Gamma" : {
     "info" : {
@@ -7672,7 +7672,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Mustang Omega" : {
     "info" : {
@@ -7734,7 +7734,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Nautilus" : {
     "info" : {
@@ -7780,7 +7780,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Nautilus Solstice Edition" : {
     "info" : {
@@ -7826,7 +7826,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Nomad" : {
     "info" : {
@@ -7888,7 +7888,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Nova Tank" : {
     "info" : {
@@ -7934,7 +7934,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Nox" : {
     "info" : {
@@ -7995,7 +7995,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Nox Kue" : {
     "info" : {
@@ -8056,7 +8056,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Odyssey" : {
     "info" : {
@@ -8102,7 +8102,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Orion" : {
     "info" : {
@@ -8148,7 +8148,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "P-52 Merlin" : {
     "info" : {
@@ -8210,7 +8210,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "P-72 Archimedes" : {
     "info" : {
@@ -8272,7 +8272,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "P-72 Archimedes Emerald" : {
     "info" : {
@@ -8334,7 +8334,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Perseus" : {
     "info" : {
@@ -8343,9 +8343,9 @@
       "size" : "Large",
       "crew" : 7,
       "cargo" : 96,
-      "price_auec" : 3.969E7,
-      "buy_location" : "",
-      "buy_locations" : [ ],
+      "price_auec" : 3.968E7,
+      "buy_location" : "Astro Armada",
+      "buy_locations" : [ "Astro Armada" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/145/images/7f70c18569c95ead2845048ca3c08167873c41b8.jpg",
       "brochure_url" : "https://media.robertsspaceindustries.com/7z87yphjoj2jk/source.pdf",
       "store_url" : "https://robertsspaceindustries.com/pledge/ships/perseus/perseus",
@@ -8396,7 +8396,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Pioneer" : {
     "info" : {
@@ -8442,7 +8442,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Polaris" : {
     "info" : {
@@ -8504,7 +8504,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Prospector" : {
     "info" : {
@@ -8566,7 +8566,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Prowler" : {
     "info" : {
@@ -8628,7 +8628,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "PTV" : {
     "info" : {
@@ -8685,7 +8685,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "RAFT" : {
     "info" : {
@@ -8713,7 +8713,7 @@
       "expedite_time" : "00:02:00"
     },
     "stats" : {
-      "mass" : 669.0,
+      "mass" : 639886.0,
       "pitch" : 30.0,
       "yaw" : 30.0,
       "roll" : 75.0,
@@ -8747,7 +8747,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Railen" : {
     "info" : {
@@ -8793,7 +8793,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ranger CV" : {
     "info" : {
@@ -8839,7 +8839,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ranger RC" : {
     "info" : {
@@ -8885,7 +8885,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ranger TR" : {
     "info" : {
@@ -8931,7 +8931,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Razor" : {
     "info" : {
@@ -8993,7 +8993,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Razor EX" : {
     "info" : {
@@ -9055,7 +9055,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Razor LX" : {
     "info" : {
@@ -9117,14 +9117,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Reclaimer" : {
     "info" : {
       "manufacturer" : "Aegis Dynamics",
       "role" : "Salvage",
       "size" : "Capital",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 420,
       "price_auec" : 3.01644E7,
       "buy_location" : "New Deal Lorville",
@@ -9145,7 +9145,7 @@
       "expedite_time" : "00:10:13"
     },
     "stats" : {
-      "mass" : 9509854.0,
+      "mass" : 9509850.0,
       "pitch" : 11.0,
       "yaw" : 11.0,
       "roll" : 14.0,
@@ -9179,7 +9179,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Reclaimer Best In Show Edition" : {
     "info" : {
@@ -9225,7 +9225,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Redeemer" : {
     "info" : {
@@ -9287,14 +9287,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Reliant Kore" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Cargo",
-      "size" : "Snub",
-      "crew" : 1.0,
+      "size" : "Small",
+      "crew" : 1,
       "cargo" : 6,
       "price_auec" : 1633900.0,
       "buy_location" : "New Deal Lorville",
@@ -9348,14 +9348,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Reliant Mako" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Multi-role",
-      "size" : "Snub",
-      "crew" : 1.0,
+      "size" : "Small",
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 2388020.0,
       "buy_location" : "New Deal Lorville",
@@ -9410,14 +9410,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Reliant Sen" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Multi-role",
-      "size" : "Snub",
-      "crew" : 1.0,
+      "size" : "Small",
+      "crew" : 1,
       "cargo" : 2,
       "price_auec" : 2136640.0,
       "buy_location" : "New Deal Lorville",
@@ -9472,14 +9472,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Reliant Tana" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Military",
-      "size" : "Snub",
-      "crew" : 1.0,
+      "size" : "Small",
+      "crew" : 1,
       "cargo" : 1,
       "price_auec" : 1885280.0,
       "buy_location" : "New Deal Lorville",
@@ -9534,7 +9534,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator" : {
     "info" : {
@@ -9596,7 +9596,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Bomber" : {
     "info" : {
@@ -9642,7 +9642,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ROC" : {
     "info" : {
@@ -9701,14 +9701,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ROC-DS" : {
     "info" : {
       "manufacturer" : "Greycat Industrial",
       "role" : "Mining",
       "size" : "Snub",
-      "crew" : 2.0,
+      "crew" : 2,
       "cargo" : 3,
       "price_auec" : 134663.0,
       "buy_location" : "New Deal Lorville",
@@ -9760,7 +9760,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Sabre" : {
     "info" : {
@@ -9822,7 +9822,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Sabre Comet" : {
     "info" : {
@@ -9884,7 +9884,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Sabre Raven" : {
     "info" : {
@@ -9946,7 +9946,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "San tok.Yāi" : {
     "info" : {
@@ -10008,7 +10008,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Scorpius" : {
     "info" : {
@@ -10070,7 +10070,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Scorpius Antares" : {
     "info" : {
@@ -10132,7 +10132,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Scythe" : {
     "info" : {
@@ -10194,7 +10194,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Spartan" : {
     "info" : {
@@ -10253,7 +10253,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "A1 Spirit" : {
     "info" : {
@@ -10315,7 +10315,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "C1 Spirit" : {
     "info" : {
@@ -10377,7 +10377,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "E1 Spirit" : {
     "info" : {
@@ -10423,7 +10423,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "SRV" : {
     "info" : {
@@ -10485,14 +10485,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Starfarer" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Multi-role",
       "size" : "Large",
-      "crew" : 8,
+      "crew" : 1,
       "cargo" : 291,
       "price_auec" : 1.25685E7,
       "buy_location" : "New Deal Lorville",
@@ -10513,7 +10513,7 @@
       "expedite_time" : "00:06:00"
     },
     "stats" : {
-      "mass" : 3466606.0,
+      "mass" : 3466610.0,
       "pitch" : 23.0,
       "yaw" : 23.0,
       "roll" : 45.0,
@@ -10547,14 +10547,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Starfarer Gemini" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Military",
       "size" : "Large",
-      "crew" : 6,
+      "crew" : 2,
       "cargo" : 291,
       "price_auec" : 1.42443E7,
       "buy_location" : "New Deal Lorville",
@@ -10609,7 +10609,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Storm" : {
     "info" : {
@@ -10668,7 +10668,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Storm AA" : {
     "info" : {
@@ -10727,14 +10727,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "STV" : {
     "info" : {
       "manufacturer" : "Greycat Industrial",
       "role" : "Multi-role",
       "size" : "Snub",
-      "crew" : 2.0,
+      "crew" : 2,
       "cargo" : 0,
       "price_auec" : 75600.0,
       "buy_location" : "Astro Armada",
@@ -10786,7 +10786,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Syulen" : {
     "info" : {
@@ -10795,7 +10795,7 @@
       "size" : "Unknown",
       "crew" : 1,
       "cargo" : 6,
-      "price_auec" : 2778300.0,
+      "price_auec" : 2082500.0,
       "buy_location" : "Astro Armada",
       "buy_locations" : [ "Astro Armada" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/188/images/e8678dd55949fd7f57e2f9140e3f20c1c19abfb1.jpg",
@@ -10847,7 +10847,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Talon" : {
     "info" : {
@@ -10909,7 +10909,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Talon Shrike" : {
     "info" : {
@@ -10971,7 +10971,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Terrapin" : {
     "info" : {
@@ -11033,14 +11033,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ursa" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Multi-role",
       "size" : "Snub",
-      "crew" : 2.0,
+      "crew" : 2,
       "cargo" : 2,
       "price_auec" : 107730.0,
       "buy_location" : "New Deal Lorville",
@@ -11092,14 +11092,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ursa Fortuna" : {
     "info" : {
       "manufacturer" : "Roberts Space Industries",
       "role" : "Multi-role",
       "size" : "Snub",
-      "crew" : 2.0,
+      "crew" : 2,
       "cargo" : 2,
       "price_auec" : 0.0,
       "buy_location" : "",
@@ -11151,14 +11151,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Valkyrie" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Military",
       "size" : "Medium",
-      "crew" : 5,
+      "crew" : 1,
       "cargo" : 90,
       "price_auec" : 1.9845E7,
       "buy_location" : "Astro Armada",
@@ -11213,7 +11213,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Valkyrie Liberator Edition" : {
     "info" : {
@@ -11259,16 +11259,16 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Vanguard Harbinger" : {
     "info" : {
       "manufacturer" : "Aegis Dynamics",
       "role" : "Military",
       "size" : "Medium",
-      "crew" : 2,
+      "crew" : 1,
       "cargo" : 0,
-      "price_auec" : 1.09346E7,
+      "price_auec" : 8200400.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/196/images/5a740e3fff1d6600e1e8a3f72e08b9f2fa531ebb.jpg",
@@ -11321,7 +11321,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Vanguard Hoplite" : {
     "info" : {
@@ -11330,7 +11330,7 @@
       "size" : "Medium",
       "crew" : 1,
       "cargo" : 0,
-      "price_auec" : 8860790.0,
+      "price_auec" : 6645250.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/197/images/401903cdc8748d2b04e0285e8fffa3282c3919e4.jpg",
@@ -11383,16 +11383,16 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Vanguard Sentinel" : {
     "info" : {
       "manufacturer" : "Aegis Dynamics",
       "role" : "Military",
       "size" : "Medium",
-      "crew" : 2,
+      "crew" : 1,
       "cargo" : 0,
-      "price_auec" : 1.0369E7,
+      "price_auec" : 7776700.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/198/images/852fbd3c23fcebc859194ff1d2d4ca9270d6e85c.jpg",
@@ -11411,7 +11411,7 @@
       "expedite_time" : "00:06:04"
     },
     "stats" : {
-      "mass" : 225970.0,
+      "mass" : 170685.0,
       "pitch" : 44.0,
       "yaw" : 39.0,
       "roll" : 126.0,
@@ -11445,16 +11445,16 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Vanguard Warden" : {
     "info" : {
       "manufacturer" : "Aegis Dynamics",
       "role" : "Military",
       "size" : "Medium",
-      "crew" : 2,
+      "crew" : 1,
       "cargo" : 0,
-      "price_auec" : 9803430.0,
+      "price_auec" : 7354900.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville" ],
       "image_url" : "https://assets.uexcorp.space/img/vehicles/199/images/d28fa48a38dc4505d5b0ad0e17b45d54dc79bf5b.jpg",
@@ -11507,7 +11507,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Vulcan" : {
     "info" : {
@@ -11553,7 +11553,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Vulture" : {
     "info" : {
@@ -11615,7 +11615,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "X1" : {
     "info" : {
@@ -11677,7 +11677,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "X1 Force" : {
     "info" : {
@@ -11739,7 +11739,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "X1 Velocity" : {
     "info" : {
@@ -11801,7 +11801,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Zeus Mk II ES" : {
     "info" : {
@@ -11863,7 +11863,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Zeus Mk II MR" : {
     "info" : {
@@ -11909,7 +11909,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Zeus Mk II CL" : {
     "info" : {
@@ -11971,7 +11971,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Endeavor Landing Bay Pod" : {
     "info" : {
@@ -12017,7 +12017,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Endeavor General Research Pod" : {
     "info" : {
@@ -12063,7 +12063,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Endeavor Medical Bay Pod" : {
     "info" : {
@@ -12109,7 +12109,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Endeavor Telescope Array Bay Pod" : {
     "info" : {
@@ -12155,7 +12155,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Endeavor Fuel Bay Pod" : {
     "info" : {
@@ -12201,7 +12201,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Galaxy Cargo Module" : {
     "info" : {
@@ -12247,7 +12247,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Galaxy Medical Module" : {
     "info" : {
@@ -12293,7 +12293,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Galaxy Refinery Module" : {
     "info" : {
@@ -12339,7 +12339,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Cargo Module - Stern" : {
     "info" : {
@@ -12385,7 +12385,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Cargo Module - Bow" : {
     "info" : {
@@ -12431,7 +12431,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Living Front Module" : {
     "info" : {
@@ -12477,7 +12477,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Living Rear Module" : {
     "info" : {
@@ -12523,7 +12523,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Torpedo Module – Bow" : {
     "info" : {
@@ -12569,7 +12569,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Dropship Front Module" : {
     "info" : {
@@ -12615,7 +12615,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F8C Lightning Executive Edition" : {
     "info" : {
@@ -12638,7 +12638,7 @@
       "sell_locations" : [ ]
     },
     "stats" : {
-      "mass" : 0.0,
+      "mass" : 153775.0,
       "pitch" : 0.0,
       "yaw" : 0.0,
       "roll" : 0.0,
@@ -12661,7 +12661,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7A Hornet Mk II" : {
     "info" : {
@@ -12723,7 +12723,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C Hornet Mk I" : {
     "info" : {
@@ -12785,7 +12785,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Pulse" : {
     "info" : {
@@ -12847,7 +12847,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Pulse LX" : {
     "info" : {
@@ -12909,7 +12909,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MPUV Tractor" : {
     "info" : {
@@ -12970,7 +12970,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Sabre Firebird" : {
     "info" : {
@@ -13032,7 +13032,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ursa Medivac" : {
     "info" : {
@@ -13091,15 +13091,15 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ironclad" : {
     "info" : {
       "manufacturer" : "Drake Interplanetary",
       "role" : "Cargo",
       "size" : "Large",
-      "crew" : 7.0,
-      "cargo" : 2204,
+      "crew" : 7,
+      "cargo" : 2200,
       "price_auec" : 0.0,
       "buy_location" : "",
       "buy_locations" : [ ],
@@ -13153,14 +13153,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Ironclad Assault" : {
     "info" : {
       "manufacturer" : "Drake Interplanetary",
       "role" : "Cargo",
       "size" : "Large",
-      "crew" : 7.0,
+      "crew" : 9,
       "cargo" : 1440,
       "price_auec" : 0.0,
       "buy_location" : "",
@@ -13215,7 +13215,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Sabre Peregrine" : {
     "info" : {
@@ -13277,7 +13277,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ATLS" : {
     "info" : {
@@ -13323,7 +13323,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Fortune" : {
     "info" : {
@@ -13331,7 +13331,7 @@
       "role" : "Salvage",
       "size" : "Small",
       "crew" : 1,
-      "cargo" : 12,
+      "cargo" : 16,
       "price_auec" : 1795500.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville", "Buy and Fly Checkmate", "Buy and Fly Orbituary", "Buy and Fly Ruin Station", "Teach's Levski" ],
@@ -13351,7 +13351,7 @@
       "expedite_time" : "00:01:18"
     },
     "stats" : {
-      "mass" : 116477.0,
+      "mass" : 137700.0,
       "pitch" : 32.0,
       "yaw" : 32.0,
       "roll" : 75.0,
@@ -13385,7 +13385,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Intrepid" : {
     "info" : {
@@ -13394,7 +13394,7 @@
       "size" : "Small",
       "crew" : 1,
       "cargo" : 8,
-      "price_auec" : 670320.0,
+      "price_auec" : 1173060.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville", "Astro Armada", "New Deal Crusader" ],
       "image_url" : "https://cdn.uexcorp.space/vehicles/236/cover/291652bd5065c42e860fc62ba78bd832057c6006.jpg",
@@ -13447,7 +13447,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Guardian" : {
     "info" : {
@@ -13509,7 +13509,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Guardian QI" : {
     "info" : {
@@ -13571,7 +13571,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "CSV-SM" : {
     "info" : {
@@ -13630,7 +13630,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Starlancer TAC" : {
     "info" : {
@@ -13692,14 +13692,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Starlancer MAX" : {
     "info" : {
       "manufacturer" : "Musashi Industrial and Starflight Concern",
       "role" : "Cargo",
       "size" : "Large",
-      "crew" : 4,
+      "crew" : 1,
       "cargo" : 224,
       "price_auec" : 8379000.0,
       "buy_location" : "New Deal Lorville",
@@ -13754,7 +13754,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Starlancer BLD" : {
     "info" : {
@@ -13800,7 +13800,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "CSV-FM" : {
     "info" : {
@@ -13846,7 +13846,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C-R Hornet Tracker Mk II" : {
     "info" : {
@@ -13908,7 +13908,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C-S Hornet Ghost Mk II" : {
     "info" : {
@@ -13970,14 +13970,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Terrapin Medic" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Medical",
       "size" : "Small",
-      "crew" : 2,
+      "crew" : 1,
       "cargo" : 0,
       "price_auec" : 5704770.0,
       "buy_location" : "Astro Armada",
@@ -14032,7 +14032,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Paladin" : {
     "info" : {
@@ -14093,7 +14093,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "F7C-M Super Hornet Mk II" : {
     "info" : {
@@ -14155,7 +14155,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Golem" : {
     "info" : {
@@ -14217,7 +14217,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ATLS GEO" : {
     "info" : {
@@ -14263,7 +14263,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Retaliator Torpedo Module – Stern" : {
     "info" : {
@@ -14309,14 +14309,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Asgard" : {
     "info" : {
       "manufacturer" : "Anvil Aerospace",
       "role" : "Cargo",
       "size" : "Medium",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 180,
       "price_auec" : 1.78605E7,
       "buy_location" : "Astro Armada",
@@ -14371,14 +14371,14 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MTC" : {
     "info" : {
       "manufacturer" : "Greycat Industrial",
       "role" : "Military",
       "size" : "Snub",
-      "crew" : 1.0,
+      "crew" : 1,
       "cargo" : 1,
       "price_auec" : 75600.0,
       "buy_location" : "New Deal Lorville",
@@ -14430,7 +14430,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Guardian MX" : {
     "info" : {
@@ -14439,8 +14439,8 @@
       "size" : "Small",
       "crew" : 1,
       "cargo" : 0,
-      "price_auec" : 7408800.0,
-      "buy_location" : "Astro Armada",
+      "price_auec" : 7038360.0,
+      "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "Astro Armada", "New Deal Lorville" ],
       "image_url" : "https://cdn.uexcorp.space/vehicles/257/cover/c59caa280022897c50322d2bae773889aaa06d37.jpg",
       "brochure_url" : "https://media.robertsspaceindustries.com/omiivz7cwzn3c/source.pdf",
@@ -14492,7 +14492,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ATLS IKTI" : {
     "info" : {
@@ -14538,7 +14538,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ATLS IKTI Rad" : {
     "info" : {
@@ -14584,7 +14584,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ATLS IKTI GEO" : {
     "info" : {
@@ -14630,7 +14630,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "ATLS IKTI GEO Rad" : {
     "info" : {
@@ -14676,7 +14676,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Prowler Utility" : {
     "info" : {
@@ -14738,7 +14738,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Meteor" : {
     "info" : {
@@ -14747,7 +14747,7 @@
       "size" : "Medium",
       "crew" : 1,
       "cargo" : 0,
-      "price_auec" : 4536000.0,
+      "price_auec" : 4309200.0,
       "buy_location" : "New Deal Lorville",
       "buy_locations" : [ "New Deal Lorville" ],
       "image_url" : "https://cdn.uexcorp.space/uid651/resources/vehicles/263/d51943d2a45ed6b78e92062a248d11ebdeb43bc6.jpg",
@@ -14800,7 +14800,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "L-21 Wolf" : {
     "info" : {
@@ -14862,7 +14862,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Stinger" : {
     "info" : {
@@ -14924,7 +14924,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Shiv" : {
     "info" : {
@@ -14935,7 +14935,7 @@
       "cargo" : 32,
       "price_auec" : 5556600.0,
       "buy_location" : "Teach's Levski",
-      "buy_locations" : [ "Teach's Levski", "Grey's Market - Grim Hex" ],
+      "buy_locations" : [ "Teach's Levski" ],
       "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles/266/6130ea5d82cfbf71f6b15fd0607049ef0741409c.jpg",
       "brochure_url" : "",
       "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/shiv/Shiv",
@@ -14986,7 +14986,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "L-22 Alpha Wolf" : {
     "info" : {
@@ -15048,7 +15048,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Clipper" : {
     "info" : {
@@ -15057,9 +15057,9 @@
       "size" : "Small",
       "crew" : 1.0,
       "cargo" : 12,
-      "price_auec" : 0.0,
-      "buy_location" : "",
-      "buy_locations" : [ ],
+      "price_auec" : 3619730.0,
+      "buy_location" : "New Deal Lorville",
+      "buy_locations" : [ "Teach's Levski", "Buy and Fly Ruin Station", "New Deal Lorville", "Buy and Fly Checkmate", "Buy and Fly Orbituary" ],
       "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles/268/ffe77901b8cbc87ed01ec814e7b6abe43dba4252.jpg",
       "brochure_url" : "",
       "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/clipper/Clipper",
@@ -15110,7 +15110,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Golem Ox" : {
     "info" : {
@@ -15172,18 +15172,18 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MDC" : {
     "info" : {
       "manufacturer" : "Greycat Industrial",
       "role" : "Military",
-      "size" : "Unknown",
-      "crew" : 1.0,
+      "size" : "Snub",
+      "crew" : 1,
       "cargo" : 32,
-      "price_auec" : 0.0,
-      "buy_location" : "",
-      "buy_locations" : [ ],
+      "price_auec" : 127575.0,
+      "buy_location" : "Buy and Fly Ruin Station",
+      "buy_locations" : [ "Buy and Fly Ruin Station", "New Deal Lorville", "Buy and Fly Orbituary", "Buy and Fly Checkmate" ],
       "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles/270/3b7178db400277eed84d962a5fea474c08a246bc.jpg",
       "brochure_url" : "",
       "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/mdc/MDC",
@@ -15200,7 +15200,7 @@
       "expedite_time" : "00:01:18"
     },
     "stats" : {
-      "mass" : 53700.0,
+      "mass" : 40611.0,
       "pitch" : 0.0,
       "yaw" : 0.0,
       "roll" : 0.0,
@@ -15231,7 +15231,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Salvation" : {
     "info" : {
@@ -15240,9 +15240,9 @@
       "size" : "Snub",
       "crew" : 1.0,
       "cargo" : 6,
-      "price_auec" : 0.0,
-      "buy_location" : "",
-      "buy_locations" : [ ],
+      "price_auec" : 1185030.0,
+      "buy_location" : "Teach's Levski",
+      "buy_locations" : [ "Teach's Levski" ],
       "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles/271/640861e9fc48d99c42bb096117170559efec18a5.jpg",
       "brochure_url" : "",
       "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/salvation/Salvation",
@@ -15293,7 +15293,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Auxilia" : {
     "info" : {
@@ -15339,7 +15339,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Stingray" : {
     "info" : {
@@ -15385,7 +15385,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Hermes" : {
     "info" : {
@@ -15394,9 +15394,9 @@
       "size" : "Medium",
       "crew" : 2.0,
       "cargo" : 288,
-      "price_auec" : 0.0,
-      "buy_location" : "",
-      "buy_locations" : [ ],
+      "price_auec" : 7110180.0,
+      "buy_location" : "Teach's Levski",
+      "buy_locations" : [ "Teach's Levski" ],
       "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles/275/2695cf85c68b634e9d419f79b81637e40b3856af.jpg",
       "brochure_url" : "",
       "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/hermes/Hermes",
@@ -15447,7 +15447,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "MOTH" : {
     "info" : {
@@ -15461,7 +15461,7 @@
       "buy_locations" : [ ],
       "image_url" : "https://cdn.uexcorp.space/uid6/resources/vehicles//ab216970a17e65c8c53748943e7a6d0a6c02f1c6.jpg",
       "brochure_url" : "",
-      "store_url" : "https://robertsspaceindustries.com/en/pledge/Standalone-Ships/MOTH",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/moth/MOTH",
       "scm_speed" : 140.0,
       "max_speed" : 960.0,
       "shield_hp" : 11220.0,
@@ -15508,7 +15508,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Aurora Mk II" : {
     "info" : {
@@ -15570,7 +15570,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "Aurora Mk I SE" : {
     "info" : {
@@ -15578,7 +15578,7 @@
       "role" : "Military",
       "size" : "Small",
       "crew" : 1,
-      "cargo" : 3,
+      "cargo" : 6,
       "price_auec" : 0.0,
       "buy_location" : "",
       "buy_locations" : [ ],
@@ -15598,7 +15598,7 @@
       "expedite_time" : "00:00:58"
     },
     "stats" : {
-      "mass" : 27066.0,
+      "mass" : 25.0,
       "pitch" : 65.0,
       "yaw" : 59.0,
       "roll" : 146.0,
@@ -15632,7 +15632,7 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
   },
   "UTV" : {
     "info" : {
@@ -15644,9 +15644,9 @@
       "price_auec" : 0.0,
       "buy_location" : "",
       "buy_locations" : [ ],
-      "image_url" : "https://robertsspaceindustries.com/i/38e96dc6b501305bd37f71f991581997c81c92ed/resize(1500,643,cover,crop(3840,1645,0,0,ADdPNihJzmPbNuTnFsH1DqUeqBRpXdSXVVtgJTyDDgscGKrzJuoFjReseHFSRFPVsi4z4U3FbP6T8PSaz8U1eesqg))/85/greycat-utv-paint-base-sku-8k.webp",
+      "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles//3347edfff23a7aa45e61ead1d74006c112352c18.jpg",
       "brochure_url" : "",
-      "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/utv/UTV",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/Standalone-Ships/UTV",
       "scm_speed" : 0,
       "max_speed" : 0,
       "shield_hp" : 1170.0,
@@ -15691,6 +15691,345 @@
     "missile_racks" : [ ],
     "turrets" : [ ],
     "components" : { },
-    "last_update" : 1777587893
+    "last_update" : 1783988230
+  },
+  "Pitbull" : {
+    "info" : {
+      "manufacturer" : "Drake Interplanetary",
+      "role" : "Military",
+      "size" : "Snub",
+      "crew" : 1,
+      "cargo" : 0,
+      "price_auec" : 0.0,
+      "buy_location" : "",
+      "buy_locations" : [ ],
+      "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles//13c27ba6f52459f44247db1989415b2bd44c3a46.jpg",
+      "brochure_url" : "",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/Standalone-Ships/Pitbull-10-Year",
+      "scm_speed" : 232.0,
+      "max_speed" : 1275.0,
+      "shield_hp" : 1350.0,
+      "hull_hp" : 1950.0,
+      "sell_location" : "",
+      "sell_locations" : [ ],
+      "type" : "Ship",
+      "career" : "Snub Fighter",
+      "dimensions" : "6x6x3",
+      "claim_time" : "00:02:00",
+      "expedite_time" : "00:00:36"
+    },
+    "stats" : {
+      "mass" : 10354.0,
+      "pitch" : 77.0,
+      "yaw" : 62.0,
+      "roll" : 220.0,
+      "fuel_capacity" : 0.0,
+      "quantum_fuel" : 0.0,
+      "hydrogen_fuel" : 2.75,
+      "qt_speed" : 0.0,
+      "qt_range" : 0.0,
+      "pilot_dps" : 0.0,
+      "turret_dps" : 0.0,
+      "missile_dps" : 0.0,
+      "total_dps" : 0.0,
+      "pilot_alpha" : 0.0,
+      "turret_alpha" : 0.0,
+      "missile_alpha" : 0.0,
+      "total_alpha" : 0.0,
+      "pitch_boost" : 92.4,
+      "yaw_boost" : 74.4,
+      "roll_boost" : 264.0,
+      "deflection_physical" : 5.0,
+      "deflection_energy" : 4.0,
+      "armor_physical_damage_modifier" : -23.0,
+      "armor_energy_damage_modifier" : 2.0,
+      "armor_em_signal_modifier" : 0.0,
+      "armor_ir_signal_modifier" : 0.0,
+      "armor_cs_signal_modifier" : 0.0,
+      "raw_ship_data_imported" : true
+    },
+    "weapons" : [ ],
+    "missiles" : [ ],
+    "missile_racks" : [ ],
+    "turrets" : [ ],
+    "components" : { },
+    "last_update" : 1783988230
+  },
+  "M80" : {
+    "info" : {
+      "manufacturer" : "Origin Jumpworks",
+      "role" : "Cargo",
+      "size" : "Medium",
+      "crew" : 1,
+      "cargo" : 2,
+      "price_auec" : 0.0,
+      "buy_location" : "",
+      "buy_locations" : [ ],
+      "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles//e5b1d2a027e7af2dd7ac57ab1a4341b6b75f0d45.jpg",
+      "brochure_url" : "",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/m80/M80",
+      "scm_speed" : 225.0,
+      "max_speed" : 1400.0,
+      "shield_hp" : 7200.0,
+      "hull_hp" : 17000.0,
+      "sell_location" : "",
+      "sell_locations" : [ ],
+      "type" : "Ship",
+      "career" : "Combat",
+      "dimensions" : "11.5x11x3.5",
+      "claim_time" : "00:11:39",
+      "expedite_time" : "00:02:55"
+    },
+    "stats" : {
+      "mass" : 135649.0,
+      "pitch" : 38.0,
+      "yaw" : 30.0,
+      "roll" : 150.0,
+      "fuel_capacity" : 0.0,
+      "quantum_fuel" : 1.9,
+      "hydrogen_fuel" : 12.9,
+      "qt_speed" : 0.0,
+      "qt_range" : 0.0,
+      "pilot_dps" : 0.0,
+      "turret_dps" : 0.0,
+      "missile_dps" : 0.0,
+      "total_dps" : 0.0,
+      "pilot_alpha" : 0.0,
+      "turret_alpha" : 0.0,
+      "missile_alpha" : 0.0,
+      "total_alpha" : 0.0,
+      "pitch_boost" : 45.6,
+      "yaw_boost" : 36.0,
+      "roll_boost" : 180.0,
+      "deflection_physical" : 41.0,
+      "deflection_energy" : 32.0,
+      "armor_physical_damage_modifier" : -19.0,
+      "armor_energy_damage_modifier" : 8.0,
+      "armor_em_signal_modifier" : 0.0,
+      "armor_ir_signal_modifier" : 0.0,
+      "armor_cs_signal_modifier" : 0.0,
+      "raw_ship_data_imported" : true
+    },
+    "weapons" : [ ],
+    "missiles" : [ ],
+    "missile_racks" : [ ],
+    "turrets" : [ ],
+    "components" : { },
+    "last_update" : 1783988230
+  },
+  "Starlite" : {
+    "info" : {
+      "manufacturer" : "Musashi Industrial and Starflight Concern",
+      "role" : "Multi-role",
+      "size" : "Medium",
+      "crew" : 1,
+      "cargo" : 0,
+      "price_auec" : 0.0,
+      "buy_location" : "",
+      "buy_locations" : [ ],
+      "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles//72f73ce8d915c4ef6636373980bbb8362c9c4aa4.jpg",
+      "brochure_url" : "",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/starlite/Starlite",
+      "scm_speed" : 150.0,
+      "max_speed" : 970.0,
+      "shield_hp" : 4114.0,
+      "hull_hp" : 68250.0,
+      "sell_location" : "",
+      "sell_locations" : [ ],
+      "type" : "Ship",
+      "career" : "Support",
+      "dimensions" : "32x19.9x9.07",
+      "claim_time" : "00:05:49",
+      "expedite_time" : "00:01:27"
+    },
+    "stats" : {
+      "mass" : 346548.0,
+      "pitch" : 35.0,
+      "yaw" : 35.0,
+      "roll" : 80.0,
+      "fuel_capacity" : 0.0,
+      "quantum_fuel" : 3.3,
+      "hydrogen_fuel" : 110.0,
+      "qt_speed" : 0.0,
+      "qt_range" : 0.0,
+      "pilot_dps" : 0.0,
+      "turret_dps" : 0.0,
+      "missile_dps" : 0.0,
+      "total_dps" : 0.0,
+      "pilot_alpha" : 0.0,
+      "turret_alpha" : 0.0,
+      "missile_alpha" : 0.0,
+      "total_alpha" : 0.0,
+      "pitch_boost" : 42.0,
+      "yaw_boost" : 42.0,
+      "roll_boost" : 96.0,
+      "deflection_physical" : 9.0,
+      "deflection_energy" : 10.0,
+      "armor_physical_damage_modifier" : -20.0,
+      "armor_energy_damage_modifier" : 8.0,
+      "armor_em_signal_modifier" : 0.0,
+      "armor_ir_signal_modifier" : 0.0,
+      "armor_cs_signal_modifier" : 0.0,
+      "raw_ship_data_imported" : true
+    },
+    "weapons" : [ ],
+    "missiles" : [ ],
+    "missile_racks" : [ ],
+    "turrets" : [ ],
+    "components" : { },
+    "last_update" : 1783988230
+  },
+  "Tiburon" : {
+    "info" : {
+      "manufacturer" : "Aegis Dynamics",
+      "role" : "Military",
+      "size" : "Large",
+      "crew" : 8.0,
+      "cargo" : 64,
+      "price_auec" : 0.0,
+      "buy_location" : "",
+      "buy_locations" : [ ],
+      "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles/285/168aef9e37f1a634a44fd1a9acf7bd35ac4600c7.jpg",
+      "brochure_url" : "",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/tiburon/Tiburon",
+      "scm_speed" : 150.0,
+      "max_speed" : 975.0,
+      "shield_hp" : 25740.0,
+      "hull_hp" : 187200.0,
+      "sell_location" : "",
+      "sell_locations" : [ ],
+      "type" : "Ship",
+      "career" : "Combat",
+      "claim_time" : "00:48:36",
+      "expedite_time" : "00:16:12"
+    },
+    "stats" : {
+      "mass" : 5158975.0,
+      "pitch" : 13.0,
+      "yaw" : 13.0,
+      "roll" : 20.0,
+      "fuel_capacity" : 0.0,
+      "quantum_fuel" : 6.7,
+      "hydrogen_fuel" : 465.0,
+      "qt_speed" : 0.0,
+      "qt_range" : 0.0,
+      "pilot_dps" : 0.0,
+      "turret_dps" : 0.0,
+      "missile_dps" : 0.0,
+      "total_dps" : 0.0,
+      "pilot_alpha" : 0.0,
+      "turret_alpha" : 0.0,
+      "missile_alpha" : 0.0,
+      "total_alpha" : 0.0,
+      "pitch_boost" : 19.5,
+      "yaw_boost" : 19.5,
+      "roll_boost" : 40.0,
+      "deflection_physical" : 531.0,
+      "deflection_energy" : 380.0,
+      "armor_physical_damage_modifier" : -19.0,
+      "armor_energy_damage_modifier" : 21.0,
+      "armor_em_signal_modifier" : 0.0,
+      "armor_ir_signal_modifier" : 0.0,
+      "armor_cs_signal_modifier" : 0.0,
+      "raw_ship_data_imported" : true
+    },
+    "weapons" : [ ],
+    "missiles" : [ ],
+    "missile_racks" : [ ],
+    "turrets" : [ ],
+    "components" : { },
+    "last_update" : 1783988230
+  },
+  "Odin" : {
+    "info" : {
+      "manufacturer" : "Anvil Aerospace",
+      "role" : "Medical",
+      "size" : "Capital",
+      "crew" : 0,
+      "cargo" : 6000,
+      "price_auec" : 0.0,
+      "buy_location" : "",
+      "buy_locations" : [ ],
+      "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles//c50b6a445528dbeb8d67d2548c72815d3040ec63.jpg",
+      "brochure_url" : "",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/ships/odin/Odin",
+      "scm_speed" : 0,
+      "max_speed" : 0,
+      "shield_hp" : 0,
+      "hull_hp" : 0,
+      "sell_location" : "",
+      "sell_locations" : [ ]
+    },
+    "stats" : {
+      "mass" : 0.0,
+      "pitch" : 0.0,
+      "yaw" : 0.0,
+      "roll" : 0.0,
+      "fuel_capacity" : 0.0,
+      "quantum_fuel" : 0.0,
+      "hydrogen_fuel" : 0.0,
+      "qt_speed" : 0.0,
+      "qt_range" : 0.0,
+      "pilot_dps" : 0.0,
+      "turret_dps" : 0.0,
+      "missile_dps" : 0.0,
+      "total_dps" : 0.0,
+      "pilot_alpha" : 0.0,
+      "turret_alpha" : 0.0,
+      "missile_alpha" : 0.0,
+      "total_alpha" : 0.0
+    },
+    "weapons" : [ ],
+    "missiles" : [ ],
+    "missile_racks" : [ ],
+    "turrets" : [ ],
+    "components" : { },
+    "last_update" : 1783988230
+  },
+  "Tyilui" : {
+    "info" : {
+      "manufacturer" : "Gatac Manufacture",
+      "role" : "Cargo",
+      "size" : "Medium",
+      "crew" : 0,
+      "cargo" : 96,
+      "price_auec" : 0.0,
+      "buy_location" : "",
+      "buy_locations" : [ ],
+      "image_url" : "https://cdn.uexcorp.space/uid2/resources/vehicles/287/f67fa205de063c5bdef3263ad2e431f5ff24a1a2.jpg",
+      "brochure_url" : "",
+      "store_url" : "https://robertsspaceindustries.com/en/pledge/Standalone-Ships/Tyilui",
+      "scm_speed" : 0,
+      "max_speed" : 0,
+      "shield_hp" : 0,
+      "hull_hp" : 0,
+      "sell_location" : "",
+      "sell_locations" : [ ]
+    },
+    "stats" : {
+      "mass" : 1348960.0,
+      "pitch" : 0.0,
+      "yaw" : 0.0,
+      "roll" : 0.0,
+      "fuel_capacity" : 0.0,
+      "quantum_fuel" : 0.0,
+      "hydrogen_fuel" : 0.0,
+      "qt_speed" : 0.0,
+      "qt_range" : 0.0,
+      "pilot_dps" : 0.0,
+      "turret_dps" : 0.0,
+      "missile_dps" : 0.0,
+      "total_dps" : 0.0,
+      "pilot_alpha" : 0.0,
+      "turret_alpha" : 0.0,
+      "missile_alpha" : 0.0,
+      "total_alpha" : 0.0
+    },
+    "weapons" : [ ],
+    "missiles" : [ ],
+    "missile_racks" : [ ],
+    "turrets" : [ ],
+    "components" : { },
+    "last_update" : 1783988230
   }
 }

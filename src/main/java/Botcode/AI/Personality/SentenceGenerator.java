@@ -498,12 +498,19 @@ public class SentenceGenerator {
         break;
     }
 
-    // Merge global learned phrases and per-user phrases.
-    List<String> learned = PhraseLearner.getLearnedPhrases(intent);
+    // For broad conversational intents, keep responses deterministic and avoid learned-phrase drift.
+    boolean stableBuiltInOnly =
+        intent == Intent.QUESTION || intent == Intent.CASUAL_CHAT || intent == Intent.NEUTRAL;
+
+    // Merge global learned phrases and per-user phrases when safe for this intent.
+    List<String> learned =
+        stableBuiltInOnly ? java.util.Collections.emptyList() : PhraseLearner.getLearnedPhrases(intent);
     List<String> personal =
-        userId > 0
-            ? PhraseLearner.getUserPhrases(userId, intent)
-            : java.util.Collections.emptyList();
+        stableBuiltInOnly
+            ? java.util.Collections.emptyList()
+            : (userId > 0
+                ? PhraseLearner.getUserPhrases(userId, intent)
+                : java.util.Collections.emptyList());
 
     List<String> pool;
     if (learned.isEmpty() && personal.isEmpty()) {
@@ -576,8 +583,12 @@ public class SentenceGenerator {
       String userText) {
     String body = getBodyForChannel(intent, userId, channelId);
 
-    // Apply vocabulary-blending variations to inject learned personality into responses
-    body = generateVariation(body, intent);
+    // Keep high-signal conversational intents stable (avoid weird phrase blending).
+    boolean stableIntent =
+        intent == Intent.QUESTION || intent == Intent.CASUAL_CHAT || intent == Intent.NEUTRAL;
+    if (!stableIntent) {
+      body = generateVariation(body, intent);
+    }
 
     ConversationMemoryService.UserPreferences prefs =
         ConversationMemoryService.getUserPreferences(userId);
@@ -607,7 +618,7 @@ public class SentenceGenerator {
       List<String> entities = ConversationMemoryService.getRecentEntityMentions(userId);
       String anchor =
           !entities.isEmpty() ? entities.get(0) : (!topics.isEmpty() ? topics.get(0) : "");
-      if (!anchor.isBlank() && anchor.length() >= 3) {
+      if (!anchor.isBlank() && anchor.length() >= 3 && anchor.length() <= 28) {
         body = body + " " + String.format(pick(continuityBridges), anchor);
       }
     }
@@ -836,5 +847,4 @@ public class SentenceGenerator {
      }
    }
 }
-
 

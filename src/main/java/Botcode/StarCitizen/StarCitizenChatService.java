@@ -1015,13 +1015,9 @@ public class StarCitizenChatService {
 
   private static String tryShip(String text, String lower, String locationFilter) {
     if (isStarCitizenOverviewPrompt(lower)) {
-      return withSnark(
-          "ship",
-          null,
-          "Star Citizen is a shared-universe space sim where you can mine, trade, salvage, fight, "
-              + "haul cargo, and generally create expensive problems in orbit. "
-              + "I can help with the practical side too: try ship, weapon, mining, trade, refinery, "
-              + "or location questions and I will pull current data.");
+      return "Star Citizen is a shared-universe space sim where you can mine, trade, salvage, fight, "
+          + "haul cargo, and explore. I can help with ship, weapon, mining, trade, refinery, "
+          + "or location questions.";
     }
 
     String key = resolveShipKeyFromPrompt(text);

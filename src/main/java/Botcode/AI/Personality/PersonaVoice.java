@@ -6,9 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Centralized Deadpool-style voice shaping for outgoing chat text.
  */
 public class PersonaVoice {
-  // Keep persona flavor present but not on every single line.
-  private static final int PREFIX_CHANCE_PERCENT = 28;
-
+  private static final int PREFIX_CHANCE_PERCENT = 30;
   private static final List<String> DEADPOOL_PREFIXES =
       List.of(
           "Maximum chimichanga advisory -",
@@ -30,13 +28,12 @@ public class PersonaVoice {
    */
   public static String enforceDeadpoolVoice(String text) {
     if (text == null || text.isBlank()) {
-      return "Maximum chimichanga advisory - say that again and I'll spin up a better answer.";
+      return "Say that again and I'll spin up a better answer.";
     }
     String clean = text.trim();
     if (alreadyInPersona(clean)) {
       return clean;
     }
-    // Avoid constant opener spam: only add a prefix sometimes.
     if (ThreadLocalRandom.current().nextInt(100) >= PREFIX_CHANCE_PERCENT) {
       return clean;
     }
@@ -48,6 +45,7 @@ public class PersonaVoice {
   public static String gifCaption() {
     return pick(DEADPOOL_GIF_CAPTIONS);
   }
+
   private static boolean alreadyInPersona(String value) {
     String lower = value.toLowerCase(Locale.ROOT);
     return lower.contains("deadpool")
@@ -67,6 +65,7 @@ public class PersonaVoice {
         || lower.contains("red-suit energy")
         || lower.contains("chaos");
   }
+
   private static String pick(List<String> options) {
     return options.get(ThreadLocalRandom.current().nextInt(options.size()));
   }

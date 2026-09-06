@@ -179,14 +179,6 @@ public class ConversationMemoryService {
       return normalized;
     }
 
-    boolean followUp =
-        TriggerEngine.isFollowUpSignal(lower)
-            || (memory.lastBotQuestionEpoch > 0
-            && (now() - memory.lastBotQuestionEpoch) <= 8 * 60L);
-    if (!followUp) {
-      return normalized;
-    }
-
     String domain = memory.lastBotDomain == null ? "" : memory.lastBotDomain.trim();
     String subject = memory.lastBotSubject == null ? "" : memory.lastBotSubject.trim();
 
@@ -213,10 +205,37 @@ public class ConversationMemoryService {
             "that one",
             "this one",
             "it",
+            "here",
+            "there",
             "those",
             "same one",
             "same ship",
             "same weapon");
+
+    // Explicit disengage/resets should never be forced back into prior SC lookup context.
+    if (hasAny(
+        lower,
+        "stop",
+        "move on",
+        "forget that",
+        "never mind",
+        "nevermind",
+        "drop it",
+        "new topic")) {
+      return normalized;
+    }
+
+    boolean followUpSignal = TriggerEngine.isFollowUpSignal(lower);
+    boolean recentQuestionContext =
+        memory.lastBotQuestionEpoch > 0 && (now() - memory.lastBotQuestionEpoch) <= 8 * 60L;
+    boolean shortContextualTurn =
+        normalized.length() <= 36
+            && (referencesPriorThing || lower.startsWith("and ") || lower.startsWith("also "));
+
+    boolean followUp = followUpSignal || (recentQuestionContext && shortContextualTurn);
+    if (!followUp) {
+      return normalized;
+    }
 
     StringBuilder expanded = new StringBuilder();
     if (!hasDomain && !domain.isBlank()) {
@@ -914,5 +933,4 @@ public class ConversationMemoryService {
     // Missing fields from old JSON snapshots default to 0 automatically.
   }
 }
-
 

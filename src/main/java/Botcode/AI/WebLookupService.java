@@ -106,9 +106,9 @@ public class WebLookupService {
           : attempt.failureReason;
       maybeQueueLookupIssue(query, reason);
 
-      return "Quick lookup mode is on, but both search providers missed this one.\n"
-          + "Try this search: " + googleSearchUrl(query)
-          + "\nNote: I logged this failure into update notes for periodic fixes.";
+      return "I tried a live lookup and the internet faceplanted on this one.\n"
+          + "Fallback search link: " + googleSearchUrl(query)
+          + "\nGive me a rephrase and I’ll take another swing.";
     }
 
     CACHE_BY_QUERY.put(cacheKey, new CachedLookup(attempt.result, System.currentTimeMillis()));
@@ -116,9 +116,9 @@ public class WebLookupService {
   }
 
   private static String extractLookupQuery(String prompt) {
-      if (prompt == null || prompt.isBlank()) {
-          return null;
-      }
+    if (prompt == null || prompt.isBlank()) {
+      return null;
+    }
     String lower = prompt.toLowerCase(Locale.ROOT).trim();
     boolean explicitLookup = lower.contains("look up")
         || lower.contains("lookup")
@@ -133,9 +133,28 @@ public class WebLookupService {
         || lower.startsWith("what is ")
         || lower.startsWith("who was ")
         || lower.startsWith("what was ");
-      if (!explicitLookup) {
-          return null;
-      }
+    boolean implicitKnowledgeQuestion =
+        (lower.endsWith("?")
+            || startsWithAny(
+                lower,
+                "where ",
+                "who ",
+                "what ",
+                "when ",
+                "why ",
+                "how ",
+                "does ",
+                "do ",
+                "is ",
+                "are ",
+                "can ",
+                "could ",
+                "should ",
+                "would "))
+            && !isSmallTalkOrAck(lower);
+    if (!explicitLookup && !implicitKnowledgeQuestion) {
+      return null;
+    }
 
     String q = prompt.trim();
     q = q.replaceAll(
@@ -146,17 +165,42 @@ public class WebLookupService {
     q = q.replaceAll("(?i)\\s+using\\s+google\\s*$", "");
     q = q.replaceAll("^[\\s\"'`]+|[\\s\"'`?.!,:;]+$", "").trim();
 
-      if (q.length() < 2) {
-          return null;
-      }
+    if (q.length() < 2) {
+      return null;
+    }
     int maxChars = Math.max(40, BotConfig.WEB_LOOKUP_MAX_QUERY_CHARS);
-      if (q.length() > maxChars) {
-          q = q.substring(0, maxChars).trim();
-      }
-      if (looksLikeLocalTarget(q)) {
-          return null;
-      }
+    if (q.length() > maxChars) {
+      q = q.substring(0, maxChars).trim();
+    }
+    if (looksLikeLocalTarget(q)) {
+      return null;
+    }
     return q;
+  }
+
+  private static boolean startsWithAny(String value, String... prefixes) {
+    for (String prefix : prefixes) {
+      if (value.startsWith(prefix)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private static boolean isSmallTalkOrAck(String lower) {
+    return lower.equals("yes")
+        || lower.equals("yeah")
+        || lower.equals("yep")
+        || lower.equals("no")
+        || lower.equals("nope")
+        || lower.equals("ok")
+        || lower.equals("okay")
+        || lower.equals("sure")
+        || lower.equals("thanks")
+        || lower.equals("thank you")
+        || lower.contains("how are you")
+        || lower.contains("how's it going")
+        || lower.contains("what are you doing");
   }
 
   private static LookupAttempt lookupWithFallback(String query) {
@@ -385,10 +429,9 @@ public class WebLookupService {
   private static String formatLookupReply(LookupResult result, String query) {
     String summary = trimSummary(result.summary, BotConfig.WEB_LOOKUP_MAX_SUMMARY_CHARS);
     String safeUrl = isSafePublicHttpsUrl(result.url) ? result.url : googleSearchUrl(query);
-    return "Quick lookup on **" + result.title + "**:\n"
+    return "**" + result.title + "**\n"
         + summary + "\n"
-        + "Source: " + safeUrl + "\n"
-        + "More results: " + googleSearchUrl(query);
+        + "Source: " + safeUrl;
   }
 
   // Matches bare RFC-1918 / loopback IP prefixes only — avoids false positives on
@@ -492,4 +535,3 @@ public class WebLookupService {
     }
   }
 }
-

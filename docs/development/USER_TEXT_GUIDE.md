@@ -458,10 +458,10 @@ Random SC-topic interjection controlled by `INTERJECTION_CHANCE_PERCENT` and
 
 In AI-scoped channels with social mode on:
 
-1. Skips low-signal acknowledgements and actionable question-style messages (these route to main answer flow).
-2. Builds an intent/emotion/personality profile from `TriggerEngine` + `EmotionEngine`.
-3. Generates conversational text via `SentenceGenerator.generateTrackedForUser()`.
-4. Optionally appends a GIF/emoji via `withExpressiveFlair()`.
+1. Builds prompt with `ConversationMemoryService.buildMemoryPrefix()`.
+2. Calls `AIResponder.resolve()`.
+3. Wraps result in `PersonaVoice.enforceDeadpoolVoice()`.
+4. Optionally appends a GIF via `withExpressiveFlair()`.
 5. Posts reply and registers it for feedback tracking.
 
 #### `tryGifReactionReply(event, ...)` — line 1475
@@ -471,11 +471,8 @@ with a `PersonaVoice.gifCaption()`.
 
 #### `sanitizeOutgoingReply(reply)` — line 1546
 
-Applies final response safety/persona pass:
-
-1. Blocks disallowed output via `SafetyGuard`.
-2. Enforces Deadpool voice via `PersonaVoice.enforceDeadpoolVoice()`.
-3. Trims output to a Discord-safe 1900-char limit.
+Strips AI self-reference phrases ("As an AI", "As a language model", etc.) and trims to Discord's
+2000-character limit.
 
 #### `applyImplicitQualityFeedback(event, text)` — line 1825
 
@@ -730,27 +727,29 @@ The resolve method now intelligently prioritizes response sources based on query
 1. **Self-Identity Queries (PRIORITY 1)** — Highest priority for consistent persona
    - Detects: "who are you", "what are you", "your name", "who made you", etc.
    - Routes to `SelfFactsRouter` for consistent Deadpool persona
-2. **Status/Playful/Planning deterministic handlers (PRIORITY 2-5)**
-   - Includes status prompts, smirky/playful handlers, and planning follow-through/runbooks.
+   - Skips all other sources to maintain character consistency
 
-3. **Targeted Star Citizen choice handlers (PRIORITY 6)**
-   - Example: deterministic fighter-pick response for bounty prompts.
+2. **Explicit Knowledge Queries (PRIORITY 2)** — Web lookup route for factual accuracy
+   - Detects: "look up", "define", "how to", "who is", "what is", "search for", etc.
+   - Excludes Star Citizen contextual queries (checks for SC keywords)
+   - Routes to `WebLookupService` for Wikipedia/DuckDuckGo lookups
+   - Useful for facts, definitions, procedures, historical info
 
-4. **Star Citizen Domain Expertise (PRIORITY 7)** — Topic-specific knowledge
+3. **Star Citizen Domain Expertise (PRIORITY 3)** — Topic-specific knowledge
    - Routes to `StarCitizenChatService` for ship, weapons, mining, trading, etc.
+   - Leverages real game data integration
 
-5. **Web Lookup (PRIORITY 8-9)** — explicit and general lookup paths
-   - Uses `WebLookupService` for factual answers (Wikipedia/DuckDuckGo).
+4. **General Web Lookup (PRIORITY 4)** — Fallback for non-SC questions
+   - For topics outside Star Citizen domain
+   - Ensures answers are factual and sourced
 
-6. **Forced non-SC question lookup (PRIORITY 10)**
-   - If prompt looks like a plain actionable question and no earlier route answered,
-     forces lookup path to avoid conversational non-answers.
+5. **Premium Provider (PRIORITY 5)** — Optional expansion point
+   - Future external AI provider integration
+   - Currently placeholder-only
 
-7. **Premium Provider (PRIORITY 11)** — Optional expansion point
-   - Future external AI provider integration.
-
-8. **Learned Personality Fallback** — Conversational continuity
-   - Last-resort style response path.
+6. **Learned Personality Fallback** — Conversational continuity
+   - Uses learned phrases for natural conversation flow
+   - Ensures bot always has a response
 
 **Helper Methods:**
 - `isSelfIdentityPrompt(String lower)` — Expanded to detect: "created by", "your role", "your purpose", "tell me about yourself"
@@ -764,11 +763,20 @@ The resolve method now intelligently prioritizes response sources based on query
 Performs real-time web lookups for knowledge questions.
 **`tryLookup(String prompt)`** — line 35
 
-1. `extractLookupQuery()` supports both explicit lookup prompts and implicit question forms (`where/what/who/how...`), excluding small-talk acks.
+1. `extractLookupQuery()` strips filler words and extracts a clean search query.
 2. `lookupWithFallback()` tries Wikipedia first, then DuckDuckGo.
-3. Returns concise sourced text on success.
-4. On provider failure, returns a direct fallback Google search link instead of silent/null behavior.
-5. Includes caching, retry logic, and safe-public-URL enforcement.
+3. Returns trimmed summary text or empty string on failure.
+   **`wikipediaLookup(String query)`** — line 106
+1. Hits `https://en.wikipedia.org/w/api.php?action=opensearch&search={query}` to resolve the article
+   title.
+2. Fetches the extract (intro paragraph) from the `query&prop=extracts` endpoint.
+3. Returns first paragraph trimmed to `WEB_LOOKUP_MAX_SUMMARY_CHARS`.
+   **`duckDuckGoLookup(String query)`** — line 155
+   Hits `https://api.duckduckgo.com/?q={query}&format=json&no_html=1`. Extracts `AbstractText` or
+   `Answer`.
+   **`sendGetWithRetry(String url)`** — line 209
+   HTTP GET with up to `WEB_LOOKUP_RETRY_COUNT` retries using Java `HttpClient` with
+   `WEB_LOOKUP_TIMEOUT_MS` timeout.
 
 ---
 
@@ -1322,10 +1330,9 @@ The bot now maintains sophisticated conversation context through multiple channe
 **Intelligent response routing:**
 - `AIResponder.resolve()` now prioritizes sources based on query intent:
   * **Identity queries** → Consistent Deadpool persona (SelfFactsRouter)
-  * **Deterministic handlers** → Playful/planning/specific mapped prompts
   * **Knowledge queries** → Web lookup for facts (Wikipedia/DuckDuckGo)
   * **Game-specific queries** → Star Citizen expertise (StarCitizenChatService)
-  * **General non-SC questions** → Forced lookup path before personality fallback
+  * **General questions** → Web fallback
   * **Conversational continuity** → Learned personality phrases
 
 **Context-aware preference learning:**
@@ -1453,8 +1460,8 @@ docker compose down
 |------------------------------------|---------|--------------------------------------|
 | `BOT_AI_ENABLED`                   | `true`  | Enable AI responses                  |
 | `BOT_WEB_LOOKUP_ENABLED`           | `true`  | Enable Wikipedia/DuckDuckGo fallback |
-| `BOT_WEB_LOOKUP_TIMEOUT_MS`        | `4500`  | Per-request HTTP timeout (ms)        |
-| `BOT_WEB_LOOKUP_MAX_SUMMARY_CHARS` | `520`   | Max characters from web summary      |
+| `BOT_WEB_LOOKUP_TIMEOUT_MS`        | `4000`  | Per-request HTTP timeout (ms)        |
+| `BOT_WEB_LOOKUP_MAX_SUMMARY_CHARS` | `400`   | Max characters from web summary      |
 | `BOT_WEB_LOOKUP_RETRY_COUNT`       | `2`     | HTTP retry attempts                  |
 
 ### Learning
@@ -1462,20 +1469,20 @@ docker compose down
 | Variable                                              | Default | Description                                |
 |-------------------------------------------------------|---------|--------------------------------------------|
 | `BOT_AUTONOMOUS_LEARNING_ENABLED`                     | `true`  | Implicit upvote/downvote learning          |
-| `BOT_PASSIVE_LEARNING_ALL_GUILD_MESSAGES`             | `true`  | Learn phrase style from all guild messages |
+| `BOT_PASSIVE_LEARNING_ALL_GUILD_MESSAGES`             | `false` | Learn phrase style from all guild messages |
 | `BOT_AUTO_PERSONAL_PHRASE_LEARNING_ENABLED`           | `true`  | Auto-save signals as personal phrases      |
-| `BOT_PASSIVE_HISTORY_BACKFILL_ENABLED`                | `true`  | Backfill chat history on startup           |
-| `BOT_PASSIVE_HISTORY_BACKFILL_MESSAGES_PER_CHANNEL`   | `60`    | Messages to backfill per channel           |
-| `BOT_PASSIVE_HISTORY_BACKFILL_MAX_CHANNELS_PER_GUILD` | `10`    | Max channels to backfill per guild         |
-| `BOT_PASSIVE_HISTORY_BACKFILL_MAX_AGE_DAYS`           | `14`    | Max age of messages to backfill            |
+| `BOT_PASSIVE_HISTORY_BACKFILL_ENABLED`                | `false` | Backfill chat history on startup           |
+| `BOT_PASSIVE_HISTORY_BACKFILL_MESSAGES_PER_CHANNEL`   | `100`   | Messages to backfill per channel           |
+| `BOT_PASSIVE_HISTORY_BACKFILL_MAX_CHANNELS_PER_GUILD` | `5`     | Max channels to backfill per guild         |
+| `BOT_PASSIVE_HISTORY_BACKFILL_MAX_AGE_DAYS`           | `7`     | Max age of messages to backfill            |
 
 ### Channels & Behaviour
 
 | Variable                             | Default | Description                                        |
 |--------------------------------------|---------|----------------------------------------------------|
 | `BOT_FREE_CHANNEL_IDS`               | empty   | Comma-separated channel IDs for free-response mode |
-| `PANEL_CHANNEL_IDS`                  | empty   | Comma-separated channel IDs for panel auto-publish |
-| `BOT_AI_CATEGORY_ID`                 | empty   | Discord category ID for AI-scoped social chat      |
+| `BOT_GUI_CHANNEL_IDS`                | empty   | Comma-separated channel IDs for panel auto-publish |
+| `AI_CATEGORY_ID`                     | empty   | Discord category ID for AI-scoped social chat      |
 | `BOT_REQUIRE_REPLY_CONTEXT`          | `false` | Only respond to explicit replies in free channels  |
 | `BOT_AI_SOCIAL_MODE`                 | `true`  | Social conversational replies in AI channels       |
 | `BOT_AI_SOCIAL_REPLY_CHANCE_PERCENT` | `68`    | Chance to reply socially in AI channels            |

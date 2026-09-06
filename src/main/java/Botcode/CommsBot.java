@@ -7,6 +7,10 @@ import Botcode.Utils.DatasetCache;
 import Botcode.listeners.Eventlistener;
 import Botcode.listeners.OnJoin;
 import Botcode.listeners.TempVoiceDelete;
+import Botcode.Security.DatabaseEncryptionManager;
+import Botcode.Security.BackupService;
+import Botcode.Monitoring.MetricsCollector;
+import Botcode.Database.DatabaseOptimizer;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
@@ -23,6 +27,9 @@ import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 
 import javax.security.auth.login.LoginException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 import static net.dv8tion.jda.api.requests.GatewayIntent.*;
 
@@ -37,6 +44,7 @@ public class CommsBot {
    * App process start timestamp (ms since epoch), used for uptime reporting.
    */
   private static final long START_EPOCH_MS = System.currentTimeMillis();
+  private static final String DEFAULT_DB_PATH = "data/starcitizen.db";
 
   private final Dotenv config;
   private final ShardManager shardManager;
@@ -59,6 +67,39 @@ public class CommsBot {
 
     System.out.println("[Startup] TOKEN loaded successfully.");
 
+    // Initialize security & monitoring modules BEFORE building JDA.
+    System.out.println("[Security] Initializing security modules...");
+    String dbPath = config.get("SC_DB_PATH");
+    if (dbPath == null || dbPath.isBlank()) {
+      dbPath = DEFAULT_DB_PATH;
+    }
+    try {
+      if (Botcode.AI.AIUtils.BotConfig.DB_ENCRYPTION_ENABLED
+          && DatabaseEncryptionManager.isEncryptionEnabled()) {
+        DatabaseEncryptionManager.getOrGenerateEncryptionKey();
+        System.out.println("[Security] Database encryption key initialized");
+      }
+
+      try (Connection dbConnection = openDatabaseConnection(dbPath)) {
+        DatabaseOptimizer.configureOptimalPragmas(dbConnection);
+        DatabaseOptimizer.createOptimalIndexes(dbConnection);
+        System.out.println("[Security] Database indexes optimized");
+      }
+
+      if (Botcode.AI.AIUtils.BotConfig.BACKUP_ENABLED) {
+        BackupService backupService = new BackupService();
+        backupService.start(dbPath);
+        System.out.println("[Security] Backup service started");
+      }
+
+      MetricsCollector.initialize();
+      System.out.println("[Security] Metrics collection started");
+
+    } catch (Exception e) {
+      System.out.println("[Security] Warning: Security module initialization failed: " + e.getMessage());
+      e.printStackTrace();
+    }
+
     // Preserve all gateway intents so downstream listeners receive required events.
     DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token)
         .enableIntents(GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS));
@@ -68,6 +109,7 @@ public class CommsBot {
       public void onReady(ReadyEvent event) {
         System.out.println("[JDA] READY as " + event.getJDA().getSelfUser().getName()
             + " | Guilds: " + event.getJDA().getGuilds().size());
+        MetricsCollector.recordEvent("bot_ready", 1);
       }
 
       @Override
@@ -156,6 +198,27 @@ public class CommsBot {
           .addOption(OptionType.STRING, "item", "Name that appears to be missing", true)
           .addOption(OptionType.STRING, "notes", "Optional extra context", false)
           .queue();
+
+      // GDPR & Security Commands
+      jda.upsertCommand("gdpr-export-my-data",
+              "Export all your personal data (Data Subject Access Request)")
+          .queue();
+
+      jda.upsertCommand("gdpr-delete-my-data",
+              "Request permanent deletion of your personal data (Right to be Forgotten)")
+          .queue();
+
+      jda.upsertCommand("backup-status",
+              "View backup status and recovery options")
+          .queue();
+
+      jda.upsertCommand("bot-health",
+              "View bot health metrics and uptime")
+          .queue();
+
+      jda.upsertCommand("bot-version",
+              "Display bot version and build info")
+          .queue();
     });
 
     // Attach listeners that handle join flows, temp channels, and slash commands.
@@ -217,16 +280,38 @@ public class CommsBot {
         "salvage"
     };
 
-    int ok = 0;
+    int updatedOrUnchanged = 0;
+    int failed = 0;
     for (String dataset : datasets) {
-      boolean success = StarCitizenUpdateManager.update(dataset);
-        if (success) {
-            ok++;
-        }
+      StarCitizenUpdateManager.UpdateResult result = StarCitizenUpdateManager.updateDetailed(dataset);
+      if (result.isSuccess()) {
+        updatedOrUnchanged++;
+      } else {
+        failed++;
+      }
     }
     System.out.println(
-        "[Startup] StarCitizen snapshot refresh complete: " + ok + "/" + datasets.length
-            + " succeeded.");
+        "[Startup] StarCitizen snapshot refresh complete: "
+            + updatedOrUnchanged
+            + "/"
+            + datasets.length
+            + " succeeded, "
+            + failed
+            + " failed.");
+  }
+
+  private static Connection openDatabaseConnection(String dbPath) throws Exception {
+    if (Botcode.AI.AIUtils.BotConfig.DB_ENCRYPTION_ENABLED
+        && DatabaseEncryptionManager.isEncryptionEnabled()) {
+      try {
+        return DatabaseEncryptionManager.getEncryptedConnection(dbPath);
+      } catch (SQLException e) {
+        System.out.println(
+            "[Security] Encrypted DB connection unavailable; falling back to standard SQLite: "
+                + e.getMessage());
+      }
+    }
+    return DriverManager.getConnection("jdbc:sqlite:" + dbPath);
   }
 
   /**

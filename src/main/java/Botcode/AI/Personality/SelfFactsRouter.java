@@ -29,20 +29,19 @@ public class SelfFactsRouter {
     String lower = text.toLowerCase(Locale.ROOT).trim();
 
     if (isNameQuestion(lower)) {
-      return "I'm Phoenix Bot --” merc with a database. Your Phoenix Industries copilot, fully licensed and barely dangerous.";
+      return "I'm Phoenix Bot, your Phoenix Industries assistant.";
     }
 
     if (isCapabilitiesQuestion(lower)) {
-      return
-          "Oh, where do I BEGIN. Mining analysis, trade routes, ship lookups, weapons, refinery, salvage, "
-              + "server tools, and genuinely outstanding conversation. "
-              + "Basically a Swiss Army knife with Wi-Fi. Try /mine, /trade, /ship, or /weapon.";
+      return "I can help with Star Citizen data, server tools, and normal conversation. Try /mine, /trade, /ship, or /weapon.";
+    }
+
+    if (isBotStatusQuestion(lower)) {
+      return "I'm doing well and ready to help. What's up?";
     }
 
     if (isGeneralConversationQuestion(lower)) {
-      return "Yep --” I can absolutely do general conversation, not just Star Citizen lookups. "
-          + "I'm basically a very sophisticated chat partner who also happens to know trade routes. "
-          + "Let's talk.";
+      return "Yes — I can do normal conversation too. What would you like to talk about?";
     }
 
     String topicResponse = resolveTopicOverview(lower);
@@ -51,9 +50,7 @@ public class SelfFactsRouter {
     }
 
     if (isWorldDominationQuestion(lower)) {
-      return "Negative, commander. I've reviewed the world domination playbook and honestly? "
-          + "Way too much paperwork. I'll stick to trade routes and good vibes --” "
-          + "but I respect the ambition.";
+      return "Nope. I’m keeping things to Star Citizen, server tools, and conversation.";
     }
 
     if (isTimeQuestion(lower)) {
@@ -104,6 +101,17 @@ public class SelfFactsRouter {
         || lower.equals("functions")
         || lower.equals("commands")
         || lower.equals("help me");
+  }
+
+  private static boolean isBotStatusQuestion(String lower) {
+    return lower.contains("how are you")
+        || lower.contains("how is the bot")
+        || lower.contains("how's the bot")
+        || lower.contains("how is phoenix bot")
+        || lower.contains("how's phoenix bot")
+        || lower.contains("how are you doing")
+        || lower.contains("how is it going")
+        || lower.contains("how's it going");
   }
 
   private static boolean isOwnerQuestion(String lower) {
@@ -176,47 +184,31 @@ public class SelfFactsRouter {
     }
 
     if (isStarCitizenOverview(lower)) {
-      return
-          "Star Citizen is a space sim MMO-in-development where you can mine, haul, fight, salvage, "
-              + "trade, and cause general chaos in a shared universe. "
-              + "I can help with the practical stuff too --” try /mine, /trade, /ship, or /weapon.";
+      return "Star Citizen is an in-development space sim MMO focused on mining, hauling, combat, salvage, trading, and exploration. I can help with the in-game details too.";
     }
 
     if (isMiningOverview(lower)) {
-      return
-          "Mining is the art of balancing rock resistance, instability, laser power, and your ship setup "
-              + "without accidentally making everything explode. "
-              + "For a viability check, use `/mine` and I'll break it all down.";
+      return "Mining is about matching your ship, laser setup, and rock resistance so you get useful ore without blowing it up. Use /mine for a full breakdown.";
     }
 
     if (isTradeOverview(lower)) {
-      return
-          "Trade is buy-low, sell-high across the verse with cargo capacity and route risk in mind. "
-              + "It sounds simple. It is not simple. Use `/trade` for top routes or commodity-specific runs.";
+      return "Trade is buying low, selling high, and managing cargo risk along the way. Use /trade for routes or commodity-specific runs.";
     }
 
     if (isRefineryOverview(lower)) {
-      return
-          "Refinery converts raw ore into higher-value output --” the fun part is choosing your method "
-              + "(time vs yield trade-offs, classic stuff). "
-              + "The panel refinery tools compare methods and station options. Check it out.";
+      return "Refinery turns raw ore into higher-value output. The main choice is usually time versus yield.";
     }
 
     if (isSalvageOverview(lower)) {
-      return
-          "Salvage is hull-scraping and material recovery --” RMC, components, whatever the verse left behind. "
-              + "Very cathartic. I can show hotspots, ship guidance, and material value references.";
+      return "Salvage is hull scraping and material recovery, usually for RMC and other recovered parts. I can point you to hotspots and ship guidance.";
     }
 
     if (isShipsOverview(lower)) {
-      return "Ship selection is deeply role-driven: cargo, combat, mining, exploration, salvage --” "
-          + "each needs different things. Don't wing it. Use `/ship <name>` for stat lookups.";
+      return "Ship selection depends on the job: cargo, combat, mining, exploration, or salvage. Use /ship <name> for stats.";
     }
 
     if (isWeaponsOverview(lower)) {
-      return
-          "Weapon choice comes down to DPS, range, projectile speed, and damage profile for your engagement style. "
-              + "Numbers matter more than vibes, unfortunately. Use `/weapon <name>` to compare.";
+      return "Weapon choice comes down to DPS, range, projectile speed, and damage type. Use /weapon <name> to compare.";
     }
 
     return null;
@@ -295,5 +287,4 @@ public class SelfFactsRouter {
     return sb.toString().trim();
   }
 }
-
 

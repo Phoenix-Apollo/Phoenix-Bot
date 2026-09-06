@@ -1,82 +1,82 @@
 {
-  "Refinement Center - Nyx Gateway (Pyro)": {
-    "system": "Pyro",
-    "body": "Nyx Gateway (Pyro system)"
+  "Refinement Center - Nyx Gateway (Pyro)" : {
+    "system" : "Pyro",
+    "body" : "Nyx Gateway (Pyro system)"
   },
-  "Refinement Center - Stanton Gateway (Nyx)": {
-    "system": "Nyx",
-    "body": "Stanton Gateway (Nyx system)"
+  "Refinement Center - Stanton Gateway (Nyx)" : {
+    "system" : "Nyx",
+    "body" : "Stanton Gateway (Nyx system)"
   },
-  "Refinement Center - Pyro Gateway (Nyx)": {
-    "system": "Nyx",
-    "body": "Pyro Gateway (Nyx system)"
+  "Refinement Center - Pyro Gateway (Nyx)" : {
+    "system" : "Nyx",
+    "body" : "Pyro Gateway (Nyx system)"
   },
-  "Refinement Center - Levski": {
-    "system": "Nyx",
-    "body": "Delamar"
+  "Refinement Center - Levski" : {
+    "system" : "Nyx",
+    "body" : "Delamar"
   },
-  "Refinement Center - Orbituary": {
-    "system": "Pyro",
-    "body": "Bloom"
+  "Refinement Center - Orbituary" : {
+    "system" : "Pyro",
+    "body" : "Bloom"
   },
-  "Refinement Center - Checkmate": {
-    "system": "Pyro",
-    "body": "Monox Lagrange Point 4"
+  "Refinement Center - Checkmate" : {
+    "system" : "Pyro",
+    "body" : "Monox Lagrange Point 4"
   },
-  "Refinement Processing - Stanton Gateway (Pyro)": {
-    "system": "Pyro",
-    "body": "Stanton Gateway (Pyro system)"
+  "Refinement Processing - Stanton Gateway (Pyro)" : {
+    "system" : "Pyro",
+    "body" : "Stanton Gateway (Pyro system)"
   },
-  "Refinement Center - Ruin Station": {
-    "system": "Pyro",
-    "body": "Terminus"
+  "Refinement Center - Ruin Station" : {
+    "system" : "Pyro",
+    "body" : "Terminus"
   },
-  "Refinement Processing - Nyx Gateway (Stanton)": {
-    "system": "Stanton",
-    "body": "Nyx Gateway (Stanton system)"
+  "Refinement Processing - Nyx Gateway (Stanton)" : {
+    "system" : "Stanton",
+    "body" : "Nyx Gateway (Stanton system)"
   },
-  "Refinement Processing - Pyro Gateway (Stanton)": {
-    "system": "Stanton",
-    "body": "Pyro Gateway (Stanton system)"
+  "Refinement Processing - Pyro Gateway (Stanton)" : {
+    "system" : "Stanton",
+    "body" : "Pyro Gateway (Stanton system)"
   },
-  "Refinement Processing - HUR-L2": {
-    "system": "Stanton",
-    "body": "Hurston Lagrange Point 2"
+  "Refinement Processing - HUR-L2" : {
+    "system" : "Stanton",
+    "body" : "Hurston Lagrange Point 2"
   },
-  "Refinement Processing - HUR-L1": {
-    "system": "Stanton",
-    "body": "Hurston Lagrange Point 1"
+  "Refinement Processing - HUR-L1" : {
+    "system" : "Stanton",
+    "body" : "Hurston Lagrange Point 1"
   },
-  "Refinement Processing - MIC-L1": {
-    "system": "Stanton",
-    "body": "microTech Lagrange Point 1"
+  "Refinement Processing - MIC-L1" : {
+    "system" : "Stanton",
+    "body" : "microTech Lagrange Point 1"
   },
-  "Refinement Processing - MIC-L2": {
-    "system": "Stanton",
-    "body": "microTech Lagrange Point 2"
+  "Refinement Processing - MIC-L2" : {
+    "system" : "Stanton",
+    "body" : "microTech Lagrange Point 2"
   },
-  "Refinement Processing - MIC-L5": {
-    "system": "Stanton",
-    "body": "microTech Lagrange Point 5"
+  "Refinement Processing - MIC-L5" : {
+    "system" : "Stanton",
+    "body" : "microTech Lagrange Point 5"
   },
-  "Refinement Processing - Terra Gateway (Stanton)": {
-    "system": "Stanton",
-    "body": "Terra Gateway (Stanton system)"
+  "Refinement Processing - Terra Gateway (Stanton)" : {
+    "system" : "Stanton",
+    "body" : "Terra Gateway (Stanton system)"
   },
-  "Refinement Processing - CRU-L1": {
-    "system": "Stanton",
-    "body": "Crusader Lagrange Point 1"
+  "Refinement Processing - CRU-L1" : {
+    "system" : "Stanton",
+    "body" : "Crusader Lagrange Point 1"
   },
-  "Refinement Processing - ARC-L4": {
-    "system": "Stanton",
-    "body": "ArcCorp Lagrange Point 4"
+  "Refinement Processing - ARC-L4" : {
+    "system" : "Stanton",
+    "body" : "ArcCorp Lagrange Point 4"
   },
-  "Refinement Processing - ARC-L2": {
-    "system": "Stanton",
-    "body": "ArcCorp Lagrange Point 2"
+  "Refinement Processing - ARC-L2" : {
+    "system" : "Stanton",
+    "body" : "ArcCorp Lagrange Point 2"
   },
-  "Refinement Processing - ARC-L1": {
-    "system": "Stanton",
-    "body": "ArcCorp Lagrange Point 1"
+  "Refinement Processing - ARC-L1" : {
+    "system" : "Stanton",
+    "body" : "ArcCorp Lagrange Point 1"
   }
 }

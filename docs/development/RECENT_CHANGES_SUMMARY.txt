@@ -1,0 +1,143 @@
+Phoenix Bot - Current State Summary (May 12, 2026 - UPDATED)
+
+What it is now
+- Discord operations bot with Star Citizen tooling, interactive panel UI, and
+  local-first data pipeline. Now includes multi-user conversation awareness for
+  contextual group participation.
+
+What changed recently
+1) Local-first data ingestion
+- Fetchers now check local files before any remote source for all supported
+  datasets (commodities, trade, ships, weapons, components, mining, refinery,
+  refinery stations, salvage, locations).
+- Optional per-dataset local raw file and stats file overrides were added via
+  env vars (see .env.example).
+
+2) SQLite-backed dataset store
+- Added persistent SQLite cache (`data/starcitizen.db`) for normalized datasets.
+- Runtime load path now prefers SQLite -> data/*.json snapshot -> packaged
+  resources.
+- Updates now dual-write to both JSON snapshots and SQLite.
+
+3) Refresh policy and remote call reduction
+- Default refresh interval is monthly (`SC_REFRESH_INTERVAL_MINUTES=43200`).
+- Startup skips live fetch when local/DB data is still fresh.
+- Admin panel refresh now forces live update when requested.
+
+4) Safer offline/blocked-source behavior
+- If upstream is blocked/unavailable, existing local data is kept for all
+  datasets instead of hard-failing or wiping useful values.
+
+5) Ship weapon panel improvements
+- Ship-weapon class filtering updated to match real weapon naming patterns.
+- Weapon stats renderer expanded to show richer fields when present
+  (burst DPS, alpha min/max, penetration, ammo/regen, spread, distortion,
+  damage-type breakdown, health, pricing).
+
+6) Conversation improvements - Context-aware tone matching
+- Added KNOWLEDGE_QUERY intent type for factual questions (time, dates, definitions,
+  facts, "how to" queries).
+- TriggerEngine now routes time/date/definition/explanation patterns to KNOWLEDGE_QUERY
+  instead of generic QUESTION.
+- PersonalityEngine assigns NEUTRAL tone + low energy (1) to knowledge queries for
+  informative, straightforward responses.
+- SentenceGenerator now conditionally applies Deadpool tags:
+  * SKIP tags: KNOWLEDGE_QUERY, COMPLAINT, CONFUSION (need sincere, informative tone)
+  * APPLY tags: GREETING, CASUAL_CHAT, QUESTION, PRAISE, HYPE (get personality)
+- Knowledge queries use natural prefixes ("Here's what I've got:", "Quick answer:",
+  "Based on that:", "Good question — here's the info:") instead of narrator voice.
+- Example: "what is the time" now returns "quick answer: Current local time: 1:49 PM"
+  instead of "Red-suit narrator voice — ...unnecessary chatter... Sure thing. What are
+  you trying to figure out?"
+
+7) Dynamic sentence generation & personality learning from reactions
+- SentenceGenerator now extracts vocabulary from high-scoring learned phrases to
+  generate fresh variations while maintaining Deadpool tone.
+- generateVariation() creates novel phrasings by:
+  * Blending learned vocabulary into response templates
+  * Injecting personality descriptors (e.g., "Full energy/chaos/vibes mode")
+  * Preserving core meaning while varying word choice
+- Variations occur 40% of the time to keep responses diverse and fresh.
+- PhraseLearner now reinforces successful personality patterns: when a phrase gets
+  upvoted (👍/✅), reinforceSuccessfulPattern() tracks which persona prefixes and
+  Deadpool markers performed well.
+- The bot learns Deadpool personality patterns from user reactions and gradually
+  improves phrase generation over time.
+- Result: Bot develops more personalized Deadpool voice that reflects what users
+  actually enjoy, while preventing personality from becoming stale/repetitive.
+
+8) Multi-user conversation awareness and contextual interjection
+- NEW SERVICE: ChannelConversationService tracks real-time multi-user conversations.
+- Bot now detects when 2+ users are actively discussing topics in a channel.
+- Intelligently participates with contextual feedback, suggestions, or insights.
+- Sentiment-driven response generation:
+  * Questions: Offers helpful perspective and follow-ups
+  * Problems: Empathetic troubleshooting and practical suggestions
+  * Positive energy: Reinforcement and momentum-building
+  * Neutral banter: Constructive additions and alternative angles
+- Respects channel configuration and maintains conversation windows.
+- Learns from group interactions via existing PhraseLearner system.
+- Upvotes/downvotes on group replies refine future responses.
+- Result: Bot feels like a natural community member, participating when relevant
+  rather than staying silent or always requiring direct @mention.
+
+9) Documentation cleanup (no standalone multi-user doc)
+- Removed `MULTI_USER_IMPLEMENTATION.md` to avoid duplicate docs.
+- Kept multi-user implementation details in this file (section 8) as the single source.
+
+10) AI package/folder structure refactor (COMPLETED - May 2026)
+- Reorganized AI subsystem into cohesive package hierarchy:
+   * `Botcode.AI.AIHook.AIResponder` — Main AI response router
+   * `Botcode.AI.Personality.*` — All 8 personality/emotion classes (CasualChat, Excited, Helpful, etc.)
+   * `Botcode.AI.AIUtils.*` — AI utilities: BotConfig, SafetyGuard, ConversationMemoryService, ChannelConversationService
+- Updated all import references project-wide across Eventlistener, InterestDetector, AIResponder, and cross-Personality classes.
+- Verified: all 8 Personality classes present, no missing functionality, runtime behavior preserved identically.
+- Single end-to-end Maven build verification performed — BUILD SUCCESS.
+
+11) Critical security patch: Apache OpenNLP XXE, RCE, and DoS vulnerabilities
+- Upgraded org.apache.opennlp:opennlp-tools from 2.3.1 to 2.5.9
+- Fixed CVE-2026-40682 (CRITICAL) — XML External Entity (XXE) injection via DictionaryEntryPersistor
+- Fixed CVE-2026-42027 (CRITICAL) — Arbitrary class instantiation via Model Manifest
+- Fixed CVE-2026-42440 (HIGH) — OOM Denial of Service via unbounded array allocation
+- All production dependencies now verified safe from known CVEs
+- Build verified clean with Maven after security patch
+
+12) Enhanced AI conversational routing and response prioritization
+- Refactored AIResponder.resolve() to prioritize response sources more intelligently:
+  * Self-identity queries get consistent Deadpool persona (highest priority)
+  * Explicit knowledge queries route to web lookup for accurate factual answers
+  * Star Citizen domain expertise handled before falling back to web
+  * Learned personality phrases used as intelligent fallback for continuity
+  * Premium provider integration remains optional/future-ready
+- Expanded isSelfIdentityPrompt() to detect more identity-seeking queries
+- Added isExplicitNonScLookupPrompt() intelligent detection with SC context awareness
+- Added isSCContextualQuery() helper to avoid routing Star Citizen questions to web lookup
+- Result: Smarter conversation flow with better fact accuracy and topic-specific expertise
+
+13) Documentation updates for May 2026 (this session)
+- Updated RECENT_CHANGES_SUMMARY.txt with security patch and AI improvements
+- Updated USER_TEXT_GUIDE.md with enhanced AI response routing explanation
+- Updated build status and feature documentation
+- All changes reflect current state as of May 12, 2026
+
+14) Cleanup - removed unused utilities (May 2026)
+- Removed patch_setup_stats.py (legacy data patching utility, no longer needed)
+- Verified removal doesn't break any build/setup workflows
+- Cleaned up associated __pycache__ bytecode
+
+Current expected behavior
+- Normal operation should primarily use local SQLite/snapshots and only hit
+  external sources when stale or force-refresh is requested.
+- Bot actively monitors channels for multi-user conversations and contributes
+  contextually when appropriate (respects all existing channel permissions).
+- AI personality system learns from user reactions and generates contextual variations.
+- Multi-user interjection system detects group conversations and participates intelligently.
+
+Build verification
+- Project builds successfully with Maven package (skip tests mode).
+- All AI personality framework fully integrated with Deadpool persona learning engine.
+- File structure reorganization complete and verified with end-to-end build.
+
+
+
+

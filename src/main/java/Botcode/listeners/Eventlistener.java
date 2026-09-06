@@ -880,9 +880,10 @@ public class Eventlistener extends ListenerAdapter {
       EmotionEngine.Emotion emotion = EmotionEngine.detectEmotion(aliasedText);
       ConversationMemoryService.recordUserMessage(
           userId, event.getAuthor().getName(), aliasedText, intent, emotion);
+      String aiBody = maybeAddSignatureOpener(ai.text, ai.source);
       String safeAiReply =
           withExpressiveFlair(
-              sanitizeOutgoingReply(ai.text),
+              sanitizeOutgoingReply(aiBody),
               event.getChannel().getIdLong(),
               ai.source != AIResponder.Source.STAR_CITIZEN);
       StarCitizenChatService.ShipEmbedData shipEmbedData =
@@ -947,6 +948,7 @@ public class Eventlistener extends ListenerAdapter {
             intent, emotion, profile, userId, event.getChannel().getIdLong(), aliasedText);
     String reply = result[0];
     String phrase = result[1];
+    reply = maybeAddSignatureOpener(reply, AIResponder.Source.LEARNED_PERSONALITY);
 
     // Add a small personalized opener when user memory exists,
     // but NOT when the intent is already a greeting/farewell --” those
@@ -1836,6 +1838,9 @@ public class Eventlistener extends ListenerAdapter {
     if (isLowSignalAck(text)) {
       return false;
     }
+    if (isActionableQuestion(text)) {
+      return false;
+    }
 
     long channelId = event.getChannel().getIdLong();
     long now = System.currentTimeMillis() / 1000L;
@@ -1911,6 +1916,26 @@ public class Eventlistener extends ListenerAdapter {
         || lower.contains("do you agree")
         || lower.contains("fair point")
         || lower.contains("makes sense?");
+  }
+
+  private boolean isActionableQuestion(String text) {
+    if (text == null || text.isBlank()) {
+      return false;
+    }
+    String lower = text.toLowerCase(Locale.ROOT).trim();
+    return lower.contains("?")
+        || lower.startsWith("where ")
+        || lower.startsWith("who ")
+        || lower.startsWith("what ")
+        || lower.startsWith("when ")
+        || lower.startsWith("why ")
+        || lower.startsWith("how ")
+        || lower.startsWith("does ")
+        || lower.startsWith("do ")
+        || lower.startsWith("is ")
+        || lower.startsWith("are ")
+        || lower.contains("where is")
+        || lower.contains("find ");
   }
 
   private boolean tryGifReactionReply(
@@ -2005,6 +2030,29 @@ public class Eventlistener extends ListenerAdapter {
     }
 
     return sanitizeOutgoingReply(out);
+  }
+
+  /**
+   * Occasionally prepends a signature Deadpool-style opener users have positively reinforced.
+   */
+  private String maybeAddSignatureOpener(String reply, AIResponder.Source source) {
+    if (reply == null || reply.isBlank()) {
+      return reply;
+    }
+    if (source == AIResponder.Source.SELF_FACTS) {
+      return reply;
+    }
+    String opener =
+        "Narrator voice: this is about to get useful and weird. "
+            + "I solemnly swear to give you the best answer I've got. What is it?";
+    if (reply.startsWith("Narrator voice: this is about to get useful and weird.")) {
+      return reply;
+    }
+    int chance = source == AIResponder.Source.WEB_LOOKUP ? 18 : 10;
+    if (ThreadLocalRandom.current().nextInt(100) >= chance) {
+      return reply;
+    }
+    return opener + "\n\n" + reply;
   }
 
   /**
@@ -2853,4 +2901,3 @@ public class Eventlistener extends ListenerAdapter {
     }
   }
 }
-

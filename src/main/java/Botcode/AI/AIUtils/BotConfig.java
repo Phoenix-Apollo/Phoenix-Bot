@@ -97,6 +97,58 @@ public class BotConfig {
   public static final Set<String> SOURCE_OVERRIDE_ALLOWED_HOSTS =
       readCsvSet("BOT_SOURCE_OVERRIDE_ALLOWED_HOSTS");
 
+  // ============================================================================
+  // SECURITY HARDENING - DATABASE ENCRYPTION
+  // ============================================================================
+  public static final boolean DB_ENCRYPTION_ENABLED = readBoolean("DB_ENCRYPTION_ENABLED", true);
+  public static final int DB_KEY_ROTATION_INTERVAL_DAYS =
+      readInt("DB_KEY_ROTATION_INTERVAL_DAYS", 90);
+
+  // ============================================================================
+  // DATA RETENTION & PRIVACY (GDPR Compliance)
+  // ============================================================================
+  public static final int DATA_RETENTION_DAYS =
+      readInt("BOT_DATA_RETENTION_DAYS", 60);
+  public static final boolean ARCHIVE_ENABLED =
+      readBoolean("BOT_ARCHIVE_ENABLED", false);
+  public static final String ARCHIVE_PATH =
+      readString("BOT_ARCHIVE_PATH", "data/archive/");
+  public static final int RETENTION_CLEANUP_HOUR =
+      readInt("BOT_RETENTION_CLEANUP_HOUR", 2);
+
+  // ============================================================================
+  // BACKUP & DISASTER RECOVERY
+  // ============================================================================
+  public static final boolean BACKUP_ENABLED = readBoolean("BOT_BACKUP_ENABLED", true);
+  public static final int BACKUP_HOUR = readInt("BOT_BACKUP_HOUR", 3);
+  public static final boolean CLOUD_BACKUP_ENABLED =
+      readBoolean("BOT_CLOUD_BACKUP_ENABLED", false);
+  public static final String CLOUD_BACKUP_PROVIDER =
+      readString("BOT_CLOUD_BACKUP_PROVIDER", "s3");
+  public static final String S3_BUCKET = readString("BOT_S3_BUCKET", "");
+  public static final String S3_REGION = readString("BOT_S3_REGION", "us-east-1");
+  public static final String GCS_BUCKET = readString("BOT_GCS_BUCKET", "");
+  public static final String GCS_PROJECT_ID = readString("BOT_GCS_PROJECT_ID", "");
+
+  // ============================================================================
+  // SECRETS MANAGEMENT & TOKEN PROTECTION
+  // ============================================================================
+  public static final boolean REDACT_SECRETS_FROM_LOGS =
+      readBoolean("BOT_REDACT_SECRETS_FROM_LOGS", true);
+  public static final int TOKEN_ROTATION_CHECK_INTERVAL_MINUTES =
+      readInt("BOT_TOKEN_ROTATION_CHECK_INTERVAL_MINUTES", 1440);
+  public static final boolean REQUIRE_ADMIN_CONFIRMATION =
+      readBoolean("BOT_REQUIRE_ADMIN_CONFIRMATION", true);
+
+  // ============================================================================
+  // RATE LIMITING & INPUT VALIDATION
+  // ============================================================================
+  public static final int RATE_LIMIT_PER_USER = readInt("BOT_RATE_LIMIT_PER_USER", 30);
+  public static final int RATE_LIMIT_PER_GUILD = readInt("BOT_RATE_LIMIT_PER_GUILD", 100);
+  public static final int MAX_INPUT_LENGTH = readInt("BOT_MAX_INPUT_LENGTH", 4000);
+  public static final boolean INPUT_VALIDATION_ENABLED =
+      readBoolean("BOT_INPUT_VALIDATION_ENABLED", true);
+
   private BotConfig() {
   }
 
