@@ -1,0 +1,13 @@
+.git
+.github
+.idea
+.vscode
+target
+logs
+bot-out.txt
+bot-err.txt
+build.log
+.env
+.env.*
+!.env.example
+*.iml

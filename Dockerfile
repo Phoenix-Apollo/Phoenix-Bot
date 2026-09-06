@@ -1,16 +1,23 @@
-FROM maven:latest as build
+FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /home/app
 
-COPY src src
-COPY pom.xml .
+COPY pom.xml ./
+COPY src ./src
+COPY data ./data
 
-RUN mvn -f /home/app/pom.xml clean package
+RUN mvn clean package
 
-########
-FROM openjdk:20-ea-1-slim
+FROM eclipse-temurin:21-jre
 WORKDIR /home/app
 
-ARG NAME="CommsBot-1.0"
-COPY --from=build /home/app/target/${NAME}-shaded.jar bot.jar
+RUN useradd -m -u 1000 appuser
 
-ENTRYPOINT ["java", "-jar", "/home/app/bot.jar"]
+COPY --from=build /home/app/target/*-shaded.jar /home/app/bot.jar
+COPY --from=build /home/app/data /home/app/data
+
+RUN chown -R appuser:appuser /home/app
+USER appuser
+
+ENV JAVA_OPTS="-Xms256m -Xmx512m"
+
+ENTRYPOINT ["sh", "-c", "exec java $JAVA_OPTS -jar /home/app/bot.jar"]

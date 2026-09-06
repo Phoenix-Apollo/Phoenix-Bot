@@ -1,9 +1,14 @@
-version: "3.9"
-
 services:
   bot:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      TOKEN: ${TOKEN:?TOKEN is required}
     volumes:
       - type: bind
-        source: ./.env
-        target: /home/app/.env
+        source: ./data
+        target: /home/app/data
+    restart: unless-stopped
+    stop_grace_period: 30s
+    init: true
