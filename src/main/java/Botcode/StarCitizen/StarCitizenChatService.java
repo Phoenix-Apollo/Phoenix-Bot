@@ -17,6 +17,10 @@ import java.util.regex.Pattern;
  * buttons.
  */
 public class StarCitizenChatService {
+  private static final String STAR_CITIZEN_OVERVIEW_REPLY =
+      "Star Citizen is a shared-universe space sim where you can mine, trade, salvage, fight, "
+          + "haul cargo, and explore. I can help with ship, weapon, mining, trade, refinery, "
+          + "or location questions.";
 
   public static class ShipEmbedData {
 
@@ -110,6 +114,9 @@ public class StarCitizenChatService {
     }
 
     String lower = text.toLowerCase(Locale.ROOT);
+    if (isStarCitizenOverviewPrompt(lower)) {
+      return STAR_CITIZEN_OVERVIEW_REPLY;
+    }
 
     String money = tryMoneyMaking(text, lower);
     if (money != null) {
@@ -1034,9 +1041,7 @@ public class StarCitizenChatService {
 
   private static String tryShip(String text, String lower, String locationFilter) {
     if (isStarCitizenOverviewPrompt(lower)) {
-      return "Star Citizen is a shared-universe space sim where you can mine, trade, salvage, fight, "
-          + "haul cargo, and explore. I can help with ship, weapon, mining, trade, refinery, "
-          + "or location questions.";
+      return STAR_CITIZEN_OVERVIEW_REPLY;
     }
 
     String key = resolveShipKeyFromPrompt(text);
@@ -1044,6 +1049,9 @@ public class StarCitizenChatService {
       return tryOriginShipsOverview();
     }
     String candidate = extractAfterKeyword(text, "ship", "ships");
+    if (candidate != null && isGenericStarCitizenReference(candidate)) {
+      return STAR_CITIZEN_OVERVIEW_REPLY;
+    }
     if (key == null && lower.contains("origin")) {
       return tryOriginShipsOverview();
     }
@@ -1189,8 +1197,23 @@ public class StarCitizenChatService {
     return lower.equals("star citizen")
         || lower.contains("what is star citizen")
         || lower.contains("whats star citizen")
+        || lower.contains("explain star citizen")
+        || lower.contains("explain the point of star citizen")
+        || lower.contains("point of star citizen")
         || lower.contains("tell me about star citizen")
-        || lower.contains("about star citizen");
+        || lower.contains("about star citizen")
+        || lower.matches(".*\\b(look up|lookup|show me)\\s+star citizen\\b.*");
+  }
+
+  private static boolean isGenericStarCitizenReference(String text) {
+    if (text == null || text.isBlank()) {
+      return false;
+    }
+    String lower = text.toLowerCase(Locale.ROOT).trim();
+    return lower.equals("star citizen")
+        || lower.equals("the game")
+        || lower.equals("this game")
+        || lower.equals("sc");
   }
 
   public static String resolveShipKeyFromPrompt(String text) {

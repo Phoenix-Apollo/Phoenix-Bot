@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Centralized Deadpool-style voice shaping for outgoing chat text.
  */
 public class PersonaVoice {
-  private static final int PREFIX_CHANCE_PERCENT = 30;
+  private static final int PREFIX_CHANCE_PERCENT = 8;
   private static final List<String> DEADPOOL_PREFIXES =
       List.of(
           "Maximum chimichanga advisory -",

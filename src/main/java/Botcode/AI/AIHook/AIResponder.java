@@ -5,8 +5,6 @@ import Botcode.StarCitizen.StarCitizenChatService;
 import Botcode.AI.AIUtils.BotConfig;
 import Botcode.AI.WebLookupService;
 
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 /**
@@ -88,6 +86,12 @@ public class AIResponder {
       }
     }
 
+    // PRIORITY 2.5: Broad "everything/anything" prompts should get a concrete steer.
+    String broadPrompt = tryBroadScopePrompt(prompt);
+    if (broadPrompt != null) {
+      return AIResponse.of(broadPrompt, Source.LEARNED_PERSONALITY);
+    }
+
     // PRIORITY 3: Playful/smirky conversational prompts.
     String playful = tryPlayfulPrompt(prompt);
     if (playful != null) {
@@ -111,6 +115,11 @@ public class AIResponder {
       return AIResponse.of(empathy, Source.LEARNED_PERSONALITY);
     }
 
+    String selfFacts = SelfFactsRouter.resolve(prompt);
+    if (selfFacts != null) {
+      return AIResponse.of(selfFacts, Source.SELF_FACTS);
+    }
+
     // PRIORITY 6: Targeted Star Citizen "which fighter should I pick" prompts.
     String fighterPick = tryBountyFighterPicker(prompt);
     if (fighterPick != null) {
@@ -125,7 +134,7 @@ public class AIResponder {
       }
     }
 
-    // PRIORITY 8: Explicit knowledge queries to web lookup (accurate facts)
+    // PRIORITY 8: Explicit knowledge queries to web lookup (accurate facts).
     if (isExplicitNonScLookupPrompt(prompt)) {
       String webFirst = WebLookupService.tryLookup(prompt);
       if (webFirst != null) {
@@ -133,30 +142,20 @@ public class AIResponder {
       }
     }
 
-    // PRIORITY 9: Web lookup for non-SC general questions
-    String web = WebLookupService.tryLookup(prompt);
-    if (web != null) {
-      return AIResponse.of(web, Source.WEB_LOOKUP);
+    // PRIORITY 9: Only fall back to web lookup when we still do not have a useful answer.
+    if (looksLikeGeneralKnowledgeQuestion(prompt.toLowerCase(Locale.ROOT))) {
+      String web = WebLookupService.tryLookupForFallback(prompt);
+      if (web != null) {
+        return AIResponse.of(web, Source.WEB_LOOKUP);
+      }
     }
 
-    // PRIORITY 10: Force web-style answer for plain non-SC questions.
-    String forcedLookup = tryForcedGeneralLookup(prompt);
-    if (forcedLookup != null) {
-      return AIResponse.of(forcedLookup, Source.WEB_LOOKUP);
-    }
-
-    // PRIORITY 11: Optional premium provider as override (future expansion)
+    // PRIORITY 10: Optional premium provider as override (future expansion)
     if (BotConfig.AI_PREMIUM_ENABLED) {
       String premium = tryPremiumRespond(prompt);
       if (premium != null && !premium.isBlank()) {
         return AIResponse.of(premium, Source.PREMIUM);
       }
-    }
-
-    // FALLBACK: Learned personality phrases for conversational continuity
-    String self = SelfFactsRouter.resolve(prompt);
-    if (self != null) {
-      return AIResponse.of(self, Source.LEARNED_PERSONALITY);
     }
 
     return AIResponse.none();
@@ -228,6 +227,18 @@ public class AIResponder {
 
     // Exclude Star Citizen specific queries
     return !isSCContextualQuery(lower);
+  }
+
+  private static String tryBroadScopePrompt(String prompt) {
+    String lower = prompt.toLowerCase(Locale.ROOT).trim();
+    if (!(lower.equals("everything")
+        || lower.equals("anything")
+        || lower.equals("all of it")
+        || lower.equals("all")
+        || lower.equals("whatever"))) {
+      return null;
+    }
+    return "Let's do it one step at a time. Give me one specific target first and I'll answer directly.";
   }
 
   private static boolean isSCContextualQuery(String lower) {
@@ -323,37 +334,29 @@ public class AIResponder {
     return null;
   }
 
-  private static String tryForcedGeneralLookup(String prompt) {
-    String lower = prompt.toLowerCase(Locale.ROOT).trim();
-    if (isSCContextualQuery(lower) || !looksLikeGeneralKnowledgeQuestion(lower)) {
-      return null;
-    }
-
-    String forcedPrompt = "look up " + prompt;
-    String lookedUp = WebLookupService.tryLookup(forcedPrompt);
-    if (lookedUp != null) {
-      return lookedUp;
-    }
-
-    return "I couldn’t pull a clean web result for that on this pass.\n"
-        + "Fast fallback: https://www.google.com/search?q="
-        + URLEncoder.encode(prompt.trim(), StandardCharsets.UTF_8);
-  }
-
   private static boolean looksLikeGeneralKnowledgeQuestion(String lower) {
-    return lower.contains("?")
-        || lower.startsWith("where ")
-        || lower.startsWith("who ")
-        || lower.startsWith("what ")
-        || lower.startsWith("when ")
-        || lower.startsWith("why ")
-        || lower.startsWith("how ")
-        || lower.startsWith("does ")
-        || lower.startsWith("do ")
-        || lower.startsWith("is ")
-        || lower.startsWith("are ")
-        || lower.contains("find ")
-        || lower.contains("where is");
+    return lower.contains("look up")
+        || lower.contains("lookup")
+        || lower.contains("search for")
+        || lower.contains("google")
+        || lower.startsWith("wiki ")
+        || lower.startsWith("wikipedia ")
+        || lower.startsWith("define ")
+        || lower.startsWith("what is ")
+        || lower.startsWith("who is ")
+        || lower.startsWith("who was ")
+        || lower.startsWith("what was ")
+        || lower.startsWith("when did ")
+        || lower.startsWith("when was ")
+        || lower.startsWith("where is ")
+        || lower.startsWith("where was ")
+        || lower.startsWith("how tall ")
+        || lower.startsWith("how old ")
+        || lower.startsWith("how far ")
+        || lower.contains("capital of")
+        || lower.contains("population of")
+        || lower.contains("distance to")
+        || lower.contains("tell me about");
   }
 
   private static String tryBountyFighterPicker(String prompt) {

@@ -33,7 +33,7 @@ public class SelfFactsRouter {
     }
 
     if (isCapabilitiesQuestion(lower)) {
-      return "I can help with Star Citizen data, server tools, and normal conversation. Try /mine, /trade, /ship, or /weapon.";
+      return "I can teach Star Citizen basics, mining, trading, ships, weapons, server tools, and event planning. Ask me for one topic and I’ll break it down.";
     }
 
     if (isBotStatusQuestion(lower)) {
@@ -93,6 +93,10 @@ public class SelfFactsRouter {
         || lower.contains("what else can you do")
         || lower.contains("what do you do")
         || lower.contains("how can you help")
+        || lower.contains("what can you teach me")
+        || lower.contains("what can you help me with")
+        || lower.contains("what can you help with")
+        || lower.contains("teach me something")
         || lower.contains("your features")
         || lower.contains("your commands")
         || lower.contains("your functions")
@@ -105,6 +109,7 @@ public class SelfFactsRouter {
 
   private static boolean isBotStatusQuestion(String lower) {
     return lower.contains("how are you")
+        || lower.contains("how are we")
         || lower.contains("how is the bot")
         || lower.contains("how's the bot")
         || lower.contains("how is phoenix bot")
@@ -287,4 +292,3 @@ public class SelfFactsRouter {
     return sb.toString().trim();
   }
 }
-

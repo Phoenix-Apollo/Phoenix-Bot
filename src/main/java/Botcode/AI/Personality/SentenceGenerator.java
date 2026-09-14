@@ -277,10 +277,10 @@ public class SentenceGenerator {
 
   private static final List<String> deepCasualProbes =
       List.of(
-          "Give me the real version: what are you trying to improve right now, and what's blocking it?",
-          "If we map your night as Plan A / Plan B / chaos goblin route, which one sounds most you?",
-          "Want me to coach this like a mission brief, or just riff with you and iterate in real time?",
-          "Drop your exact goal and constraints, and I'll build a cleaner strategy than half the internet.");
+          "What part do you want me to go deeper on?",
+          "Want a quick summary first, then the detailed version?",
+          "Share your exact goal and constraints and I'll give you a cleaner plan.",
+          "If you want, I can turn this into a step-by-step plan.");
 
   private static final List<String> continuityBridges =
       List.of(
@@ -625,7 +625,7 @@ public class SentenceGenerator {
 
     // Add a lightweight follow-up probe so conversations keep moving naturally.
     if (intent == Intent.CASUAL_CHAT) {
-      int probeChance = depthScore >= 8 ? 8 : 5;
+      int probeChance = depthScore >= 8 ? 4 : 2;
       if (followUpSignal || random.nextInt(10) < probeChance) {
         body = body + " " + pick(depthScore >= 8 ? deepCasualProbes : casualProbes);
       }
@@ -643,20 +643,14 @@ public class SentenceGenerator {
     }
 
     // NEUTRAL follow-ups should feel like conversation continuity, not generic fallback reset.
-    if (intent == Intent.NEUTRAL && followUpSignal && random.nextInt(10) < 8) {
+    if (intent == Intent.NEUTRAL && followUpSignal && random.nextInt(10) < 4) {
       List<String> topics = ConversationMemoryService.getRecentTopics(userId);
       if (!topics.isEmpty()) {
         body =
             "Yep, still with you. We can keep going on "
                 + topics.get(0)
-                + " and make it more practical. "
-                + pick(depthScore >= 8 ? deepCasualProbes : casualProbes);
+                + ".";
       }
-    }
-
-    // Keep direct sessions moving: occasionally add a short prompt to avoid dead-end turns.
-    if (!body.contains("?") && random.nextInt(10) < (followUpSignal ? 8 : 3)) {
-      body = body + " " + pick(depthScore >= 8 ? deepCasualProbes : casualProbes);
     }
 
      // Humorous style prefix --” 20% chance so it stays a fun surprise rather than
@@ -847,4 +841,3 @@ public class SentenceGenerator {
      }
    }
 }
-

@@ -2039,7 +2039,7 @@ public class Eventlistener extends ListenerAdapter {
     if (reply == null || reply.isBlank()) {
       return reply;
     }
-    if (source == AIResponder.Source.SELF_FACTS) {
+    if (source != AIResponder.Source.WEB_LOOKUP) {
       return reply;
     }
     String opener =
@@ -2048,7 +2048,7 @@ public class Eventlistener extends ListenerAdapter {
     if (reply.startsWith("Narrator voice: this is about to get useful and weird.")) {
       return reply;
     }
-    int chance = source == AIResponder.Source.WEB_LOOKUP ? 18 : 10;
+    int chance = 3;
     if (ThreadLocalRandom.current().nextInt(100) >= chance) {
       return reply;
     }
@@ -2355,6 +2355,9 @@ public class Eventlistener extends ListenerAdapter {
     if (lower.equals("no")
         || lower.equals("nah")
         || lower.equals("nope")
+        || lower.equals("yes")
+        || lower.equals("yep")
+        || lower.equals("yup")
         || lower.equals("ye")
         || lower.equals("yeah")
         || lower.equals("y")

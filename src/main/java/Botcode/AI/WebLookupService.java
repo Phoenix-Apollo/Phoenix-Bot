@@ -82,10 +82,18 @@ public class WebLookupService {
   }
 
   public static String tryLookup(String prompt) {
+    return tryLookupInternal(prompt, false);
+  }
+
+  public static String tryLookupForFallback(String prompt) {
+    return tryLookupInternal(prompt, true);
+  }
+
+  private static String tryLookupInternal(String prompt, boolean allowImplicit) {
       if (!BotConfig.WEB_LOOKUP_ENABLED) {
           return null;
       }
-    String query = extractLookupQuery(prompt);
+    String query = extractLookupQuery(prompt, allowImplicit);
       if (query == null || query.isBlank()) {
           return null;
       }
@@ -96,7 +104,7 @@ public class WebLookupService {
     String cacheKey = query.toLowerCase(Locale.ROOT);
     CachedLookup cached = CACHE_BY_QUERY.get(cacheKey);
     if (cached != null && !cached.isExpired()) {
-      return formatLookupReply(cached.result, query);
+      return formatLookupReply(cached.result, query, !allowImplicit);
     }
 
     LookupAttempt attempt = lookupWithFallback(query);
@@ -106,16 +114,20 @@ public class WebLookupService {
           : attempt.failureReason;
       maybeQueueLookupIssue(query, reason);
 
+      if (!allowImplicit) {
+        return "I tried a live lookup and the internet faceplanted on this one.\n"
+            + "Search reference: " + googleSearchUrl(query)
+            + "\nGive me a rephrase and I’ll take another swing.";
+      }
       return "I tried a live lookup and the internet faceplanted on this one.\n"
-          + "Fallback search link: " + googleSearchUrl(query)
-          + "\nGive me a rephrase and I’ll take another swing.";
+          + "Give me a rephrase and I’ll take another swing.";
     }
 
     CACHE_BY_QUERY.put(cacheKey, new CachedLookup(attempt.result, System.currentTimeMillis()));
-    return formatLookupReply(attempt.result, query);
+    return formatLookupReply(attempt.result, query, !allowImplicit);
   }
 
-  private static String extractLookupQuery(String prompt) {
+  private static String extractLookupQuery(String prompt, boolean allowImplicit) {
     if (prompt == null || prompt.isBlank()) {
       return null;
     }
@@ -152,7 +164,7 @@ public class WebLookupService {
                 "should ",
                 "would "))
             && !isSmallTalkOrAck(lower);
-    if (!explicitLookup && !implicitKnowledgeQuestion) {
+    if (!explicitLookup && (!allowImplicit || !implicitKnowledgeQuestion)) {
       return null;
     }
 
@@ -344,9 +356,6 @@ public class WebLookupService {
         if (extract.isBlank()) {
             return LookupAttempt.failed("duckduckgo_empty_extract");
         }
-        if (page.isBlank()) {
-            page = googleSearchUrl(query);
-        }
       return LookupAttempt.success(new LookupResult(title, extract, page));
     } catch (Exception e) {
       return LookupAttempt.failed("duckduckgo_exception");
@@ -426,9 +435,12 @@ public class WebLookupService {
     return clean.substring(0, cut).trim() + "...";
   }
 
-  private static String formatLookupReply(LookupResult result, String query) {
+  private static String formatLookupReply(LookupResult result, String query, boolean allowGoogleLink) {
     String summary = trimSummary(result.summary, BotConfig.WEB_LOOKUP_MAX_SUMMARY_CHARS);
-    String safeUrl = isSafePublicHttpsUrl(result.url) ? result.url : googleSearchUrl(query);
+    String safeUrl =
+        isSafePublicHttpsUrl(result.url)
+            ? result.url
+            : (allowGoogleLink ? googleSearchUrl(query) : "unavailable");
     return "**" + result.title + "**\n"
         + summary + "\n"
         + "Source: " + safeUrl;
